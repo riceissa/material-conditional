@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -20,6 +20,11 @@
   </head>
   <body>
     <article>
+      <p>Audience for this post: someone who has written some proofs
+      before and has seen propositional logic and truth tables, but
+      who still feels confused why the truth table for the material
+      conditional is the way it is.</p>
+
       <p>Something mathematicians love to do is to discover and talk
       about recursive things. For instance, the famous Fibonacci
       sequence \(0, 1, 1, 2, 3, 5, 8, 13, 21, \ldots\) is defined as
@@ -43,8 +48,8 @@
       reasoning. This is like using a microscope not to study cells,
       but to study microscopes themselves!</p>
 
-      <p>Why might we want to do this? Well, mathematicians are kind
-      of weird and curious people, and delight in getting all
+      <p>Why might we want to do this? Well, mathematicians are a
+      weird and curious people, and delight in getting all
       self-referential to see what happens. It's also a fairly natural
       thought: as mathematicians, we have been reasoning in a
       particular way and gotten used to it. It has become our "hammer"
@@ -54,11 +59,28 @@
       on in the conclusion, I will discuss some other reasons why
       studying mathematical reasoning using mathematical reasoning is
       useful. But for now, I hope this curiosity-based reason (which
-      is potentially a wild and useless idea!) is sufficient to keep
+      is potentially just a wild and useless idea!) is sufficient to keep
       you interested.</p>
 
-      <p></p>
+      <p>So how do we go about mathematically analyzing mathematical
+      reasoning? As in many situations in math, it's easiest if we
+      have an example to work with. Let's look at an argument showing
+      that every integer (i.e., the positive and negative whole
+      numbers together with zero) is exactly one of even or odd. You
+      might think this is too obvious, and that's okay! The point
+      right now isn't to discover <em>new</em> mathematics, but rather
+      to examine the familiar in a new way. For that, an example that
+      seems too simple is perfect.</p>
 
+      <p>We will call an integer \(n\) <em>even</em> iff there is some
+      integer \(k\) such that \(n = 2k\). This expresses the idea that
+      an even number is a multiple of \(2\).</p>
+
+      <p>Similarly, we will call an integer \(n\) <em>odd</em> iff
+      there is some integer \(k\) such that \(n = 2k + 1\). This
+      expresses the idea that an odd number is one more than an even
+      number, i.e., an odd number is one that is half-way between two
+      even numbers.</p>
     </article>
   </body>
 </html>
