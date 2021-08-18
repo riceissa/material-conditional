@@ -1,0 +1,19 @@
+body {
+  font-family: Charter, "Bitstream Charter", Georgia, serif;
+  margin: 10px 10px;
+  background-color: #a0a0a0;
+  line-height: 1.5;
+}
+
+article {
+  max-width: 45rem;
+  margin: 12px auto;
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+nav { color: #dddddd; }
+nav a { text-decoration: none; }
+nav a:hover, nav a:active { text-decoration: underline; }
+nav a:link { color: #ffffff; }
+nav a:visited { color: #ffffff; }
