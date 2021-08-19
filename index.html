@@ -81,6 +81,40 @@
       expresses the idea that an odd number is one more than an even
       number, i.e., an odd number is one that is half-way between two
       even numbers.</p>
+
+      <p>Now that we have these two definitions, we can show that
+      every integer is exactly one of even or odd. If you wish, you
+      might want to try proving this yourself first, and then compare
+      with what's below!</p>
+
+      <p>First we show that every integer has at least one of the
+      properties of being even or odd. To do this, we begin by
+      restricting attention to the non-negative integers, and use
+      induction. The number \(0\) is even because \(0 = 2\cdot 0\).
+      Now suppose inductively that the number \(n\) is even or odd. We
+      want to show that \(n+1\) is even or odd. If \(n\) happens to be
+      even, there is some integer \(k\) such that \(n = 2k\). Thus we
+      have \(n+1 = 2k+1\), so \(n+1\) is odd. If \(n\) happens to be
+      odd, there is some integer \(k\) such that \(n = 2k+1\), so
+      \(n+1 = (2k+1)+1 = 2k+2 = 2(k+1)\), which shows that \(n+1\) is
+      even. This closes the induction, and shows that every
+      non-negative integer is even or odd.</p>
+
+      <p>We still have to show that each negative integer is even or
+      odd. So suppose \(n\) is a negative integer. Then \(-n\) is a
+      positive integer. By what we said in the previous paragraph,
+      \(-n\) is even or odd. If \(-n\) is even, then we have \(-n =
+      2k\) for some integer \(k\). Thus \(n = 2(-k)\); since \(-k\) is
+      also an integer, this shows that \(n\) too is even. If \(-n\)
+      happens to be odd, then we have \(-n = 2k+1\) for some integer
+      \(k\). Thus \(n = -(2k+1) = -2k-1\). This isn't quite in the
+      form we want. We can write \(-2k-1\) as \(2(-k)-1\), which is
+      closer, but we still have a \(-1\) at the end instead of \(+1\).
+      Here we use a trick that is pretty common, which is to add and
+      subtract the same thing. This is like adding zero, which doesn't
+      change the number. In this case, to get a \(+1\) at the end, we
+      will subtract by \(1\), then add back the \(1\). So we get
+      \(2(-k)-1-1+1\). This simplifies to \(2(-k)-2+1=2(-k-1)+1\).
     </article>
   </body>
 </html>
