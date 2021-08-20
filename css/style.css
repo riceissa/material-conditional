@@ -13,6 +13,19 @@ article {
   background-color: #ffffff;
 }
 
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+a.heading-marker {
+    font-size: 90%;
+    text-decoration: none;
+}
+
 nav { color: #dddddd; }
 nav a { text-decoration: none; }
 nav a:hover, nav a:active { text-decoration: underline; }
