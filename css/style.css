@@ -13,43 +13,32 @@ article {
   background-color: #ffffff;
 }
 
-h1 {
-    font-size: 150%;
-}
-
-h2 {
-    font-size: 120%;
-}
+h1 { font-size: 150%; }
+h2 { font-size: 120%; }
 
 a.heading-marker {
-    font-size: 60%;
-    text-decoration: none;
+  font-size: 60%;
+  text-decoration: none;
 }
 
 table {
-    border-bottom: 2px solid #777777;
-    border-collapse: collapse;
-    border-top: 2px solid #777777;
-    margin: 0px auto; /* center table */
+  border-bottom: 2px solid #777777;
+  border-collapse: collapse;
+  border-top: 2px solid #777777;
+  margin: 0px auto; /* center table */
 }
 
 table th {
-    font-weight: normal;
-    padding: 0px 10px;
-    vertical-align: bottom; /* Maybe this should be "top" instead */
+  font-weight: normal;
+  padding: 0px 10px;
+  vertical-align: bottom;
 }
 
 table td {
-    padding: 0px 10px;
-    vertical-align: top;
+  padding: 0px 10px;
+  vertical-align: top;
 }
 
 table tbody tr { border-bottom: 1px dotted #ccc; }
 table thead th { border-bottom: 1px solid #777777; }
 table tfoot th { border-top: 1px solid #777777; }
-
-nav { color: #dddddd; }
-nav a { text-decoration: none; }
-nav a:hover, nav a:active { text-decoration: underline; }
-nav a:link { color: #ffffff; }
-nav a:visited { color: #ffffff; }
