@@ -101,7 +101,7 @@
 
       <table>
         <thead>
-          <tr><th>P</th> <th>Q</th> <th>P or Q</th> <th>P xor Q</th></tr>
+          <tr><th>P</th> <th>Q</th> <th>P inclusive-or Q</th> <th>P exclusive-or Q</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -120,42 +120,78 @@
       </table>
 
       <p>The same cannot be said for the conditional statement! It is
-        true that "if P, then Q" is a statement involving P and Q.</p>
+      true that "if P, then Q" is a statement involving P and Q. But
+      is this statement really a function of the <em>truth values</em>
+      of P and Q? Or could it depend on the <em>contents</em> of P and
+      Q?</p>
 
-      <p>The problem is that with the conditional statement, this is
-      not obvious.</p>
+      <p>Let me stress this point by bringing in another unrelated
+      example: Consider two functions, \(f\) and \(g\), both defined
+      on pairs of numbers. We define \(f(x,y) =
+      \operatorname{sgn}(xy)\), where \(\operatorname{sgn}\) is
+      the <a href="https://en.wikipedia.org/wiki/Sign_function">sign
+      function</a> that returns \(1\) when a number is positive, \(0\)
+      when it is the number \(0\), and \(-1\) when a number is
+      negative. We define \(g(x,y) = xy\) to be the product of the two
+      numbers. Thus for example \(f(-2,3) = -1\) and \(g(-2,3) = -6\).
+      It can be shown that \(\operatorname{sgn}(xy) =
+      \operatorname{sgn}(x)\operatorname{sgn}(y)\), so the value of
+      \(f\) depends only on the sign of the inputs. This is analogous
+      to how the OR connective depends only on the truth values of the
+      input statements. On the other hand, the value of \(g\) depends
+      on the actual values of the inputs, not just the sign. In an
+      analogous way, a statement involving two other statements may
+      depend on just the truth values of the input statements, or it
+      may depend more specifically on the contents of the input
+      statements.</p>
 
-      <p>In math, it is important to pay attention to your mental representations of things and to not conflate different things</p>
+      <p>A logical connective can only be represented in a truth table
+      if it depends solely on the truth values of the inputs. So at
+      the moment it is not clear whether the conditional statement can
+      actually be represented in a truth table.</p>
 
-      <p>Looking at "if \(P\), then Q", we have two different interpretations/mental models of it:</p>
+      <p>We can make the above point in a slightly different way: As
+      humans, we tend to <em>conflate</em> things in order to simplify
+      our thinking. But in math, it is important to pay attention to
+      one's mental representations of things and to not conflate
+      things that are actually distinct. This sort of thing happen in
+      mathematics all the time. We might, for example, introduce a
+      relation called \(\leq\) on some class of objects. But just
+      because it looks like an inequality, we cannot assume that it is
+      reflexive or transitive or has any of the properties we normally
+      associate with an inequality relation! A mathematician has to
+      think very carefully to avoid this kind of conflation.</p>
 
       <p>
-        1. The mysterious new meaning textbooks are forcing on us: The logical connective \(\implies\), which turns it into a sentence with a specific truth value, described by the truth table.</p>
+        Looking at the statement "if
+      \(P\), then Q", we currently have two different mental models of
+      it:</p>
 
-      <p>A much more familiar meaning: 2. As a rule of inference
-        saying that once we have P, we are allowed to have Q.</p>
+      <ol>
+        <li>The mysterious new meaning textbooks are forcing on us:
+        The logical connective \(\implies\), which turns it into a
+        sentence with a specific truth value, described by the truth
+        table.</li>
+
+        <li>A much more familiar meaning: As a rule of inference
+        saying that once we have P, we are allowed to have Q.</li>
+      </ol>
 
       <p>Intuitively, we think of "if P, then Q" as a rule telling us
       that whenever in an argument we've shown P to be true, then we
-      also get to say that Q is true. A priori, this has very little
-      to do with the statement \(P \implies Q\) as defined by the
-        truth table!</p>
+      also get to say that Q is true. <em>A priori</em>, this has very
+      little to do with the statement \(P \implies Q\) as defined by
+      the truth table! This is just another way of stating that we
+      aren't sure yet whether our intuitive notion of "if P, then Q"
+      can be represented in a truth table.</p>
 
-      <p>We should in general be suspicious of linguistic games such
-      as this. Similar things happen in mathematics all the time. We
-      might, for example, introduce a relation called \(\leq\) on some
-      class of objects. But just because it looks like an inequality,
-      we cannot assume that it is reflexive or transitive or has any
-      of the properties we normally associate with an inequality
-      relation! A mathematician has to think very carefully to avoid
-      this kind of conflation.</p>
 
       <p>So, <em>are</em> these two meanings of "if P, then Q"
       related? It turns out, there is a very satisfying connection: we
       can make the inference from P to Q exactly when the statement
       \(P \implies Q\) is true. In other words, our intuitive notion
       of "if P, then Q" coincides perfectly with the truth-table
-      definition of implication.</p>
+      definition of implication!</p>
 
       <p>"Huh?" you might say. "How could our intuitive notion
       coincide with the truth table one? Didn't we go on at length in
@@ -283,6 +319,14 @@
       <p>You are also familiar with how we can form new statements using existing statements. For example, the statement "both \(P\) and \(Q\) are true" is itself a statement. This kind of claim comes up so often that </p>
 
       <h2>Conclusion and flashcards</h2>
+
+      <p>Earlier we brought up the point that the implication seems to
+      be both intuitive and unintuitive, and that this seems
+      contradictory. But a little reflection shows that this sort of
+      thing happens all the time in math. In fact, one way of thinking
+      of math is to take things that seems awfully unintuitive or
+      confusing, and then stare at it in just the right way so as to
+      make it totally obvious.</p>
 
       <p>This concludes our investigation into the material conditional.</p>
 
