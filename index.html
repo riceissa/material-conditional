@@ -238,19 +238,22 @@
         </tbody>
       </table>
 
+      <p><b>Theorem.</b> Our intuitive meaning of "if P, then Q",
+      i.e., that from P we can derive Q, is true if and only if the
+      material conditional \(P \implies Q\) is true.</p>
 
-      <p>Let's first suppose that our intuitive meaning of "if P, then
-      Q" is true. In other words, given P, we can derive Q. We want to
-      show that \(\lnot P \lor Q\) is true. We have two cases, \(P\)
-      or \(\lnot P\). Suppose first that \(P\) is true. Then by our
-      assumption, we are allowed to derive Q. Since we know that Q is
-      true, we know that at least one of Q or \(\lnot P\) is true, so
-      \(\lnot P \lor Q\) is true. Next suppose that \(\lnot P\). This
-      case is even simpler: since \(\lnot P\) is already true, we know
-      that at least one of \(\lnot P\) or \(Q\) is true, so \(\lnot P
-      \lor Q\) is true. In either case, we have shown that \(\lnot P
-      \lor Q\) is true. This completes this direction of the
-      proof.</p>
+      <p><em>Proof.</em> Let's first suppose that our intuitive
+      meaning of "if P, then Q" is true. In other words, given P, we
+      can derive Q. We want to show that \(\lnot P \lor Q\) is true.
+      We have two cases, \(P\) or \(\lnot P\). Suppose first that
+      \(P\) is true. Then by our assumption, we are allowed to derive
+      Q. Since we know that Q is true, we know that at least one of Q
+      or \(\lnot P\) is true, so \(\lnot P \lor Q\) is true. Next
+      suppose that \(\lnot P\). This case is even simpler: since
+      \(\lnot P\) is already true, we know that at least one of
+      \(\lnot P\) or \(Q\) is true, so \(\lnot P \lor Q\) is true. In
+      either case, we have shown that \(\lnot P \lor Q\) is true. This
+      completes this direction of the proof.</p>
 
       <p>Next we show that if \(\lnot P \lor Q\) is true, then given P
       we can derive Q. So let's suppose we are given P. Our goal now
@@ -260,8 +263,60 @@
       that at least one of \(\lnot P\) or \(Q\) is true. This
       contradiction shows that our assumption that Q is false was in
       error, so Q must be true. This completes this direction of the
-      proof, and hence the result.</p>
+        proof, and hence the result.&nbsp;\(\Box\)</p>
 
+      <p>The above theorem justifies calling \(\implies\) the
+      "implies" connective, and treating the sentence \(P \implies Q\)
+      the same as we would the claim that "if P, then Q". In a way, it
+      is amazing that "if P, then Q" can be captured by a logical
+      connective! The statement "if P, then Q" at first seems much
+      more fuzzy, something we use in an argument but that can't be
+      formalized so simply.</p>
+
+      <p></p>
+
+      <h2>Appendix: Technical notes</h2>
+
+      <p>This appendix is only for the experts or people curious about
+      more advanced mathematical logic. As long as you understood the
+      main text of the post, it's not important to understand
+      this.</p>
+
+      <p>Some readers with more experience in mathematical logic may
+      be wondering what the connection is between the argument we gave
+      above and what is known as
+      the <a href="https://en.wikipedia.org/wiki/Deduction_theorem">deduction
+      theorem</a>. We gave a special case of the deduction theorem and
+      its converse when the set of sentences \(\Delta\) that we use as
+      assumptions is the empty set.</p>
+
+      <p>The proof of the deduction theorem is typically syntactic: it
+      doesn't refer to the meanings of the letters or connectives,
+      only the formal rules of the system. However, the usual
+      syntactic proof is cumbersome to present for two reasons. First,
+      we have to put in a lot of effort into setting up the groundwork
+      or our formal system. This is important if we are trying to do
+      serious mathematical logic, but pedagogically speaking this is
+      problematic when one is only a beginner trying to understand the
+      material conditional! Second, the syntactic proof of the
+      deduction theorem is an induction argument and is fairly
+        long.</p>
+
+      <p>To get around this problem, but still appreciating the
+      distinction the deduction theorem is trying to point at, we give
+      a <em>semantic</em> argument. This relies on the soundness and
+      completeness theorems for a formal system, which are themselves
+      quite involved to prove. But as long as we are just working
+      informally in mathematical English, the soundness and
+      completeness theorems amount to saying "our thoughts make sense
+      and we aren't doing anything horrible". And once we have
+      accepted soundness and completeness, the proof of (a special
+      case of) the deduction theorem is essentially as given in the
+      main body of the post.</p>
+
+      <p>Knowing about this approach, you might ask why the deduction
+      theorem is typically proved syntactically rather than
+      semantically. I'm not actually sure why this is the case.</p>
 
       <p>
       TODO: things to add:
