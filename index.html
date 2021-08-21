@@ -38,7 +38,7 @@
 
       <p>In this post we will explore the truth table of
       the <a href="https://en.wikipedia.org/wiki/Material_conditional">material
-      conditional</a> (i.e., the "if ..., then ..." statement used in
+      conditional</a> (i.e., the “if &hellip;, then &hellip;” statement used in
       math). Students first learning formal logic or getting started
       with writing proofs are introduced to the idea of truth tables
       along with the usual logical connectives like \(\lnot\) (NOT),
@@ -57,9 +57,9 @@
       antecedent is false, it's also not clear that one has actually
       kept the promise, or that one <em>would have</em> kept the
       promise. It also seemed suspicious that we were picking one
-      specific way in which "if ..., then ..." was used in natural
+      specific way in which “if &hellip;, then &hellip;” was used in natural
       language and ignoring all the others. Why were we allowed to
-      pick one specific meaning to use for "if ..., then ..."? But
+      pick one specific meaning to use for “if &hellip;, then &hellip;”? But
       then again, I didn't have the same problem with the logical OR
       connective: it always meant
       the <a href="https://mathworld.wolfram.com/InclusiveDisjunction.html">inclusive
@@ -97,7 +97,7 @@
 
       <p>For a logical connective like OR, there is no debate about
       whether it can be represented as a binary operation on the truth
-      values of sentences. Sure, we might debate whether our "or"
+      values of sentences. Sure, we might debate whether our “or”
       should be inclusive or exclusive, but in either case, it is
       clear that this concept can be represented as one of two columns
       in a truth table:</p>
@@ -123,7 +123,7 @@
       </table>
 
       <p>The same cannot be said for the conditional statement! It is
-      true that "if P, then Q" is a statement involving P and Q. But
+      true that “if P, then Q” is a statement involving P and Q. But
       is this statement really a function of the <em>truth values</em>
       of P and Q? Or could it depend on the <em>contents</em> of P and
       Q?</p>
@@ -166,8 +166,8 @@
       think very carefully to avoid this kind of conflation.</p>
 
       <p>
-        Looking at the statement "if
-      \(P\), then Q", we currently have two different mental models of
+        Looking at the statement “if
+      \(P\), then Q”, we currently have two different mental models of
       it:</p>
 
       <ol>
@@ -180,30 +180,30 @@
         saying that once we have P, we are allowed to have Q.</li>
       </ol>
 
-      <p>Intuitively, we think of "if P, then Q" as a rule telling us
+      <p>Intuitively, we think of “if P, then Q” as a rule telling us
       that whenever in an argument we've shown P to be true, then we
       also get to say that Q is true. <em>A priori</em>, this has very
       little to do with the statement \(P \implies Q\) as defined by
       the truth table! This is just another way of stating that we
-      aren't sure yet whether our intuitive notion of "if P, then Q"
+      aren't sure yet whether our intuitive notion of “if P, then Q”
       can be represented in a truth table.</p>
 
 
-      <p>So, <em>are</em> these two meanings of "if P, then Q"
+      <p>So, <em>are</em> these two meanings of “if P, then Q”
       related? It turns out, there is a very satisfying connection: we
       can make the inference from P to Q exactly when the statement
       \(P \implies Q\) is true. In other words, our intuitive notion
-      of "if P, then Q" coincides perfectly with the truth-table
+      of “if P, then Q” coincides perfectly with the truth-table
       definition of implication!</p>
 
-      <p>"Huh?" you might say. "How could our intuitive notion
+      <p>“Huh?” you might say. “How could our intuitive notion
       coincide with the truth table one? Didn't we go on at length in
       the introduction about how unintuitive the implication is? How
-      can it be both intuitive and unintuitive?" This is a good point,
+      can it be both intuitive and unintuitive?” This is a good point,
       and we will come back to it soon! But first, let's try to prove
       this result.</p>
 
-      <p>To prevent us from conflating the two meanings of "implies", in
+      <p>To prevent us from conflating the two meanings of “implies”, in
       our proof, let's use \(\lnot P \lor Q\) instead of \(P \implies
       Q\). By inspecting the truth table, we see that the two are the
       same:</p>
@@ -230,13 +230,13 @@
       </table>
 
       <p>To summarize, the result we are trying to show is the
-      following: Our intuitive meaning of "if P, then Q", i.e., that
+      following: Our intuitive meaning of “if P, then Q”, i.e., that
       from P we can derive Q, is true if and only if the material
       conditional \(P \implies Q\) (which is equivalent to \(\lnot P
       \lor Q\)) is true.</p>
 
-      <p>Let's first suppose that our intuitive meaning of "if P, then
-      Q" is true. In other words, given P, we can derive Q. We want to
+      <p>Let's first suppose that our intuitive meaning of “if P, then
+      Q” is true. In other words, given P, we can derive Q. We want to
       show that \(\lnot P \lor Q\) is true. We have two cases, \(P\)
       or \(\lnot P\). Suppose first that \(P\) is true. Then by our
       assumption, we are allowed to derive Q. Since we know that Q is
@@ -259,10 +259,10 @@
       proof, and hence the result.</p>
 
       <p>The above result justifies calling \(\implies\) the
-      "implies" connective, and treating the sentence \(P \implies Q\)
-      the same as we would the claim that "if P, then Q". In a way, it
-      is amazing that "if P, then Q" can be captured by a logical
-      connective! The statement "if P, then Q" at first seems much
+      “implies” connective, and treating the sentence \(P \implies Q\)
+      the same as we would the claim that “if P, then Q”. In a way, it
+      is amazing that “if P, then Q” can be captured by a logical
+      connective! The statement “if P, then Q” at first seems much
       more fuzzy, something we use in an argument but that can't be
       formalized so simply.</p>
 
@@ -322,6 +322,10 @@
       numbers using letters like \(a, b, c, \ldots\)&nbsp;.</p>
 
       <p>You are also familiar with how we can form new statements using existing statements. For example, the statement "both \(P\) and \(Q\) are true" is itself a statement. This kind of claim comes up so often that </p>
+
+      of course, in this post we've been talking about these things
+      somewhat loosely. but this same style of reasoning can be taken
+      further and leads to the field of mathematical logic.
 
       <h2 id="conclusion">Conclusion and flashcards</h2>
 
