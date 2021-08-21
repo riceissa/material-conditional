@@ -91,6 +91,14 @@
       confused why the truth table for the material conditional is the
       way it is.</p>
 
+      <p>Finally, one small terminological note: in this post I use
+      “material conditional”, “conditional”, and “implication”
+      interchangeably. In some contexts people distinguish the
+      “material” conditional from other kinds of conditionals, and in
+      such places these terms can’t be used interchangeably, but we
+      will not be encountering any other conditionals in this post, so
+      it is safe to switch around if one sounds more natural than the
+      others.</p>
 
       <h2 id="material-conditional">The material conditional
         <a href="#material-conditional" class="heading-marker">#</a>
@@ -103,12 +111,15 @@
       have no problem with the other connectives so there must
       be <em>some</em> difference we can identify. And, in my opinion,
       it is this difference that makes people so uncomfortable about
-      the truth table for the conditional.</p>
+      the truth table for the conditional. If you feel so inclined, I
+      think this is a good exercise to attempt before reading on. It
+      will give you practice peeking into your own mind and trying to
+      pinpoint a subtle distinction your mind is making.</p>
 
-      <p>For a logical connective like OR, there is no debate about
-      whether it can be represented as a binary operation on the truth
-      values of sentences. Sure, we might debate whether our “or”
-      should be inclusive or exclusive, but in either case, it is
+      <p>Now, for a logical connective like OR, there is no debate
+      about whether it can be represented as a binary operation on the
+      truth values of sentences. Sure, we might debate whether our
+      “or” should be inclusive or exclusive, but in either case, it is
       clear that this concept can be represented as one of two columns
       in a truth table:</p>
 
@@ -134,14 +145,15 @@
 
       <p>The same cannot be said for the conditional statement! It is
       true that “if \(P\), then \(Q\)” is a statement involving \(P\)
-      and \(Q\). But is this statement really a function of
-      the <em>truth values</em> of \(P\) and \(Q\)? Or could it depend
-      on the <em>contents</em> of \(P\) and \(Q\)?</p>
+      and \(Q\), which we presume has some truth value. But is this
+      statement really a function of the <em>truth values</em> of
+      \(P\) and \(Q\)? Or could it depend on the <em>contents</em> of
+      \(P\) and \(Q\)?</p>
 
-      <p>Let me stress this point by bringing in another unrelated
-      example: Consider two functions, \(f\) and \(g\), both defined
-      on pairs of numbers. We define \(f(x,y) =
-      \operatorname{sgn}(xy)\), where \(\operatorname{sgn}\) is
+      <p>Let me stress this point by bringing in an unrelated example:
+      Consider two functions, \(f\) and \(g\), both defined on pairs
+      of numbers. We define \(f(x,y) = \operatorname{sgn}(xy)\), where
+      \(\operatorname{sgn}\) is
       the <a href="https://en.wikipedia.org/wiki/Sign_function">sign
       function</a> that returns \(1\) when a number is positive, \(0\)
       when it is the number \(0\), and \(-1\) when a number is
@@ -164,25 +176,26 @@
       actually be represented in a truth table.</p>
 
       <p>We can make the above point in a slightly different way: As
-      humans, we tend to <em>conflate</em> things in order to simplify
-      our thinking. But in math, it is important to pay attention to
-      one’s mental representations of things and to not conflate
-      things that are actually distinct. This sort of thing happen in
-      mathematics all the time. We might, for example, introduce a
-      relation called \(\leq\) on some class of objects. But just
-      because it looks like an inequality, we cannot assume that it is
-      reflexive or transitive or has any of the properties we normally
-      associate with an inequality relation! A mathematician has to
-      think very carefully to avoid this kind of conflation.</p>
+      humans, we tend to <em>conflate</em> similar-seeming things in
+      order to simplify our thinking. But in math, it is important to
+      pay attention to one’s mental representations of things and to
+      not conflate things that are actually meaningfully distinct.
+      This sort of thing happens in mathematics all the time. We
+      might, for example, introduce a relation called \(\leq\) on some
+      class of objects. But just because it looks like an inequality,
+      we cannot assume that it is reflexive or transitive or has any
+      of the properties we normally associate with an inequality
+      relation! A mathematician has to think very carefully to avoid
+      this kind of conflation.</p>
 
       <p>Looking at the statement “if \(P\), then \(Q\)”, we currently
       have two different mental models of it:</p>
 
       <ol>
         <li>The mysterious new meaning textbooks are forcing on us:
-        The logical connective \(\implies\), which turns it into a
-        sentence with a specific truth value, described by the truth
-        table.</li>
+        The logical connective \(\implies\), which takes two sentences
+        and turns them into a third sentence with a specific truth
+        value, as described by the truth table.</li>
 
         <li>A much more familiar meaning: As a rule of inference
         saying that once we have \(P\), we are allowed to have
@@ -252,11 +265,11 @@
       true. Then by our assumption, we are allowed to derive \(Q\).
       Since we know that \(Q\) is true, we know that at least one of
       \(Q\) or \(\lnot P\) is true, so \(\lnot P \lor Q\) is true.
-      Next suppose that \(\lnot P\). This case is even simpler: since
-      \(\lnot P\) is already true, we know that at least one of
-      \(\lnot P\) or \(Q\) is true, so \(\lnot P \lor Q\) is true. In
-      either case, we have shown that \(\lnot P \lor Q\) is true. This
-      completes this direction of the proof.</p>
+      Next suppose that \(\lnot P\) is true. This case is even
+      simpler: since \(\lnot P\) is already true, we know that at
+      least one of \(\lnot P\) or \(Q\) is true, so \(\lnot P \lor Q\)
+      is true. In either case, we have shown that \(\lnot P \lor Q\)
+      is true. This completes the first direction of the proof.</p>
 
       <p>Next we show that if \(\lnot P \lor Q\) is true, then given
       \(P\) we can derive \(Q\). So let’s suppose we are given \(P\).
@@ -265,8 +278,8 @@
       we have both \(P\) and \(\lnot Q\). This contradicts \(\lnot P
       \lor Q\), which states that at least one of \(\lnot P\) or \(Q\)
       is true. This contradiction shows that our assumption that \(Q\)
-      is false was in error, so \(Q\) must be true. This completes
-      this direction of the proof, and hence the result.</p>
+      is false was in error, so \(Q\) must be true. This completes the
+      other direction of the proof, and hence we have the result.</p>
 
       <p>The above result justifies calling \(\implies\) the “implies”
       connective, and treating the sentence \(P \implies Q\) the same
@@ -274,7 +287,9 @@
       is amazing that “if \(P\), then \(Q\)” can be captured by a
       logical connective! The statement “if \(P\), then \(Q\)” at
       first seems much more fuzzy, something we use in an argument but
-      that can’t be formalized so simply.</p>
+      that can’t be formalized so simply&mdash;something that we
+      would expect depends on the <em>meanings</em> of the sentences
+      and not just their truth values.</p>
 
       <p></p>
 
@@ -316,15 +331,6 @@
       is potentially just a wild and useless idea!) is sufficient to keep
       you interested.</p>
 
-      <p>So how do we go about mathematically analyzing mathematical
-      reasoning? As in many situations in math, it’s easiest if we
-      have an example to work with. Let’s look at an argument showing
-      that every integer (i.e., the positive and negative whole
-      numbers together with zero) is exactly one of even or odd. You
-      might think this is too obvious, and that’s okay! The point
-      right now isn’t to discover <em>new</em> mathematics, but rather
-      to examine the familiar in a new way. For that, an example that
-      seems too simple is perfect.</p>
 
 
       <p>We can represent entire mathematical statements using letters
