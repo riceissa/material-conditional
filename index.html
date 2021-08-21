@@ -62,15 +62,15 @@
 
       <p>As a beginner to math, I spent many <em>years</em> being
       confused about this. Just to give one aspect of my confusion,
-      the explanation in terms of promises didn't make sense because
-      while it was true that one didn't break the promise if the
-      antecedent is false, it's also not clear that one has actually
+      the explanation in terms of promises didn’t make sense because
+      while it was true that one didn’t break the promise if the
+      antecedent is false, it’s also not clear that one has actually
       kept the promise, or that one <em>would have</em> kept the
       promise. It also seemed suspicious that we were picking one
       specific way in which “if &hellip;, then &hellip;” was used in natural
       language and ignoring all the others. Why were we allowed to
       pick one specific meaning to use for “if &hellip;, then &hellip;”? But
-      then again, I didn't have the same problem with the logical OR
+      then again, I didn’t have the same problem with the logical OR
       connective: it always meant
       the <a href="https://mathworld.wolfram.com/InclusiveDisjunction.html">inclusive
       OR</a> in math, and I was fine to accept that. So why was I so
@@ -83,7 +83,7 @@
       the usual truth table without understanding it because it just
       seemed to work. Many years later, I eventually hit upon the core
       of my confusion, and also a way to resolve this confusion. This
-      is what I'd like to explain in this post.</p>
+      is what I’d like to explain in this post.</p>
 
       <p>In keeping with the above, the audience for this post is
       someone who has written some proofs before and has seen
@@ -98,7 +98,7 @@
 
       <p>So why does the conditional statement \(P \implies Q\) have
       the truth table that it does? In order to answer this question,
-      let's think about what makes implication different from the
+      let’s think about what makes implication different from the
       other logical connectives like NOT, AND, and OR. After all, we
       have no problem with the other connectives so there must
       be <em>some</em> difference we can identify. And, in my opinion,
@@ -166,7 +166,7 @@
       <p>We can make the above point in a slightly different way: As
       humans, we tend to <em>conflate</em> things in order to simplify
       our thinking. But in math, it is important to pay attention to
-      one's mental representations of things and to not conflate
+      one’s mental representations of things and to not conflate
       things that are actually distinct. This sort of thing happen in
       mathematics all the time. We might, for example, introduce a
       relation called \(\leq\) on some class of objects. But just
@@ -190,11 +190,11 @@
       </ol>
 
       <p>Intuitively, we think of “if \(P\), then \(Q\)” as a rule
-      telling us that whenever in an argument we've shown \(P\) to be
+      telling us that whenever in an argument we’ve shown \(P\) to be
       true, then we also get to say that \(Q\) is true. <em>A
       priori</em>, this has very little to do with the statement \(P
       \implies Q\) as defined by the truth table! This is just another
-      way of stating that we aren't sure yet whether our intuitive
+      way of stating that we aren’t sure yet whether our intuitive
       notion of “if \(P\), then \(Q\)” can be represented in a truth
       table.</p>
 
@@ -207,14 +207,14 @@
       with the truth-table definition of implication!</p>
 
       <p>“Huh?” you might say. “How could our intuitive notion
-      coincide with the truth table one? Didn't we go on at length in
+      coincide with the truth table one? Didn’t we go on at length in
       the introduction about how unintuitive the implication is? How
       can it be both intuitive and unintuitive?” This is a good point,
-      and we will come back to it soon! But first, let's try to prove
+      and we will come back to it soon! But first, let’s try to prove
       this result.</p>
 
       <p>To prevent us from conflating the two meanings of “implies”, in
-      our proof, let's use \(\lnot P \lor Q\) instead of \(P \implies
+      our proof, let’s use \(\lnot P \lor Q\) instead of \(P \implies
       Q\). By inspecting the truth table, we see that the two are the
       same:</p>
 
@@ -245,7 +245,7 @@
       if the material conditional \(P \implies Q\) (which is
       equivalent to \(\lnot P \lor Q\)) is true.</p>
 
-      <p>Let's first suppose that our intuitive meaning of “if \(P\),
+      <p>Let’s first suppose that our intuitive meaning of “if \(P\),
       then \(Q\)” is true. In other words, given \(P\), we can derive
       \(Q\). We want to show that \(\lnot P \lor Q\) is true. We have
       two cases, \(P\) or \(\lnot P\). Suppose first that \(P\) is
@@ -259,7 +259,7 @@
       completes this direction of the proof.</p>
 
       <p>Next we show that if \(\lnot P \lor Q\) is true, then given
-      \(P\) we can derive \(Q\). So let's suppose we are given \(P\).
+      \(P\) we can derive \(Q\). So let’s suppose we are given \(P\).
       Our goal now is to show that \(Q\) is true. Can \(Q\) be false?
       Suppose for the sake of contradiction that \(Q\) is false. Then
       we have both \(P\) and \(\lnot Q\). This contradicts \(\lnot P
@@ -274,14 +274,14 @@
       is amazing that “if \(P\), then \(Q\)” can be captured by a
       logical connective! The statement “if \(P\), then \(Q\)” at
       first seems much more fuzzy, something we use in an argument but
-      that can't be formalized so simply.</p>
+      that can’t be formalized so simply.</p>
 
       <p></p>
 
       <h2 id="propositional-logic">Why propositional logic? <a href="#propositional-logic" class="heading-marker">#</a> <a href="#toc" class="heading-marker">↩︎</a></h2>
 
-      <p>Now that we've hopefully demystified the material
-      conditional, let's zoom out a bit an look at propositional logic
+      <p>Now that we’ve hopefully demystified the material
+      conditional, let’s zoom out a bit an look at propositional logic
       more generally. What have we accomplished? Why should we
       care?</p>
 
@@ -304,7 +304,7 @@
 
       <p>Why might we want to do this? Well, mathematicians are a
       weird and curious people, and delight in getting all
-      self-referential to see what happens. It's also a fairly natural
+      self-referential to see what happens. It’s also a fairly natural
       thought: as mathematicians, we have been reasoning in a
       particular way and gotten used to it. It has become our "hammer"
       and we see "nails" everywhere. From this perspective, our own
@@ -317,12 +317,12 @@
       you interested.</p>
 
       <p>So how do we go about mathematically analyzing mathematical
-      reasoning? As in many situations in math, it's easiest if we
-      have an example to work with. Let's look at an argument showing
+      reasoning? As in many situations in math, it’s easiest if we
+      have an example to work with. Let’s look at an argument showing
       that every integer (i.e., the positive and negative whole
       numbers together with zero) is exactly one of even or odd. You
-      might think this is too obvious, and that's okay! The point
-      right now isn't to discover <em>new</em> mathematics, but rather
+      might think this is too obvious, and that’s okay! The point
+      right now isn’t to discover <em>new</em> mathematics, but rather
       to examine the familiar in a new way. For that, an example that
       seems too simple is perfect.</p>
 
@@ -333,7 +333,7 @@
 
       <p>You are also familiar with how we can form new statements using existing statements. For example, the statement "both \(P\) and \(Q\) are true" is itself a statement. This kind of claim comes up so often that </p>
 
-      of course, in this post we've been talking about these things
+      of course, in this post we’ve been talking about these things
       somewhat loosely. but this same style of reasoning can be taken
       further and leads to the field of mathematical logic.
 
@@ -349,7 +349,7 @@
 
       <p>This concludes our investigation into the material conditional.</p>
 
-      <p>But that's not all! This text is written in the mnemonic medium blah blah</p>
+      <p>But that’s not all! This text is written in the mnemonic medium blah blah</p>
 
       <p>
       TODO: things to add:
