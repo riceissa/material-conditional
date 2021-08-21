@@ -212,7 +212,55 @@
       and we will come back to it soon! But first, let's try to prove
       this result.</p>
 
-      <p>
+      <p>To help us from conflating the two meanings of "implies", in
+      our proof, let's use \(\lnot P \lor Q\) instead of \(P \implies
+      Q\). By inspecting the truth table, we see that the two are the
+      same:</p>
+
+
+      <table>
+        <thead>
+          <tr><th>P</th> <th>Q</th> <th>\(\lnot P\)</th> <th>\(\lnot P \lor Q\)</th> <th>\(P \implies Q\)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p>Let's first suppose that our intuitive meaning of "if P, then
+      Q" is true. In other words, given P, we can derive Q. We want to
+      show that \(\lnot P \lor Q\) is true. We have two cases, \(P\)
+      or \(\lnot P\). Suppose first that \(P\) is true. Then by our
+      assumption, we are allowed to derive Q. Since we know that Q is
+      true, we know that at least one of Q or \(\lnot P\) is true, so
+      \(\lnot P \lor Q\) is true. Next suppose that \(\lnot P\). This
+      case is even simpler: since \(\lnot P\) is already true, we know
+      that at least one of \(\lnot P\) or \(Q\) is true, so \(\lnot P
+      \lor Q\) is true. In either case, we have shown that \(\lnot P
+      \lor Q\) is true. This completes this direction of the
+      proof.</p>
+
+      <p>Next we show that if \(\lnot P \lor Q\) is true, then given P
+      we can derive Q. So let's suppose we are given P. Our goal now
+      is to show that Q is true. Can Q be false? Suppose for the sake
+      of contradiction that Q is false. Then we have both P and
+      \(\lnot Q\). This contradicts \(\lnot P \lor Q\), which states
+      that at least one of \(\lnot P\) or \(Q\) is true. This
+      contradiction shows that our assumption that Q is false was in
+      error, so Q must be true. This completes this direction of the
+      proof, and hence the result.</p>
 
 
       <p>
