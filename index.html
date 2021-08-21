@@ -170,15 +170,51 @@
         </tbody>
       </table>
 
+      <p>The problem is that with the conditional statement, this is
+      not obvious.</p>
+
       <p>In math, it is important to pay attention to your mental representations of things and to not conflate different things</p>
 
       <p>Looking at "if \(P\), then Q", we have two different interpretations/mental models of it:</p>
 
       <p>
-        1. The mysterious new meaning textbooks are forcing on us: The logical connective \(\implies\), which turns it into a sentence with a specific truth value, described by the truth table.
+        1. The mysterious new meaning textbooks are forcing on us: The logical connective \(\implies\), which turns it into a sentence with a specific truth value, described by the truth table.</p>
 
-        <p>A much more familiar meaning:
-      2. As a rule of inference saying that once we have P, we are allowed to have Q.
+      <p>A much more familiar meaning: 2. As a rule of inference
+        saying that once we have P, we are allowed to have Q.</p>
+
+      <p>Intuitively, we think of "if P, then Q" as a rule telling us
+      that whenever in an argument we've shown P to be true, then we
+      also get to say that Q is true. A priori, this has very little
+      to do with the statement \(P \implies Q\) as defined by the
+        truth table!</p>
+
+      <p>We should in general be suspicious of linguistic games such
+      as this. Similar things happen in mathematics all the time. We
+      might, for example, introduce a relation called \(\leq\) on some
+      class of objects. But just because it looks like an inequality,
+      we cannot assume that it is reflexive or transitive or has any
+      of the properties we normally associate with an inequality
+      relation! A mathematician has to think very carefully to avoid
+      this kind of conflation.</p>
+
+      <p>So, <em>are</em> these two meanings of "if P, then Q"
+      related? It turns out, there is a very satisfying connection: we
+      can make the inference from P to Q exactly when the statement
+      \(P \implies Q\) is true. In other words, our intuitive notion
+      of "if P, then Q" coincides perfectly with the truth-table
+      definition of implication.</p>
+
+      <p>"Huh?" you might say. "How could our intuitive notion
+      coincide with the truth table one? Didn't we go on at length in
+      the introduction about how unintuitive the implication is? How
+      can it be both intuitive and unintuitive?" This is a good point,
+      and we will come back to it soon! But first, let's try to prove
+      this result.</p>
+
+      <p>
+
+
       <p>
       TODO: things to add:
       - it's a fascinating fact that mathematical reasoning itself has such a concise formal description. we can easily imagine alternative worlds in which this was not the case, where mathematical reasoning itself is very complicated and messy even though the objects we study are simple formal systems.
