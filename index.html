@@ -60,11 +60,15 @@
       \(\lor\) (OR). Everything goes well until the logical connective
       \(\implies\) (IMPLIES) for the material conditional is
       introduced. Why does a false statement imply everything? This is
-      usually explained quite poorly, e.g., in terms of promises: a
-      false antecedent means the condition of the promise never
-      arises, so one automatically keeps the promise.</p>
-
-      <!-- TODO: probably needs an example of a promise, to make this more concrete -->
+      usually explained quite poorly, e.g., in terms of promises. For
+      instance, “if the Moon is made of cheese, then \(1+1=3\)” is
+      interpreted in terms of the promise that \(1+1=3\) as long as
+      the Moon is made of cheese; but since the Moon is not made of
+      cheese, we can’t say that the promise was broken, and so we say
+      that the promise was kept. In this way, a false antecedent (the
+      part of the conditional appearing after “if&nbsp;&hellip;”)
+      means the condition of the promise never arises, so one
+      automatically keeps the promise.</p>
 
       <p>As a beginner to math, I spent many <em>years</em> being
       confused about this. Just to give one aspect of my confusion,
@@ -86,11 +90,11 @@
       mind, confused about <em>why</em> I was confused; I had trouble
       articulating my own confusion.</p>
 
-      <p>Like many students of math, I eventually decided to accept
-      the usual truth table without understanding it because it just
-      seemed to work. Many years later, I eventually hit upon the core
-      of my confusion, and also a way to resolve this confusion. This
-      is what I’d like to explain in this post.</p>
+      <p>Like many students of mathematics, I eventually decided to
+      accept the usual truth table without understanding it because it
+      just seemed to work. Many years later, I eventually hit upon the
+      core of my confusion, and also a way to resolve this confusion.
+      This is what I’d like to explain in this post.</p>
 
       <p>In keeping with the above, the audience for this post is
       someone who has written some proofs before and has seen
@@ -101,11 +105,11 @@
       <p>Finally, one small terminological note: in this post I use
       “material conditional”, “conditional”, and “implication”
       interchangeably. In some contexts people distinguish the
-      “material” conditional from other kinds of conditionals, and in
-      such places these terms can’t be used interchangeably, but we
-      will not be encountering any other conditionals in this post, so
-      it is safe to switch around if one sounds more natural than the
-      others.</p>
+      <em>material</em> conditional from other kinds of conditionals,
+      and in such places these terms can’t be used interchangeably,
+      but we will not be encountering any other conditionals in this
+      post, so it is safe to switch around if one phrase sounds more
+      natural than the others.</p>
 
       <h2 id="material-conditional">The material conditional
         <a href="#material-conditional" class="heading-marker">#</a>
@@ -175,12 +179,16 @@
       analogous way, a statement involving two other statements may
       depend on just the truth values of the input statements, or it
       may depend more specifically on the contents of the input
-      statements.</p>
+      statements&mdash;what those statements are
+      actually <em>saying</em>.</p>
 
       <p>A logical connective can only be represented in a truth table
-      if it depends solely on the truth values of the inputs. So at
-      the moment it is not clear whether the conditional statement can
-      actually be represented in a truth table.</p>
+      if it depends solely on the truth values of the inputs; this is
+      because the rows of the truth table alternate between all the
+      permutations of <em>truth values</em> that the input sentences
+      can have, without reference to what those sentences are saying.
+      So at the moment it is not clear whether the conditional
+      statement can actually be represented in a truth table.</p>
 
       <p>We can make the above point in a slightly different way: As
       humans, we tend to <em>conflate</em> similar-seeming things in
@@ -258,8 +266,8 @@
       </table>
 
       <p>To summarize, the result we are trying to show is the
-      following: Our intuitive meaning of “if \(P\), then \(Q\)”,
-      i.e., that from \(P\) we can derive \(Q\), is true if and only
+      following: Our intuitive meaning of “if \(P\), then \(Q\)”
+      (i.e., that from \(P\) we can derive \(Q\)) is true if and only
       if the material conditional \(P \implies Q\) (which is
       equivalent to \(\lnot P \lor Q\)) is true. If you feel excited
       at this point, I think it’s a good idea to try to prove this
@@ -298,9 +306,23 @@
       expect depends on the <em>meanings</em> of the sentences and not
       just their truth values.</p>
 
-      <!-- TODO: say more about how this also justifies that if we start with P, then show Q, we can conclude P implies Q. and that if we are given P and P implies Q, then we can derive Q. -->
-
-      <!-- TODO: talk about vacuous implication; go back to how in the beginning, the confusion was specifically about how false implies everything. -->
+      <p>Let’s return to the example from the start of this post, “if
+      the Moon is made of cheese, then \(1+1=3\)”. Since the
+      antecedent is false, this is an example of
+      a <a href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuous
+      truth</a>. Can we now make sense of this statement given the
+      result we showed above? One approach is to run through part of
+      the proof again, but using the concrete statements that we have
+      instead of the letters \(P\) and \(Q\). We know that the Moon is
+      not made of cheese, so “the Moon is not made of cheese or
+      \(1+1=3\)” is true. But now suppose in addition that the
+      Moon <em>were</em> made of cheese. Could we now say that
+      \(1+1\ne 3\)? If we did, this would contradict what we said
+      above, that either the Moon is not made of cheese or \(1+1=3\).
+      So we have no choice but to conclude that \(1+1=3\). But now
+      notice that we started with the assumption that the Moon is made
+      of cheese, and derived \(1+1=3\), so we have shown “if the Moon
+      is made of cheese, then \(1+1=3\)”!</p>
 
       <h2 id="propositional-logic">Why propositional logic?
         <a href="#propositional-logic" class="heading-marker">#</a>
@@ -361,9 +383,9 @@
       be both intuitive and unintuitive, and that this seems
       contradictory. But a little reflection shows that this sort of
       thing happens all the time in math. In fact, one way of thinking
-      of math is to take things that seems awfully unintuitive or
-      confusing, and then stare at it in just the right way so as to
-      make it totally obvious.</p>
+      of math is to take things that seem awfully unintuitive or
+      confusing, and then stare at them in just the right way so as to
+      make them totally obvious.</p>
 
       <p>It’s a fascinating fact that the conditional statement (and
       mathematical reasoning more generally) has such a concise formal
@@ -383,15 +405,12 @@
       repetition</a>), this allows you to efficiently retain your
       understanding of this post.</p>
 
-      <!-- TODO: remember to remove the debug when submitting -->
-
       <orbit-reviewarea color="cyan" debug>
         <orbit-prompt
           question="Why is an explanation of the material conditional in terms of promises not convincing?"
           answer="There are many potential answers, but here are two:
 
 1. It's not entirely clear that the promise has been kept if the condition never arises.
-
 2. It's not clear why we are allowed to take one specific ordinary usage of “if&nbsp;&hellip;, then&nbsp;&hellip;” while ignoring all the others."
         ></orbit-prompt>
         <orbit-prompt
@@ -399,20 +418,17 @@
           answer="inclusive OR"
         ></orbit-prompt>
         <orbit-prompt
-          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (truth tables)"
+          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)"
           answer="It's not clear that the meaning of the conditional can be captured by a truth table."
         ></orbit-prompt>
         <orbit-prompt
-          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (intuitive rule of inference)"
-          answer="We have both the rule-of-inference and truth table interpretation of the conditional, and it's not clear the two are the same."
+          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of intuitive rule of inference)"
+          answer="We have both the rule-of-inference and truth table interpretations of the conditional, and it's not clear the two are the same."
         ></orbit-prompt>
         <orbit-prompt
-          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR?"
-          answer="Two possible ways to phrase this are:
-
-1. It's not clear that the meaning of the conditional can be captured by a truth table.
-
-2. We have both the rule-of-inference and truth table interpretation of the conditional, and it's not clear the two are the same."
+          question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like NOT, AND, and OR?"
+          answer="1. truth table representability
+2. equivalence of the rule-of-inference and truth table interpretations of the conditional"
         ></orbit-prompt>
         <orbit-prompt
           question="What does the fact that a logical connective only depends on the truth values of its inputs mean in terms of a truth table?"
@@ -424,7 +440,7 @@
         ></orbit-prompt>
         <orbit-prompt
           question="To prevent us from conflating $P \implies Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?"
-          answer="We replaced it with $\lnot P \lor Q$, which has the same truth table entries as $P \implies Q$"
+          answer="We replaced $P\implies Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \implies Q$"
         ></orbit-prompt>
         <orbit-prompt
           question="Why can propositional logic be seen as an example of recursion/self-reference/meta?"
