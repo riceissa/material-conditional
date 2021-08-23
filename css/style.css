@@ -16,13 +16,16 @@ article {
 h1 { font-size: 150%; }
 h2 { font-size: 120%; }
 
+a:link { color: #1287e0; }
+a:visited { color: #a972b5; }
+
 a.heading-marker {
   font-size: 60%;
   text-decoration: none;
   color: #cccccc;
 }
 
-h2:hover a { color: blue; }
+h2:hover a { color: #1287e0; }
 
 table {
   border-bottom: 2px solid #777777;
