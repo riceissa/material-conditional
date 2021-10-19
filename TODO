@@ -8,7 +8,6 @@
 - "if the moon is made of cheese, then 1+1=3" is an example of a {vacuous truth}
 - might be interesting to read other explanations of the conditional, and then ask questions from _those_; the idea is that if you fully/globally understand the conditional, then you ought to be able to answer these questions even if nothing in the text actually directly touches on those things.
 - add appendix about what the proofs in the piece are doing from a mathematical logic perspective (is it a semantic proof of the deduction theorem?)? why doesn't one side of the proof look just like a typical inductive proof of the deduction theorem? to what extent can my proofs be replicated inside a formal system?
-  - maybe ask on math SE about why my proof wouldn't work inside a formal system.
 - look at the deleted sections from when i originally wrote this essay, and see if i should incorporate them into an appendix (i think there was one part where i wrote this really long proof that every integer is exactly one of even or odd, as an example of mathematical reasoning, and another part where i started going into the mathematical logic aspect and deduction theorem; was there a third section i cut?).
 - when showing "P => Q" implies P |- Q, we can also do a "proof by truth table": look at the rows where both P and P => Q are true; this then forces you to also believe that Q is true. (this also works for converse)
 - Q: what are the columns in a truth table for P => Q?
