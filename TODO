@@ -15,3 +15,4 @@
 - Q: what are the columns in a truth table for P => Q?
   A: P, Q, P => Q (in that order)
 - Why is "=>" more confusing than AND, OR, NOT?
+- for appendix, say something like: In this essay, we've carefully made the distinction between one's intuitive sense of "If p, then q" and the truth-table sense of "If p, then q". It turns out that logicians have made several other distinctions like this. It would be far outside the scope of this essay to cover all of these in detail, but here we will attempt to give a taste of what happens in further logic. In particular, we'll try to explain what this essay did, in terms of mathematical logic.
