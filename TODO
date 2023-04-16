@@ -26,3 +26,4 @@
 - false implies anything is basically the statement-level version of the principle of explosion. so maybe what i need to do is to explain the principle of explosion too, or first, or something.
 - for some reason it's not possible to copy-paste the math symbols from the webpage of the essay. even google is not indexing the math symbols at all... is this some problem with mathjax 3?
 - i think the essay still doesn't quite explain why when P is false, it doesn't matter what Q is. show that "in every interpretation in which P is true, Q is also true" would be false if the truth table rows for P=false had some other stuff in it?
+- if i don't already say this at the end, make sure to say that this "treat math as a mechanical thing, treat it as an object of study in itself (rather than studying other objects like spheres or whatever)" is taken much further in mathematical logic.
