@@ -4,7 +4,6 @@
 
   q: what's it called when an implication has a false antecedent?
   a: vacuous truth
-- run mjpage over the html? i'm already loading fonts and orbit so the load-time won't really change. so i am leaning against. but... it might help with the firefox reader view problem.
 - "if the moon is made of cheese, then 1+1=3" is an example of a {vacuous truth}
 - might be interesting to read other explanations of the conditional, and then ask questions from _those_; the idea is that if you fully/globally understand the conditional, then you ought to be able to answer these questions even if nothing in the text actually directly touches on those things.
 - add appendix about what the proofs in the piece are doing from a mathematical logic perspective (is it a semantic proof of the deduction theorem?)? why doesn't one side of the proof look just like a typical inductive proof of the deduction theorem? to what extent can my proofs be replicated inside a formal system?
