@@ -46,4 +46,5 @@
     not-Q
     therefore, P
   it's almost like the above is obviously true. if that's the case, a syntactic natural deduction system seems like actually the more intuitive approach than the semantics-first approach!
-- i almost want to develop a typology of explanations of the material conditional. is it a semantics-first approach? is it a syntax-first approach? etc.
+- i almost want to develop a typology of explanations of the material conditional. is it a semantics-first approach? is it a syntax-first approach? etc. if syntax-first, you have the choice of natural deduction vs axiomatic.
+  the syntax-first approach maybe runs into problems when we talk about truth tables... you need to assign meaning. and you can't just say "it's true if you can prove it", since truth and provability are distinct notions. the syntactic approach *feels* more natural to me but it's arguably the wrong approach since it risks confusing truth and provability (by having the natural deduction rules, you're starting to talk about what we can prove, but in fact you're also like informally talking about what's true by saying things like "if P is true ..."). I think I maybe need to first talk about this distinction in the essay itself, or maybe an appendix.
