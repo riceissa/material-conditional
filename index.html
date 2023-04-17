@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-54694473-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-54694473-1');
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&amp;family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+    <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+
+    <link rel="canonical" href="https://riceissa.github.io/material-conditional/">
+    <meta property="og:title" content="Understanding the material conditional">
+    <meta property="og:site_name" content="Issa Rice">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta name="author" content="Issa Rice">
+    <meta name="dcterms.date" content="2021-08-22">
+    <title>Understanding the material conditional</title>
+
+  <style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-surd + .mjx-box {display: inline-flex}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor; overflow: visible}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MJXc-TeX-unknown-R {font-family: monospace; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: monospace; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: monospace; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: monospace; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style></head>
+  <body>
+    <article>
+      <h1>Understanding the material conditional</h1>
+      <p>by <a href="https://issarice.com/">Issa Rice</a></p>
+      <p>August 22, 2021</p>
+
+      <h2 id="toc">Table of contents</h2>
+      <ul>
+        <li><a href="#intro">Introduction and audience for this piece</a></li>
+        <li><a href="#material-conditional">The material conditional</a></li>
+        <li><a href="#propositional-logic">Why propositional logic?</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+
+      <h2 id="intro">Introduction and audience for this piece
+        <a href="#intro" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">↩︎</a></h2>
+
+      <p>In this essay we will explore the truth table of
+      the <a href="https://en.wikipedia.org/wiki/Material_conditional">material
+      conditional</a> (i.e., the “if&nbsp;…,
+      then&nbsp;…” statement used in math). Students first
+      learning formal logic or getting started with writing proofs are
+      introduced to the idea of truth tables along with the usual
+      logical connectives like <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span></span></span></span></span> (NOT), <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\land"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∧</span></span></span></span></span></span> (AND), and
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lor"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span></span></span></span></span> (OR). Everything goes well until the logical connective
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\implies"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span></span></span></span></span> (IMPLIES) for the material conditional is
+      introduced. Why does a false statement imply everything? This is
+      usually explained quite poorly, e.g., in terms of promises. For
+      instance, “if the Moon is made of cheese, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>” is
+      interpreted as the promise that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> as long as
+      the Moon is made of cheese; but since the Moon is not made of
+      cheese, we can’t say that the promise was broken, and so we say
+      that the promise was kept. In this way, a false antecedent (the
+      part of the conditional appearing after “if&nbsp;…”)
+      means the condition of the promise never arises, so one
+      automatically keeps the promise.</p>
+
+      <p>As a beginner to math, I spent many <em>years</em> being
+      confused about this. Just to give one aspect of my confusion,
+      the explanation in terms of promises didn’t make sense because
+      while it is true that one didn’t break the promise when the
+      antecedent is false, it’s also not clear that one has actually
+      kept the promise, or that one <em>would have</em> kept the
+      promise. It also seemed suspicious that we were picking one
+      specific way in which “if&nbsp;…, then&nbsp;…” was
+      used in natural language and ignoring all the others. Why were
+      we allowed to pick one specific meaning to use for
+      “if&nbsp;…, then&nbsp;…”? But then again, I didn’t
+      have the same problem with the logical OR connective: it always
+      meant
+      the <a href="https://mathworld.wolfram.com/InclusiveDisjunction.html">inclusive
+      OR</a> in math, and I was fine to accept that. So why was I so
+      confused about the material conditional? It seemed like I was
+      not only confused about the truth table, but also, inside my own
+      mind, confused about <em>why</em> I was confused; I had trouble
+      articulating my own confusion.</p>
+
+      <p>Like many students of mathematics, I eventually decided to
+      accept the usual truth table without understanding it because it
+      just seemed to work. Many years later, I eventually hit upon the
+      core of my confusion, and also a way to resolve this confusion.
+      This is what I’d like to explain in this essay.</p>
+
+      <p>In keeping with the above, the audience for this essay is
+      someone who has written some proofs before and has seen
+      propositional logic and truth tables, but who still feels
+      confused why the truth table for the material conditional is the
+      way it is.</p>
+
+      <p>One small terminological note: in this essay I use “material
+      conditional”, “conditional”, and “implication” interchangeably.
+      In some contexts people distinguish the
+      <em>material</em> conditional from other kinds of conditionals,
+      and in such places these terms can’t be used interchangeably,
+      but we will not be encountering any other conditionals in this
+      essay, so it is safe to switch around if one phrase sounds more
+      natural than the others. Similarly, we use “statement”,
+      “sentence”, and “proposition” interchangeably.</p>
+
+      <p>Finally, I know how difficult it is to learn <em>and
+      retain</em> math, so I have prepared some short questions for
+      you to answer throughout this essay to check your understanding.
+      If you sign up with your email address, you will get email
+      reminders to review these questions in the future. Since the
+      reminder emails will get more infrequent over time as your
+      understanding becomes more durable (this is known
+      as <a href="https://en.wikipedia.org/wiki/Spaced_repetition">spaced
+      repetition</a>), this allows you to efficiently retain your
+      understanding of this essay.</p>
+
+      <orbit-reviewarea color="cyan">
+        <orbit-prompt question="Why is an explanation of the material conditional in terms of promises not convincing?" answer="There are many potential answers, but here are two:
+
+1. It's not entirely clear that the promise has been (or would have been) kept if the condition never arises.
+2. It's not clear why we are allowed to take one specific ordinary usage of “if&nbsp;…, then&nbsp;…” while ignoring all the others."></orbit-prompt>
+        <orbit-prompt question="Which kind of logical OR is the default in math?" answer="inclusive OR"></orbit-prompt>
+      </orbit-reviewarea>
+
+      <h2 id="material-conditional">The material conditional
+        <a href="#material-conditional" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">↩︎</a></h2>
+
+      <p>So why does the conditional statement <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> have
+      the truth table that it does? In order to answer this question,
+      let’s think about what makes implication different from the
+      other logical connectives like NOT, AND, and OR. After all, we
+      have no problem with the other connectives so there must
+      be <em>some</em> difference we can identify. And, in my opinion,
+      it is this difference that makes people so uncomfortable about
+      the truth table for the conditional. If you feel so inclined, I
+      think this is a good exercise to attempt before reading on. It
+      will give you practice peeking into your own mind and trying to
+      pinpoint a subtle distinction your mind is already making.</p>
+
+      <p>Now, for a logical connective like OR, there is no debate
+      about whether it can be represented as a binary operation on the
+      truth values of sentences. Sure, we might debate whether our
+      “or” should be inclusive or exclusive, but in either case, it is
+      clear that this concept can be represented as one of two columns
+      in a truth table:</p>
+
+      <table>
+        <thead>
+          <tr><th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> inclusive-or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> exclusive-or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>T</td> <td>T</td> <td>T</td> <td>F</td>
+          </tr>
+          <tr>
+            <td>T</td> <td>F</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>T</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>F</td> <td>F</td> <td>F</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The same cannot be said for the conditional statement! It is
+      true that “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” is a statement involving <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>
+      and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>, which we presume has some truth value. But is this
+      statement really a function of the <em>truth values</em> of
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>? Or could it depend on the <em>contents</em> of
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>?</p>
+
+      <p>Let me stress this point by bringing in an unrelated example:
+      Consider two functions, <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="f"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.519em; padding-right: 0.06em;">f</span></span></span></span></span></span> and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="g"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;">g</span></span></span></span></span></span>, both defined on pairs
+      of numbers. We define <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="f(x,y) = \operatorname{sgn}(xy)"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.519em; padding-right: 0.06em;">f</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.144em; padding-bottom: 0.519em;">,</span></span><span class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.151em; padding-bottom: 0.519em;">sgn</span></span><span class="mjx-mo"><span class="mjx-char"></span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span></span></span></span></span>, where
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\operatorname{sgn}"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.151em; padding-bottom: 0.519em;">sgn</span></span></span></span></span></span> is
+      the <a href="https://en.wikipedia.org/wiki/Sign_function">sign
+      function</a> that returns <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span></span></span></span></span> when a number is positive, <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="0"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">0</span></span></span></span></span></span>
+      when it is the number <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="0"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">0</span></span></span></span></span></span>, and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="-1"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">−</span></span><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span></span></span></span></span> when a number is
+      negative. We define <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="g(x,y) = xy"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;">g</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.144em; padding-bottom: 0.519em;">,</span></span><span class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span></span></span></span></span> to be the product of the two
+      numbers. Thus for example <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="f(-2,3) = -1"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.519em; padding-right: 0.06em;">f</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">−</span></span><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">2</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.144em; padding-bottom: 0.519em;">,</span></span><span class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">−</span></span><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span></span></span></span></span> and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="g(-2,3) = -6"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;">g</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">−</span></span><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">2</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.144em; padding-bottom: 0.519em;">,</span></span><span class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">−</span></span><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">6</span></span></span></span></span></span>.
+      It can be shown that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\operatorname{sgn}(xy) =
+      \operatorname{sgn}(x)\operatorname{sgn}(y)"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.151em; padding-bottom: 0.519em;">sgn</span></span><span class="mjx-mo"><span class="mjx-char"></span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.151em; padding-bottom: 0.519em;">sgn</span></span><span class="mjx-mo"><span class="mjx-char"></span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.298em;">x</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span><span class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.151em; padding-bottom: 0.519em;">sgn</span></span><span class="mjx-mo"><span class="mjx-char"></span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.006em;">y</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span></span></span></span></span>, so the value of
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="f"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.519em; padding-right: 0.06em;">f</span></span></span></span></span></span> depends only on the sign of the inputs. This is analogous
+      to how the OR connective depends only on the truth values of the
+      input statements. (This is sometimes expressed by saying that the OR
+      connective is <em>truth-functional</em>. The term “truth-functional”
+      comes from the fact that the connective is a function of the truth
+      values, i.e., depends only on the truth values.)
+      On the other hand, the value of <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="g"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;">g</span></span></span></span></span></span> depends
+      on the actual values of the inputs, not just the sign. In an
+      analogous way, a statement involving two other statements may
+      depend on just the truth values of the input statements, or it
+      may depend more specifically on the contents of the input
+      statements—what those statements are
+      actually <em>saying</em>.</p>
+
+      <p>A logical connective can only be represented in a truth table
+      if it depends solely on the truth values of the inputs; this is
+      because the rows of the truth table alternate between all the
+      permutations of <em>truth values</em> that the input sentences
+      can have, without reference to what those sentences are saying.
+      So at the moment it is not clear whether the conditional
+      statement can actually be represented in a truth table.</p>
+
+      <p>We can make the above point in a slightly different way: As
+      humans, we tend to <em>conflate</em> similar-seeming things in
+      order to simplify our thinking. But in math, it is important to
+      pay attention to one’s mental representations of things and to
+      not conflate things that are actually meaningfully distinct.
+      This sort of thing happens in mathematics all the time. We
+      might, for example, introduce a relation called <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\leq"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.446em;">≤</span></span></span></span></span></span> on some
+      class of objects. But just because it looks like an inequality,
+      we cannot assume that it is reflexive or transitive or has any
+      of the properties we normally associate with an inequality
+      relation! A mathematician has to think very carefully to avoid
+      this kind of conflation.</p>
+
+      <p>Looking at the statement “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>”, we currently
+      have two different mental models of it:</p>
+
+      <ol>
+        <li>The mysterious new meaning textbooks are forcing on us:
+        The logical connective <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\implies"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span></span></span></span></span>, which takes two sentences
+        and turns them into a third sentence with a specific truth
+        value, as described by the truth table.</li>
+
+        <li>A much more familiar meaning: As a rule of inference
+        saying that once we have <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, we are allowed to have
+        <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>.</li>
+      </ol>
+
+      <p>Intuitively, we think of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” as a rule
+      telling us that whenever in an argument we’ve shown <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> to be
+      true, then we also get to say that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true. <em>A
+      priori</em>, this has very little to do with the statement <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P
+      \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> as defined by the truth table! This is just another
+      way of stating that we aren’t sure yet whether our intuitive
+      notion of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” can be represented in a truth
+      table.</p>
+
+      <p>So, <em>are</em> these two meanings of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>”
+      related? It turns out, there is a very satisfying connection: we
+      can make the inference from <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> to <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> exactly when the
+      statement <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true. In other words, our
+      intuitive notion of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” coincides perfectly
+      with the truth-table definition of implication!</p>
+
+      <p>“Huh?” you might say. “How could our intuitive notion
+      coincide with the truth table one? Didn’t we go on at length in
+      the introduction about how unintuitive the implication is? How
+      can it be both intuitive and unintuitive?” This is a good point,
+      and we will come back to it soon! But first, let’s try to prove
+      this result.</p>
+
+      <p>To prevent us from conflating the two meanings of “implies”,
+      in our proof, let’s use <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> instead of <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P
+      \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>. By inspecting the truth table, we see that the two
+      are the same:</p>
+
+      <table>
+        <thead>
+          <tr><th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th> <th><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>T</td> <td>T</td> <td>F</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>T</td> <td>F</td> <td>F</td> <td>F</td> <td>F</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>T</td> <td>T</td> <td>T</td> <td>T</td>
+          </tr>
+          <tr>
+            <td>F</td> <td>F</td> <td>T</td> <td>T</td> <td>T</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>To summarize, the result we are trying to show is the
+      following: Our intuitive meaning of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>”
+      (i.e., that from <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> we can derive <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>) is true if and only
+      if the material conditional <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> (which is
+      equivalent to <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>) is true. If you feel excited
+      at this point, I think it’s a good idea to try to prove this
+      result yourself.</p>
+
+      <p>Let’s first suppose that our intuitive meaning of “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>,
+      then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” is true. In other words, given <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, we can derive
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>. We want to show that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true. We have
+      two cases, <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>. Suppose first that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> is
+      true. Then by our assumption, we are allowed to derive <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>.
+      Since we know that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true, we know that at least one of
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> is true, so <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true.
+      Next suppose that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> is true. This case is even
+      simpler: since <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> is already true, we know that at
+      least one of <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true, so <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>
+      is true. In either case, we have shown that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>
+      is true. This completes the first direction of the proof.</p>
+
+      <p>Next we show that if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true, then given
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> we can derive <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>. So let’s suppose we are given <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>.
+      Our goal now is to show that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is true. Can <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> be false?
+      Suppose for the sake of contradiction that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> is false. Then
+      we have both <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>. This contradicts <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P
+      \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>, which states that at least one of <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>
+      is true. This contradiction shows that our assumption that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>
+      is false was in error, so <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> must be true. This completes the
+      other direction of the proof, and hence we have the result.</p>
+
+      <p>The above result justifies calling <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\implies"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span></span></span></span></span> the “implies”
+      connective, and treating the sentence <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \implies Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.225em; padding-bottom: 0.372em;">⟹</span></span><span class="mjx-mspace" style="width: 0.278em; height: 0px;"></span><span class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span> the same
+      as we would the claim that “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>”. In a way, it
+      is amazing that “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” can be captured by a
+      logical connective! The statement “if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>” at
+      first seems much more fuzzy, something we use in an argument but
+      that can’t be formalized so simply—something that we would
+      expect depends on the <em>meanings</em> of the sentences and not
+      just their truth values.</p>
+
+      <p>Let’s return to the example from the start of this essay, “if
+      the Moon is made of cheese, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>”. Since the
+      antecedent is false, this is an example of
+      a <a href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuous
+      truth</a>. Can we now make sense of this statement given the
+      result we showed above? One approach is to run through part of
+      the proof again, but using the concrete statements that we have
+      instead of (or in addition to) the letters <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span> and
+      <span style="white-space: nowrap;"><span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>.</span>
+      We know that the Moon is
+      not made of cheese (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>), so “the Moon is not made of cheese or
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>” (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>) is true. But now suppose in addition that the
+      Moon <em>were</em> made of cheese (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>). Could we now say that
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1\ne 3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">≠</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>)? If we did, this would
+      contradict what we said
+      above, that either the Moon is not made of cheese or
+      <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>).
+      So we have no choice but to conclude that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>). But now
+      notice that we started with the assumption that the Moon is made
+      of cheese (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>), and derived <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>),
+      so we have shown “if the Moon
+      is made of cheese, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>” (if <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>, then <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>)!</p>
+
+      <p>(You might say that in the above proof, at the step where we ask
+      whether we could say that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1\ne 3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">≠</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span> (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>), that of course we
+      could. That is also a valid approach. If you want to continue the proof
+      that way, we have that the Moon is made of cheese (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span></span></span></span></span>); <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1\ne 3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">≠</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>
+      (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>); and “the Moon is not made of cheese or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>”
+      (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot P \lor Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>). The first two of these can be combined into
+      “the Moon is made of cheese and <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1\ne 3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">≠</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>” (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="P \land \lnot Q"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∧</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span></span></span></span></span>),
+      which is equivalent to saying “it is not the case that either the
+      Moon is not made of cheese or <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>” (<span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="\lnot (\lnot P \lor Q)"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">(</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">¬</span></span><span class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.109em;">P</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.372em;">∨</span></span><span class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.519em; padding-bottom: 0.446em;">Q</span></span><span class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.446em; padding-bottom: 0.593em;">)</span></span></span></span></span></span>).
+      But now we have a contradiction. And
+      <a href="https://en.wikipedia.org/wiki/Principle_of_explosion">from a contradiction we can derive anything</a>,
+      including that <span class="mjpage"><span class="mjx-chtml"><span class="mjx-math" aria-label="1+1=3"><span class="mjx-mrow" aria-hidden="true"><span class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.446em;">+</span></span><span class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">1</span></span><span class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.077em; padding-bottom: 0.298em;">=</span></span><span class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.372em;">3</span></span></span></span></span></span>.)</p>
+
+      <orbit-reviewarea color="cyan">
+        <orbit-prompt question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)" answer="It's not clear that the meaning of the conditional can be captured by a truth table."></orbit-prompt>
+        <orbit-prompt question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of intuitive rule of inference)" answer="We have both the rule-of-inference and truth table interpretations of the conditional, and it's not clear the two are the same."></orbit-prompt>
+        <orbit-prompt question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like NOT, AND, and OR?" answer="1. truth table representability
+2. equivalence of the rule-of-inference and truth table interpretations of the conditional"></orbit-prompt>
+        <orbit-prompt question="What does the fact that a logical connective only depends on the truth values of its inputs mean in terms of a truth table?" answer="the connective can be represented as a truth table"></orbit-prompt>
+        <orbit-prompt question="What does the fact that a logical connective can be represented as a truth table mean in terms of how it uses its inputs?" answer="it only depends on the _truth values_ of the inputs rather than the _contents_ of those inputs"></orbit-prompt>
+        <orbit-prompt question="To prevent us from conflating $P \implies Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?" answer="We replaced $P\implies Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \implies Q$"></orbit-prompt>
+      </orbit-reviewarea>
+
+      <h2 id="propositional-logic">Why propositional logic?
+        <a href="#propositional-logic" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">↩︎</a></h2>
+
+      <p>Now that we’ve hopefully demystified the material
+      conditional, let’s zoom out a bit and look at propositional
+      logic more generally. What have we accomplished? Why should we
+      care?</p>
+
+      <p>Something mathematicians love to do is to discover and talk
+      about recursive things like
+      the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci
+      sequence</a>. If you reflect for a moment, you will see that
+      propositional logic is a striking example of recursion.
+      Mathematicians have been reasoning about math and writing proofs
+      for thousands of years, leading to many fascinating results
+      about numbers, geometry, and equations. But one way to view
+      propositional logic is that it is pointing this machinery at
+      itself: we are analyzing mathematical reasoning <em>using
+      mathematical reasoning</em>. This is like using a microscope not
+      to study cells, but to study microscopes themselves!</p>
+
+      <p>Why might we want to do this? Well, mathematicians are a
+      weird and curious people, and delight in getting all
+      self-referential and “meta” to see what happens. It’s also a
+      fairly natural thought: as mathematicians, we have been
+      reasoning in a particular way and have gotten used to it. It has
+      become our “hammer” and we see “nails” everywhere. From this
+      perspective, our own mathematical reasoning is itself just
+      another mathematical object we could be analyzing using our
+      existing “hammer”. But there are other reasons why studying
+      mathematical reasoning using mathematical reasoning is useful.
+      In math, we often want to find the negation of a complicated
+      statement, or find the contrapositive of an implication, or
+      perform some other operation. If we have the tools of
+      propositional logic at hand, we no longer need to rely on our
+      verbal ability to perform these manipulations. Instead, we can
+      be on “autopilot”, simply following the formal rules of
+      propositional logic. Once we invest in mathematically analyzing
+      something, in a sense we get to mindlessly use that thing
+      without having to pay too much attention to it every time.</p>
+
+      <p>So how does this all connect to the material conditional?
+      Well, by showing that the conditional statement is amenable to
+      being summarized by a truth table, we have brought it from the
+      realm of fuzzy human thought down to the realm of <em>mindless
+      computational stuff</em>. By doing so, we can quickly negate or
+      otherwise manipulate complicated expressions involving
+      “if&nbsp;…, then&nbsp;…” statements. This is a
+      powerful ability to have when writing proofs!</p>
+
+      <orbit-reviewarea color="cyan">
+        <orbit-prompt question="Why can propositional logic be seen as an example of recursion/self-reference/meta?" answer="because we are using mathematical reasoning to analyze mathematical reasoning"></orbit-prompt>
+        <orbit-prompt question="Microscope analogy for propositional logic" answer="using a microscope to study microscopes"></orbit-prompt>
+        <orbit-prompt question="Why is propositional logic useful? (phrase answer in terms of computation)" answer="We can mindlessly perform manipulations like negation and contraposition on complicated expressions"></orbit-prompt>
+      </orbit-reviewarea>
+
+      <h2 id="conclusion">Conclusion
+        <a href="#conclusion" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">↩︎</a></h2>
+
+      <p>Earlier we brought up the point that the implication seems to
+      be both intuitive and unintuitive, and that this seems
+      contradictory. But a little reflection shows that this sort of
+      thing happens all the time in math. In fact, one way of thinking
+      of math is to take things that seem awfully unintuitive or
+      confusing, and then stare at them in just the right way so as to
+      make them totally obvious.</p>
+
+      <p>It’s a fascinating fact that the conditional statement (and
+      mathematical reasoning more generally) has such a concise formal
+      description. We can easily imagine alternative worlds in which
+      this was not the case, where mathematical reasoning itself is
+      very complicated and messy even though the objects we study are
+      simple formal systems.</p>
+
+      <p>Do you have feedback for this essay? Feel free
+      to <a href="https://github.com/riceissa/material-conditional/edit/main/index.html">suggest
+      an edit</a>
+      or <a href="https://github.com/riceissa/material-conditional/discussions">post
+      in the discussion</a>!
+      You can also <a href="mailto:riceissa@gmail.com">email me</a> to give private feedback.</p>
+
+      <p><em>Acknowledgments: Thanks to Satira and Vipul Naik for
+      comments on a draft version of this essay.</em></p>
+    </article>
+  
+
+</body></html>
