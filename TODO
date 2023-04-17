@@ -33,3 +33,8 @@
 - it's almost like we have both a semantics and a syntactic derivation type thing for "if... then...". but then, what's up with the implication in the object-language? well we want that because we are modeling mathematical discourse/argumentation. problem is, we have two "intuitive ways of thinking" about the thing, but only one connective symbol for it! so there has to be a choice that gets made here, of which thing -> is trying to model.
 - there's also this weird thing that i think i've only seen tim gowers discuss, which is that a propositional "if P then Q" basically never happens in math. you're almost always doing instead the predicate logic "for all x, if P(x) then Q(x)" instead.
 - semantic entailment is more "primitive" or "prior" in some sense b/c syntactic derivation supposes some sort of deductive system/rules of inference to be laid out.
+- we need to distinguish between:
+  1. a logically valid argument with false premises.
+  2. a vacuously logically valid argument (premises are logically false, not just false in the "real world"). e.g. from https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=57 "Jack is married. Jack is not married. So the world will end tomorrow!"
+  3. a conditional with false antecedent.
+  4. and, i guess, a conditional with logically false antecedent?
