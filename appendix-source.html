@@ -92,6 +92,47 @@ sentences and have the premises be true but the conclusion be false.
 This leads to a semantic approach to explanation: you explain what's valid by
 explaining what things *mean*.
 
+<p>So why bother talking about valid arguments anyway?  That's because
+"if...then..." is also a construction that shows up a lot in arguments.
+Part of the function of "if...then..." is how it behaves as part of arguments.
+
+<p>But now that we have explained that, what is the main essay trying to do?
+It's trying to connect up the intuitive notion of "if...then..." with the truth
+table version.  The shape this explanation takes, then, depends on what
+intuitive notion the reader has.  So there are several possibilities we might
+take.
+
+<ol>
+  <li>"if P then Q" means that if you start out by assuming P, then after some
+    number of steps of reasoning, you can derive the fact that Q. In other
+    words, it corresponds to P |- Q in our notation.
+  <li>"if P then Q" is a claim within the object language of (1).  This makes
+    sense since we want to use "if P then Q" within arguments that happen in
+    the object language.  In propositional logic though (unlike in some
+    first-order logic theories like Peano Arithmetic) there is no way to
+    represent a "provability" predicate.  So how should we represent this
+    formally? Well, we can introduce a placeholder logical connective called →
+    that has certain properties that we associate with "if P then Q".
+    If there exists a connective with the property that P |- Q if and only if
+    |-P→Q, that is pretty convincing that the connective means what we want it
+    to mean.  Then, "if P then Q" is the sentence P→Q inside the object
+    language.
+    Note that it's not even clear that such a connective can exist, so we'd
+    also have to prove the existence of the connective.
+  <li>Same as (2). But we proceed to characterize the connective → a bit
+    differently. In particular, if we know that P→Q and also P, we want to say
+    we can derive Q. Also, if we start out with P as an assumption and then can
+    derive Q, we want to conclude that P→Q.  In other words, we look for a
+    connective → such that the derivation rules "P, P→Q |- Q" and "if P|- Q
+    then |-P→Q" hold.  As with (2), "if P then Q" corresponds to the sentence
+    P→Q inside the object language.
+  <li>Semantic: it's the claim that there is no way to assign a
+    valuation/interpretation to sentences that makes P true and Q false. Or in
+    other words, for every possible valuation, if P is true under that
+    valuation then Q is also true.  In our notation that becomes P |= Q.
+  <li>As |= P→Q
+</ol>
+
 <p>If we take the syntax first approach, we have both Modus Ponens and the
 Deduction Theorem (which is not exactly a theorem since we are working in a
 formal system using natural deduction rather than Hilbert-style axiomatic
@@ -100,7 +141,7 @@ system), so we have:
 <p>P |- Q if and only if |- P=&gt;Q
 
 <p>On the other hand, if we take the semantics-first approach, we can show that
-P semantically entails Q if and only if P&gt;Q is a tautology, i.e. we have:
+P semantically entails Q if and only if P=&gt;Q is a tautology, i.e. we have:
 
 <p>P |= Q if and only if |= P=&gt;Q
 
