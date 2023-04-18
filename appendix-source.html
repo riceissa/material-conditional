@@ -130,8 +130,31 @@ take.
     valuation/interpretation to sentences that makes P true and Q false. Or in
     other words, for every possible valuation, if P is true under that
     valuation then Q is also true.  In our notation that becomes P |= Q.
-  <li>As |= P→Q
+  <li>As P→Q where → is a connective such that P|=Q iff |=P→Q
+  <li>As P→Q where → is a connective such that "P,P→Q |= Q" and "if P |= Q then
+    |= P→Q" hold.
 </ol>
+
+(1) and (4) don't make sense since we're mixing levels.  But it turns out that
+all of the others are true: we can find a single connective → such that all of
+(2), (3), (5), and (6) are true.
+We will give an outline of how this can be done. The interested reader can find
+the details in Peter Smith's <a
+href="https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf"><em>An
+Introduction to Formal Logic</em> (2nd ed.)</a>, although the order in the book
+will be different.  I'll provide the section numbers in the book corresponding
+to our outline. So, here's the outline:
+
+<ul>
+  <li>
+  <li>
+  <li>
+  <li>How do we know that our propositional logic even exists? Or maybe it
+    trivially exists, but it outputs a bunch of nonsense, e.g. because it can
+    prove any statement at all.
+  <li>
+  <li>
+</ul>
 
 <p>If we take the syntax first approach, we have both Modus Ponens and the
 Deduction Theorem (which is not exactly a theorem since we are working in a
