@@ -55,3 +55,8 @@
 - do the zero margins thing i did on my personal website. (when making window narrower, the gray background should completely disappear after a while)
 - make sure to say that in this essay we are only considering "if...then..." as it is used in mathematics. so we don't consider things like counterfactual "if"s, possible-worlds, subjunctive, whatever.
 - section 22.3 in smith's book is very important https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=216
+- if it's not already there, explain the connection to False |- anything.
+- many explanations, (e.g. pointing to how (P ^ Q) -> P should be a tautology; three of the lines in the truth table for this show that T->T, F->T and F->F; see https://math.stackexchange.com/a/3467187/35525 for details) just start by assuming that -> can be captured by a truth table! maybe mention this at the start of my essay.
+  also a similar reasoning should show that P -> ~P is false no matter what!
+- idea for appendix 2: a comprehensive list of all the *other* explanations of the material conditional and why i don't like them.
+- i kinda like https://math.stackexchange.com/a/1623400/35525 even though it also assumes you can write it in a truth table.
