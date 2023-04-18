@@ -67,6 +67,53 @@ Therefore, P.
 How do we know that the above argument is valid? You might say, "well, it is
 just obvious!"  How would you explain it to someone who is skeptical? A child?
 
+<p>There are a few approaches to answering this question:
+
+<p>1. you can say that this is just kind of the thing that a valid argument
+looks like. this is kind of the definition of OR. you can write various rules
+of inference like "if P then Q; P; therefore Q" is also valid.
+this leads to a syntactic approach.  We explain what connectives and arguments
+are by giving examples (phrased as "axioms" and "rules of infrence"), by
+showing what you can *do* with them.
+You might even show how a robot would reason about this: it could write "P or
+Q" and then when it encounters "not-Q", it will cross off the "Q" and be left
+with just "P", so it concludes that "P" is true.
+How do we know that our rules are valid? Where do the rules come from? It turns
+out that we kind of just need to have the rules "baked in" to our mind, in a
+sense. If we don't, we run into an infinite regress where we can't do any logic
+at all -- see Lewis Carroll's famous <a
+href="https://en.wikipedia.org/wiki/What_the_Tortoise_Said_to_Achilles">"What
+the Tortoise Said to Achilles"</a> for more.
+
+<p>2. you can say that *whatever* P and Q happen to be (whether true or false),
+in the worlds where both premises are true, the conclusion is true as well.
+You're saying: it is impossible to assign any meaning or interpretation to the
+sentences and have the premises be true but the conclusion be false.
+This leads to a semantic approach to explanation: you explain what's valid by
+explaining what things *mean*.
+
+<p>If we take the syntax first approach, we have both Modus Ponens and the
+Deduction Theorem (which is not exactly a theorem since we are working in a
+formal system using natural deduction rather than Hilbert-style axiomatic
+system), so we have:
+
+<p>P |- Q if and only if |- P=&gt;Q
+
+<p>On the other hand, if we take the semantics-first approach, we can show that
+P semantically entails Q if and only if P&gt;Q is a tautology, i.e. we have:
+
+<p>P |= Q if and only if |= P=&gt;Q
+
+<p>Now the soundness theorem shows that anything that we said using |- can also
+be said using |=. And the completeness theorem show that anything that we said
+using |= can also be said using |-.  So finally, all four of the things above
+coincide.  Whatever was our "intuitive" understanding of "if ... then ...", we
+have connected it to the truth table meaning (|= P=&gt;Q).
+
+<p>Why is |= P=&gt;Q the truth table meaning?
+
+<p>The truth table is more like P,Q |= P=&gt;Q;  P,~Q |= ~(P=&gt;Q);  ~P |= P=&gt;Q.
+
     </article>
   </body>
 </html>
