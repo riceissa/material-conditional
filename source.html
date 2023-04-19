@@ -318,7 +318,7 @@
 
       <p>To summarize, the result we are trying to show is the
       following: Our intuitive meaning of “if \(P\), then \(Q\)”
-      (i.e., a sentence following both <em>modus ponens</em> and
+      (i.e., a sentence obeying both <em>modus ponens</em> and
       conditional proof) is true if and only
       if the material conditional \(P \implies Q\) (which is
       equivalent to \(\lnot P \lor Q\)) is true. If you feel excited
@@ -340,7 +340,7 @@
       <p>Next we show that if \(\lnot P \lor Q\) is true, then our
       intuitive meaning of “if \(P\), then \(Q\)” is true. So suppose
       that \(\lnot P \lor Q\) is true. To show that “if \(P\), then
-      \(Q\)” is true, we will assume that \(P\) is and then (through a
+      \(Q\)” is true, we will assume that \(P\) is true and then (through a
       chain of deductions) show that \(Q\) is true. So let’s suppose
       that \(P\) is true. Our goal now is to show that \(Q\) is true.
       Can \(Q\) be false? Suppose for the sake of contradiction that
@@ -353,6 +353,7 @@
       hence we have the result.</p>
 
       <p>The above result justifies calling \(\implies\) the “implies”
+      or conditional
       connective, and treating the sentence \(P \implies Q\) the same
       as we would the claim that “if \(P\), then \(Q\)”. In a way, it
       is amazing that “if \(P\), then \(Q\)” can be captured by a
@@ -398,6 +399,10 @@
       <a href="https://en.wikipedia.org/wiki/Principle_of_explosion">from a contradiction we can derive anything</a>,
       including that \(1+1=3\).)</p>
 
+      <p>That was a lot of material we just covered, so it is a good
+      time to answer some review questions to solidify your
+      understanding:</p>
+
       <orbit-reviewarea color="cyan">
         <orbit-prompt
           question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)"
@@ -423,6 +428,23 @@
         <orbit-prompt
           question="To prevent us from conflating $P \implies Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?"
           answer="We replaced $P\implies Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \implies Q$"
+        ></orbit-prompt>
+        <orbit-prompt
+          question="What's the following rule of inference called?
+
+If $P$, then $Q$. \
+$P$. \
+Therefore, $Q$."
+          answer="*modus ponens*"
+        ></orbit-prompt>
+        <orbit-prompt
+          question="What's the following rule of inference called?
+
+Suppose $P$ is true. \
+[…] \
+$Q$. \
+Therefore, if $P$ then $Q$."
+          answer="conditional proof"
         ></orbit-prompt>
       </orbit-reviewarea>
 
