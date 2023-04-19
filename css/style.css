@@ -4,6 +4,7 @@ body {
   margin: 10px 10px;
   background-color: #a0a0a0;
   line-height: 1.45;
+  text-rendering: optimizeLegibility;
 }
 
 article {
