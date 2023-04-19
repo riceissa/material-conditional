@@ -225,7 +225,7 @@
       actually <em>saying</em>.</p>
 
       <p>A logical connective can only be represented in a truth table
-      if it depends solely on the truth values of the inputs; this is
+      if it depends solely on the truth values of the inputs. This is
       because the rows of the truth table alternate between all the
       permutations of <em>truth values</em> that the input sentences
       can have, without reference to what those sentences are saying.
@@ -250,23 +250,29 @@
 
       <ol>
         <li>The mysterious new meaning textbooks are forcing on us:
-        The logical connective \(\implies\), which takes two sentences
+        the logical connective \(\implies\), which takes two sentences
         and turns them into a third sentence with a specific truth
         value, as described by the truth table.</li>
 
-        <li>A much more familiar meaning: As a rule of inference
-        saying that once we have \(P\), we are allowed to have
-        \(Q\).</li>
+        <li>A much more familiar meaning: a statement governed by
+          certain rules of inference.  In particular, we know that if
+          “if \(P\), then \(Q\)” is true and \(P\) is true, then we are
+          allowed to also say that \(Q\) is true
+          (this is called
+          <a href="https://en.wikipedia.org/wiki/Modus_ponens"><em>modus ponens</em></a>).
+          Furthermore, the way we show that “if \(P\), then \(Q\)” is
+          true is by supposing that \(P\) is true, then doing some
+          deductions to show that \(Q\) is true (this is called
+          <a href="https://en.wikipedia.org/wiki/Conditional_proof">conditional proof</a>).</li>
       </ol>
 
-      <p>Intuitively, we think of “if \(P\), then \(Q\)” as a rule
-      telling us that whenever in an argument we’ve shown \(P\) to be
-      true, then we also get to say that \(Q\) is true. <em>A
-      priori</em>, this has very little to do with the statement \(P
-      \implies Q\) as defined by the truth table! This is just another
-      way of stating that we aren’t sure yet whether our intuitive
-      notion of “if \(P\), then \(Q\)” can be represented in a truth
-      table.</p>
+      <p>Intuitively as well as when writing mathematical proofs, we
+      think of (and make use of) “if \(P\), then \(Q\)” in the sense (2)
+      given above. <em>A priori</em>, this has very little to do with
+      the statement \(P \implies Q\) as defined by the truth table! This
+      is just another way of stating that we aren’t sure yet whether our
+      intuitive notion of “if \(P\), then \(Q\)” can be represented in a
+      truth table.</p>
 
       <p>So, <em>are</em> these two meanings of “if \(P\), then \(Q\)”
       related? It turns out, there is a very satisfying connection: we
