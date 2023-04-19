@@ -526,7 +526,7 @@
 
       <orbit-reviewarea color="cyan">
         <orbit-prompt question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)" answer="It's not clear that the meaning of the conditional can be captured by a truth table."></orbit-prompt>
-        <orbit-prompt question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of intuitive rule of inference)" answer="We have both the rule-of-inference and truth table interpretations of the conditional, and it's not clear the two are the same."></orbit-prompt>
+        <orbit-prompt question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of intuitive rule of inference)" answer="It's not clear that the material conditional corresponds to what we intuitively mean by “If $P$, then $Q$”, which is a sentence governed by certain rules of inference."></orbit-prompt>
         <orbit-prompt question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like NOT, AND, and OR?" answer="1. truth table representability
 2. equivalence of the rule-of-inference and truth table interpretations of the conditional"></orbit-prompt>
         <orbit-prompt question="What does the fact that a logical connective only depends on the truth values of its inputs mean in terms of a truth table?" answer="the connective can be represented as a truth table"></orbit-prompt>
@@ -540,9 +540,12 @@ Therefore, $Q$." answer="*modus ponens*"></orbit-prompt>
         <orbit-prompt question="What's the following rule of inference called?
 
 Suppose $P$ is true. \
-[…] \
+[…insert more work here…] \
 $Q$. \
 Therefore, if $P$ then $Q$." answer="conditional proof"></orbit-prompt>
+        <orbit-prompt question="What's it called when a conditional has a false antecedent?" answer="vacuous truth"></orbit-prompt>
+        <orbit-prompt question="“If the moon is made of cheese, then $1+1=3$ is an example of what?”" answer="vacuous truth"></orbit-prompt>
+        <orbit-prompt question="What's the term for when something only depends on the truth values of its inputs?" answer="truth-functional"></orbit-prompt>
       </orbit-reviewarea>
 
       <h2 id="propositional-logic">Why propositional logic?
@@ -620,6 +623,16 @@ Therefore, if $P$ then $Q$." answer="conditional proof"></orbit-prompt>
       this was not the case, where mathematical reasoning itself is
       very complicated and messy even though the objects we study are
       simple formal systems.</p>
+
+      <p>Here are some final review questions, covering material throughout the
+      whole essay:</p>
+
+      <orbit-reviewarea color="cyan">
+        <orbit-prompt question="What does it mean for something to be truth-functional?" answer="it only depends on the truth values of inputs"></orbit-prompt>
+        <orbit-prompt question="What's a vacuous truth?" answer="a conditional where the antecedent is false"></orbit-prompt>
+        <orbit-prompt question="What is *modus ponens*?" answer="A rule of inference that allows us to conclude $Q$ given “If $P$ then $Q$” and $P$."></orbit-prompt>
+        <orbit-prompt question="What's a conditional proof?" answer="A proof where you start out by assuming $P$, and then (through a chain of deductions) show $Q$, which allows you to conclude “if $P$ then $Q$”."></orbit-prompt>
+      </orbit-reviewarea>
 
       <p>Do you have feedback for this essay? Feel free
       to <a href="https://github.com/riceissa/material-conditional/edit/main/index.html">suggest
