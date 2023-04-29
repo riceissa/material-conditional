@@ -363,7 +363,8 @@
       expect depends on the <em>meanings</em> of the sentences and not
       just their truth values.</p>
 
-      <p>Another way to view the result we proved is that if we add a symbol
+      <p>Another way to view the result we proved is that if we add an
+      initially meaning-less symbol
       “\({\implies}\)” to our notation and all we know is that it obeys <em>modus
       ponens</em> and conditional proof, then our new symbol <em>must</em> be
       truth-functional, and its truth table is that of the material
@@ -374,6 +375,12 @@
       <p>There is an alternative, more hands-on proof. I'd like to explain it
       because I think it makes the especially counter-intuitive rows of the
       truth table make more sense.</p>
+
+      <p>We want to show that “if \(P\), then \(Q\)” is true if and only if
+      \(\lnot P \lor Q\) is true.</p>
+
+      <p>We have four cases, corresponding to the four rows of the truth
+      table.</p>
 
       <p>Notice the symmetry: to show that \(P \implies Q\) is true, we used
       modus ponens. To show that it is false, we used conditional proof. Is
