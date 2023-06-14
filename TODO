@@ -93,3 +93,6 @@ here's maybe another way to think about what to put in the essay: ask what the m
 - why do silly implications like "if 1+1=5 then the riemann hypothesis is true" or "if 1+1=2 then fermat's last theorem is true" not cause a problem in practice?
   If you've found a contradiction, then you should not be using that system. In real life you're only going to be arguing from a contradictory assumption in a proof by contradiction where you can't yet use the fact that a thing is false. Also if the consequent is true, then you must already have some sort of proof (ignoring godelian stuff) so you're not really going to be talking about implications involving it. idk i feel like there's a lot more that could be said here.
   Also mathematicians have a way to explore which theorems are provable without using certain results (e.g. see reverse mathematics and stuff in mathematical logic where you try to see how strong certain axioms are). There are also "alternative proofs" of therems.. which is a bit harder to formalize.
+
+- why are the people who say "this is just a definition, get used to it" wrong?
+  a: it's because in this case, the problem isn't that there's just one way => is used in math, there are two! what's needed is to bridge that gap.
