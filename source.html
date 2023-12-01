@@ -63,7 +63,7 @@
       introduced to the idea of truth tables along with the usual
       logical connectives like \(\lnot\) (NOT), \(\land\) (AND), and
       \(\lor\) (OR). Everything goes well until the logical connective
-      \(\implies\) (IMPLIES) for the material conditional is
+      \(\rightarrow\) (IMPLIES) for the material conditional is
       introduced. Why does a false statement imply anything? This is
       usually explained quite poorly, e.g., in terms of promises. For
       instance, “if the Moon is made of cheese, then \(1+1=3\)” is
@@ -109,17 +109,28 @@
       confused why the truth table for the material conditional is the
       way it is.</p>
 
-      <p>One small terminological note: in this essay I use “material
-      conditional”, “conditional”, and “implication” interchangeably.
+      <p>A small terminological note: in this essay I use “material
+      conditional” and “conditional” interchangeably.
       In some contexts people distinguish the
       <em>material</em> conditional from other kinds of conditionals,
       and in such places these terms can’t be used interchangeably,
       but we will not be encountering any other conditionals in this
-      essay, so it is safe to switch around if one phrase sounds more
-      natural than the others.  Some people also distinguish between
+      essay, so it is safe to switch around if one term sounds more
+      natural than the others.
+      Some authors also distinguish between a conditional and an implication.
+      We won’t be needing the concept of (what some authors call) implication
+      in this essay, so to avoid confusion, we will refer to conditionals
+      only, not implications.<sup>*</sup>
+
+
+      and “implication”
+      Some people also distinguish between
       conditionals and implications, but we will again elide this distinction.
-      Similarly, we use “statement”, “sentence”, and “proposition”
-      interchangeably.</p>
+
+      Also, throughout the essay we use “statement”, “sentence”, and “proposition”
+      interchangeably.
+      </p>
+
 
       <p>Finally, I know how difficult it is to learn <em>and
       retain</em> math, so I have prepared some short questions for
@@ -133,7 +144,7 @@
       understanding of the ideas in this essay.
       The short review questions appear in boxes like the following:</p>
 
-      <orbit-reviewarea color="cyan">
+      <orbit-reviewarea debug color="cyan">
         <orbit-prompt
           question="Why is an explanation of the material conditional in terms of promises not convincing?"
           answer="There are many potential answers, but here are two:
@@ -151,7 +162,7 @@
         <a href="#conditional-different" title="Link to this section" class="heading-marker">#</a>
         <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
-      <p>So why does the conditional statement \(P \implies Q\) have
+      <p>So why does the conditional statement \(P \rightarrow Q\) have
       the truth table that it does? In order to answer this question,
       let’s think about what makes implication different from the
       other logical connectives like NOT, AND, and OR. After all, we
@@ -248,7 +259,7 @@
 
       <ol>
         <li>The mysterious new meaning textbooks are forcing on us:
-        the logical connective \(\implies\), which takes two sentences
+        the logical connective \(\rightarrow\), which takes two sentences
         and turns them into a third sentence with a specific truth
         value, as described by the truth table.</li>
 
@@ -271,7 +282,7 @@
       given above. That is, a conditional statement is something that we
       create via a conditional proof and make use of via <em>modus
       ponens</em>. <em>A priori</em>, this has very little to do with
-      the statement \(P \implies Q\) as defined by the truth table! This
+      the statement \(P \rightarrow Q\) as defined by the truth table! This
       is just another way of stating that we aren’t sure yet whether our
       intuitive notion of “if \(P\), then \(Q\)” can be represented in a
       truth table.</p>
@@ -293,12 +304,12 @@
 
       <p>To prevent us from conflating the two meanings of the
       conditional, let’s use \(\lnot P \lor Q\) instead of \(P
-      \implies Q\). By inspecting the truth table, we see that the two
+      \rightarrow Q\). By inspecting the truth table, we see that the two
       are the same:</p>
 
       <table>
         <thead>
-          <tr><th>\(P\)</th> <th>\(Q\)</th> <th>\(\lnot P\)</th> <th>\(\lnot P \lor Q\)</th> <th>\(P \implies Q\)</th></tr>
+          <tr><th>\(P\)</th> <th>\(Q\)</th> <th>\(\lnot P\)</th> <th>\(\lnot P \lor Q\)</th> <th>\(P \rightarrow Q\)</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -320,7 +331,7 @@
       following: Our intuitive meaning of “if \(P\), then \(Q\)”
       (i.e., a sentence obeying both <em>modus ponens</em> and
       conditional proof) is true if and only
-      if the material conditional \(P \implies Q\) (which is
+      if the material conditional \(P \rightarrow Q\) (which is
       equivalent to \(\lnot P \lor Q\)) is true. If you feel excited
       at this point, I think it’s a good idea to try to prove this
       result yourself.</p>
@@ -352,9 +363,9 @@
       is true. This completes the other direction of the proof, and
       hence we have the result.</p>
 
-      <p>The above result justifies calling \(\implies\) the “implies”
+      <p>The above result justifies calling \(\rightarrow\) the “implies”
       or conditional
-      connective, and treating the sentence \(P \implies Q\) the same
+      connective, and treating the sentence \(P \rightarrow Q\) the same
       as we would the claim that “if \(P\), then \(Q\)”. In a way, it
       is amazing that “if \(P\), then \(Q\)” can be captured by a
       logical connective! The statement “if \(P\), then \(Q\)” at
@@ -365,7 +376,7 @@
 
       <p>Another way to view the result we proved is that if we add an
       initially meaning-less symbol
-      “\(\!{\implies}\!\)” to our notation and all we know is that it obeys <em>modus
+      “\(\!{\rightarrow}\!\)” to our notation and all we know is that it obeys <em>modus
       ponens</em> and conditional proof, then our new symbol <em>must</em> be
       truth-functional, and its truth table is that of the material
       conditional.</p>
@@ -382,7 +393,7 @@
       <p>We have four cases, corresponding to the four rows of the truth
       table.</p>
 
-      <p>Notice the symmetry: to show that \(P \implies Q\) is true, we used
+      <p>Notice the symmetry: to show that \(P \rightarrow Q\) is true, we used
       modus ponens. To show that it is false, we used conditional proof. Is
       there anything deep going on here? I'm going to bet that there is, but I
       don't even understand this myself yet.</p>
@@ -416,7 +427,7 @@
       time to answer some review questions to solidify your
       understanding:</p>
 
-      <orbit-reviewarea color="cyan">
+      <orbit-reviewarea debug color="cyan">
         <orbit-prompt
           question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)"
           answer="It's not clear that the meaning of the conditional can be captured by a truth table."
@@ -439,8 +450,8 @@
           answer="it only depends on the _truth values_ of the inputs rather than the _contents_ of those inputs"
         ></orbit-prompt>
         <orbit-prompt
-          question="To prevent us from conflating $P \implies Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?"
-          answer="We replaced $P\implies Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \implies Q$"
+          question="To prevent us from conflating $P \rightarrow Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?"
+          answer="We replaced $P\rightarrow Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \rightarrow Q$"
         ></orbit-prompt>
         <orbit-prompt
           question="What's the following rule of inference called?
@@ -524,7 +535,7 @@ Therefore, if $P$ then $Q$."
       “if&nbsp;&hellip;, then&nbsp;&hellip;” statements. This is a
       powerful ability to have when writing proofs!</p>
 
-      <orbit-reviewarea color="cyan">
+      <orbit-reviewarea debug color="cyan">
         <orbit-prompt
           question="Why can propositional logic be seen as an example of recursion/self-reference/meta?"
           answer="because we are using mathematical reasoning to analyze mathematical reasoning"
@@ -576,7 +587,7 @@ Therefore, if $P$ then $Q$."
       <p>Here are some final review questions, covering material throughout the
       whole essay:</p>
 
-      <orbit-reviewarea color="cyan">
+      <orbit-reviewarea debug color="cyan">
         <orbit-prompt
           question="What does it mean for something to be truth-functional?"
           answer="it only depends on the truth values of inputs"
@@ -634,6 +645,29 @@ Therefore, if $P$ then $Q$."
       <hr />
 
       <ol>
+        <li id="footnote-implication">
+          This footnote is for readers who are curious about this distinction.
+          If you don’t care about the distinction, you are free to skip this
+          footnote; it won’t affect your comprehension of the rest of the
+          essay.
+      The basic idea of the distinction is that an implication is supposedly a
+      meta-linguistic
+      statement involving quoted versions of propositions.  For example,
+      we might say that “The Moon is made of cheese” implies “\(1 + 1 = 3\)”.
+      It would feel ungrammatical to use unquoted versions of the two involved
+      propositions.  On the other hand, a conditional statement is made inside
+      the object-language and uses unquoted versions of the two involved
+      propositions; it’s simply a what is called a <em>connective</em>, like
+      “and” or “or”. So we would say that if the Moon
+      is made of cheese, then \(1 + 1 = 3\).  However, other authors elide this
+      distinction and use “material conditional” and “material implication”
+      interchangeably.  In mathematical logic, <em>is</em> an actually
+      important distinction
+      between the material conditional and semantic consequence (also called
+      logical consequence), where the latter is meta-linguistic and is denoted
+      by the symbol \(\models\).
+      For more information, see <a href="https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/">this post</a> by Tim Gowers and section 18.8(b) in Peter Smith’s book <a href="https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=167">here</a>.
+        </li>
         <li id="footnote-dependence">Somewhat
       technically: if \(f\) is a function taking two inputs such that
       there exists another two-input function \(g\) as well as a
