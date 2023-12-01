@@ -59,14 +59,15 @@
       the <a href="https://en.wikipedia.org/wiki/Material_conditional">material
       conditional</a> (i.e., the “if&nbsp;&hellip;,
       then&nbsp;&hellip;” statement used in math). Students first
-      learning formal logic or getting started with writing proofs are
+      learning formal logic or getting started with writing mathematical proofs are
       introduced to the idea of truth tables along with the usual
       logical connectives like \(\lnot\) (“not”), \(\land\) (“and”), and
-      \(\lor\) (“or”). Everything goes well until the logical connective
+      \(\lor\) (“or”).<sup><a href="#footnote-connectives-notation" id="footnote-connectives-notation-ref">*</a></sup> Everything goes well until the logical connective
       \(\rightarrow\) (“if&nbsp;&hellip;, then&nbsp;&hellip;”) for the material conditional is
-      introduced. Why does a false statement imply anything? This is
-      usually explained quite poorly, e.g., in terms of promises. For
-      instance, “if the Moon is made of cheese, then \(1+1=3\)” is
+      introduced. Why does a false statement imply anything?
+      Almost everywhere this is explained poorly.
+      For instance, in terms of promises: the sentence
+      “if the Moon is made of cheese, then \(1+1=3\)” is
       interpreted as the promise that \(1+1=3\) as long as
       the Moon is made of cheese; but since the Moon is not made of
       cheese, we can’t say that the promise was broken, and so we say
@@ -81,15 +82,19 @@
       while it is true that one didn’t break the promise when the
       antecedent is false, it’s also not clear that one has actually
       kept the promise, or that one <em>would have</em> kept the
-      promise. It also seemed suspicious that we were picking one
+      promise.  Indeed, because the consequent (the part appearing
+      after “then&nbsp;&hellip;”) is false, it seemed clear that no
+      such promise about \(1 + 1 = 3\) could have been kept.
+      It also seemed suspicious that we were picking one
       specific way in which “if&nbsp;&hellip;, then&nbsp;&hellip;” was
       used in natural language and ignoring all the others. Why were
       we allowed to pick one specific meaning to use for
-      “if&nbsp;&hellip;, then&nbsp;&hellip;”? But then again, I didn’t
-      have the same problem with the logical OR connective: it always
+      the “if&nbsp;&hellip;, then&nbsp;&hellip;” in mathematics?
+      But then again, I didn’t
+      have the same problem with the logical “or” connective: it always
       meant
       the <a href="https://mathworld.wolfram.com/InclusiveDisjunction.html">inclusive
-      OR</a> in math, and I was fine to accept that. So why was I so
+      “or”</a> in math, and I was fine to accept that. So why was I so
       confused about the material conditional? It seemed like I was
       not only confused about the truth table, but also, inside my own
       mind, confused about <em>why</em> I was confused&mdash;I had trouble
@@ -107,7 +112,9 @@
       someone who has written some proofs before and has seen
       propositional logic and truth tables, but who still feels
       confused why the truth table for the material conditional is the
-      way it is.</p>
+      way it is.  This means that I won’t be explaining all of formal logic
+      from scratch.  I’ll only be explaining the conceptually tricky
+      parts that are not covered in most books.</p>
 
       <p>A small terminological note: in this essay I use “material
       conditional” and “conditional” interchangeably.
@@ -116,7 +123,7 @@
       and in such places these terms can’t be used interchangeably,
       but we will not be encountering any other conditionals in this
       essay, so it is safe to switch around if one term sounds more
-      natural than the others.
+      natural than the other.
       Some authors also distinguish between a conditional and an implication.
       We won’t be needing the concept of (what some authors call) implication
       in this essay, so to avoid confusion, we will refer to conditionals
@@ -135,6 +142,8 @@
       as <a href="https://en.wikipedia.org/wiki/Spaced_repetition">spaced
       repetition</a>), this allows you to efficiently retain your
       understanding of the ideas in this essay.
+      I highly recommend signing up with your email so that you remember these
+      important ideas forever.
       The short review questions appear in boxes like the following:</p>
 
       <orbit-reviewarea debug color="cyan">
@@ -146,8 +155,8 @@
 2. It's not clear why we are allowed to take one specific ordinary usage of “if&nbsp;&hellip;, then&nbsp;&hellip;” while ignoring all the others."
         ></orbit-prompt>
         <orbit-prompt
-          question="Which kind of logical OR is the default in math?"
-          answer="inclusive OR"
+          question="Which kind of logical “or” is the default in math?"
+          answer="inclusive or"
         ></orbit-prompt>
       </orbit-reviewarea>
 
@@ -157,17 +166,17 @@
 
       <p>So why does the conditional statement \(P \rightarrow Q\) have
       the truth table that it does? In order to answer this question,
-      let’s think about what makes the conditional different from the
-      other logical connectives like NOT, AND, and OR. After all, we
+      it’s instructive to think about what makes the conditional different from the
+      other logical connectives like “not”, “and”, and “or”. After all, we
       have no problem with the other connectives so there must
-      be <em>some</em> difference we can identify. And, in my opinion,
-      it is this difference that makes people so uncomfortable with
+      be <em>some</em> difference we can identify. It must be
+      this difference that makes people so uncomfortable with
       the truth table for the conditional. If you feel so inclined, I
       think this is a good exercise to attempt before reading on. It
-      will give you practice peeking into your own mind and trying to
+      will give you practice peering into your own mind and trying to
       pinpoint a subtle distinction your mind is already making.</p>
 
-      <p>Now, for a logical connective like OR, there is no debate
+      <p>Now, for a logical connective like “or”, there is no debate
       about whether it can be represented as a binary operation on the
       truth values of sentences. Sure, we might debate whether our
       “or” should be inclusive or exclusive, but in either case, it is
@@ -213,8 +222,8 @@
       It can be shown that \(\operatorname{sgn}(xy) =
       \operatorname{sgn}(x)\operatorname{sgn}(y)\), so the value of
       \(f\) depends only on the sign of the inputs.<sup><a href="#footnote-dependence" id="footnote-dependence-ref">1</a></sup>  This is analogous
-      to how the OR connective depends only on the truth values of the
-      input statements. (This is sometimes expressed by saying that the OR
+      to how the “or” connective depends only on the truth values of the
+      input statements. (This is sometimes expressed by saying that the “or”
       connective is <em>truth-functional</em>. The term “truth-functional”
       comes from the fact that the connective is a function of the truth
       values, i.e., depends only on the truth values.)
@@ -422,15 +431,15 @@
 
       <orbit-reviewarea debug color="cyan">
         <orbit-prompt
-          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of truth tables)"
+          question="What makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”? (phrase answer in terms of truth tables)"
           answer="It's not clear that the meaning of the conditional can be captured by a truth table."
         ></orbit-prompt>
         <orbit-prompt
-          question="What makes the material conditional more confusing than other logical connectives like NOT, AND, and OR? (phrase answer in terms of intuitive rule of inference)"
+          question="What makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”? (phrase answer in terms of intuitive rule of inference)"
           answer="It's not clear that the material conditional corresponds to what we intuitively mean by “If $P$, then $Q$”, which is a sentence governed by certain rules of inference."
         ></orbit-prompt>
         <orbit-prompt
-          question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like NOT, AND, and OR?"
+          question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”?"
           answer="1. truth table representability
 2. equivalence of the rule-of-inference and truth table interpretations of the conditional"
         ></orbit-prompt>
@@ -638,6 +647,10 @@ Therefore, if $P$ then $Q$."
       <hr />
 
       <ol>
+        <li id="footnote-connectives-notation">
+          There's a variety of notations here, e.g., \(\sim\) for “not” and
+          \(\&amp;\) for “and”. Some other variants for \(\rightarrow\) include \(\!\implies\!\) and \(\supset\).&nbsp;<a href="#footnote-connectives-notation-ref">&#8617;</a>
+        </li>
         <li id="footnote-implication">
           This footnote is for readers who are curious about this distinction.
           If you don’t care about the distinction, you are free to skip this
