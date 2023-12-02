@@ -497,26 +497,41 @@
       </ol>
 
       <p>In all cases, we have shown that \(\lnot P \lor Q\) and
-      “if \(P\), then \(Q\)” have the same truth values, so this
+      “if \(P\), then \(Q\)” have the same truth value, so this
       shows that they are identical.  This proof may seem
-      tedious to read, but it is more concrete: each case
-      corresponds to a specific row of the truth table.</p>
+      tedious to read, but it has the virtue of being more concrete: each case
+      corresponds to a specific row of the truth table.  This means that
+      if we are confused about a particular row of the truth table, then
+      we only need to examine that specific case.  For example, take the
+      example sentence “if the Moon is made of cheese, then \(1+1=3\)”
+      that we have been using throughout this essay.  Why is it true?
+      It corresponds to the fourth case of the proof.  The reasoning
+      here, from “within the logic”, goes like this: if the Moon is made of
+      cheese, then, well, it’s <em>not</em> made of cheese, so supposing that
+      it <em>is</em> made of cheese is absurd.  This means we’ve gotten
+      ourselves into trouble and all logic breaks down, so in particular
+      \(1+1=3\).</p>
 
 
+      <!--
       <p>Notice the symmetry: to show that \(P \rightarrow Q\) is true, we used
       conditional proof. To show that it is false, we used <em>modus ponens</em>. Is
       there anything deep going on here? I'm going to bet that there is, but I
       don't even understand this myself yet.</p>
+      -->
 
       <h2 id="vacuous-truth">Vacuous truth
         <a href="#vacuous-truth" title="Link to this section" class="heading-marker">#</a>
         <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
-      <p>Let’s return to the example from the start of this essay, “if
-      the Moon is made of cheese, then \(1+1=3\)”. Since the
-      antecedent is false, this is an example of
-      a <a href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuous
-      truth</a>. Can we now make sense of this statement given the
+      <p>A conditional where the antecedent is false is called a
+      <a href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuous truth</a>.
+      So the sentence “if the Moon is made of cheese, then \(1+1=3\)” is
+      vacuously true.
+
+      Let’s return to the example from the start of this essay, “if
+      the Moon is made of cheese, then \(1+1=3\)”.
+      Can we now make sense of this statement given the
       result we showed above? One approach is to run through part of
       the proof again, but using the concrete statements that we have
       instead of (or in addition to) the letters \(P\) and
@@ -835,7 +850,21 @@ Therefore, if $P$ then $Q$."
 
         <li id="footnote-intuitive">
           <!-- FIXME: this needs to be stated better. -->
-          Some books use \(P \rightarrow Q\) to initially mean the intuitive notion of “if \(P\), then \(Q\)”.&nbsp;<a href="#footnote-intuitive-ref" class="footnote-arrow">&#8617;</a>
+          Some books use \(P \rightarrow Q\) to initially mean the intuitive notion of “if \(P\), then \(Q\)”.
+
+          So there's two ways to approach what '\(\rightarrow\)' means. One way
+          is to define it according to the truth table, then show that "\(P
+          \rightarrow Q\)" matches that "intuitive" meaning of "if P, then Q"
+          (i.e. a statement following MP and CP). That's what I was trying to
+          get at there, by defining "\(P \rightarrow Q\)" as the same as
+          "\(\lnot P\lor Q\)" (but then not using the former notation because
+          it seemed confusing). The other way is to let "\(P \rightarrow Q\)"
+          be a connective that obeys MP and CP (i.e. we define
+          '\(\rightarrow\)' to mean the intuitive "if ... then ..."), then show
+          that this has a truth table equivalent to "\(\lnot P\lor Q\)".
+
+
+          &nbsp;<a href="#footnote-intuitive-ref" class="footnote-arrow">&#8617;</a>
         </li>
 
       </ol>
