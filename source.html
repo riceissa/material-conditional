@@ -174,7 +174,8 @@
       the truth table for the conditional. If you feel so inclined, I
       think this is a good exercise to attempt before reading on. It
       will give you practice peering into your own mind and trying to
-      pinpoint a subtle distinction your mind is already making.</p>
+      pinpoint a subtle distinction your mind is already making.
+      Pause reading here and give it a try!</p>
 
       <p>Now, for a logical connective like “or”, there is no debate
       about whether it can be represented as a binary operation on the
@@ -210,15 +211,18 @@
       \(P\) and \(Q\)? Or could it depend on the <em>contents</em> of
       \(P\) and \(Q\)?</p>
 
-      <p>Let me stress this point by bringing in an unrelated example:
+      <p>Let me stress this point by bringing in an unrelated, somewhat artificial example:
       Consider two functions, \(f\) and \(g\), both defined on pairs
-      of numbers. We define \(f(x,y) = \operatorname{sgn}(xy)\), where
+      of real numbers. We define \(f(x,y) = \operatorname{sgn}(xy)\), where
       \(\operatorname{sgn}\) is
       the <a href="https://en.wikipedia.org/wiki/Sign_function">sign
       function</a> that returns \(1\) when a number is positive, \(0\)
       when it is the number \(0\), and \(-1\) when a number is
-      negative. We define \(g(x,y) = xy\) to be the product of the two
-      numbers. Thus for example \(f(-2,3) = -1\) and \(g(-2,3) = -6\).
+      negative. In other words, \(f(x,y)\) is the sign of the product
+      of the two numbers.  Similarly, we define
+      \(g(x,y) = \operatorname{sgn}(x+y)\) to be
+      the sign of the sum of the two
+      numbers. Thus for example \(f(-2,3) = -1\) and \(g(-2,3) = 1\).
       It can be shown that \(\operatorname{sgn}(xy) =
       \operatorname{sgn}(x)\operatorname{sgn}(y)\), so the value of
       \(f\) depends only on the sign of the inputs.<sup><a href="#footnote-dependence" id="footnote-dependence-ref">1</a></sup>  This is analogous
@@ -228,12 +232,15 @@
       comes from the fact that the connective is a function of the truth
       values, i.e., depends only on the truth values.)
       On the other hand, the value of \(g\) depends
-      on the actual values of the inputs, not just the sign. In an
+      on the actual values of the inputs, not just the sign. This is
+      despite the fact that \(g\) only takes on values in “sign space”, i.e.,
+      the set \(\{-1,0,1\}\). In an
       analogous way, a statement involving two other statements may
       depend on just the truth values of the input statements, or it
       may depend more specifically on the contents of the input
       statements&mdash;what those statements are
-      actually <em>saying</em>.</p>
+      actually <em>saying</em>&mdash;despite the fact that it has a definite
+      truth value.</p>
 
       <p>A logical connective can only be represented in a truth table
       if it depends solely on the truth values of the inputs. This is
@@ -263,7 +270,7 @@
         <li>The mysterious new meaning textbooks are forcing on us:
         the logical connective \(\rightarrow\), which takes two sentences
         and turns them into a third sentence with a specific truth
-        value, as described by the truth table.</li>
+        value, as governed by the truth table.</li>
 
         <li>A much more familiar meaning: a statement governed by
           certain rules of inference.  In particular, the way we use “if
@@ -290,19 +297,21 @@
       truth table.</p>
 
       <p>So, <em>are</em> these two meanings of “if \(P\), then \(Q\)”
-      related? It turns out, there is a very satisfying connection: they
+      related? It turns out, there is a very satisfying but surprising connection: they
       are exactly the same. That’s right, our
       intuitive notion of “if \(P\), then \(Q\)” coincides perfectly
       with the truth-table definition of the conditional!</p>
 
       <p>“Huh?” you might say. “How could our intuitive notion
       coincide with the truth table one? Didn’t we go on at length in
-      the introduction about how unintuitive the conditional is? How
+      the introduction about how unintuitive the conditional statement is? How
       can it be both intuitive and unintuitive?” This is a good point,
       and we will come back to it <a href="#conclusion">soon</a>! But first, let’s try to prove
       this result.</p>
 
-      <h2 id="proving">Proving that the conditional has the usual truth table</h2>
+      <h2 id="proving">Proving that the conditional has the usual truth table
+        <a href="#proving" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
       <p>To prevent us from conflating the two meanings of the
       conditional, let’s use \(\lnot P \lor Q\) instead of \(P
@@ -336,7 +345,8 @@
       if the material conditional \(P \rightarrow Q\) (which is
       equivalent to \(\lnot P \lor Q\)) is true. If you feel excited
       at this point, I think it’s a good idea to try to prove this
-      result yourself.</p>
+      result yourself.  Pause reading here if you want to attempt
+      a proof.</p>
 
       <p>Let’s first suppose that our intuitive meaning of “if \(P\),
       then \(Q\)” is true. We want to show that \(\lnot P \lor Q\) is
@@ -354,7 +364,8 @@
       intuitive meaning of “if \(P\), then \(Q\)” is true. So suppose
       that \(\lnot P \lor Q\) is true. To show that “if \(P\), then
       \(Q\)” is true, we will assume that \(P\) is true and then (through a
-      chain of deductions) show that \(Q\) is true. So let’s suppose
+      chain of deductions) show that \(Q\) is true.  In other words, we
+      will do a conditional proof.  So let’s suppose
       that \(P\) is true. Our goal now is to show that \(Q\) is true.
       Can \(Q\) be false? Suppose for the sake of contradiction that
       \(Q\) is false. Then we have both \(P\) and \(\lnot Q\). This
@@ -365,8 +376,8 @@
       is true. This completes the other direction of the proof, and
       hence we have the result.</p>
 
-      <p>The above result justifies calling \(\rightarrow\) the “if&nbsp;&hellip;, then&nbsp;&hellip;”
-      or conditional
+      <p>The above result justifies calling \(\rightarrow\) the
+      “if&nbsp;&hellip;, then&nbsp;&hellip;” or conditional
       connective, and treating the sentence \(P \rightarrow Q\) the same
       as we would the claim that “if \(P\), then \(Q\)”. In a way, it
       is amazing that “if \(P\), then \(Q\)” can be captured by a
@@ -374,7 +385,7 @@
       first seems much more fuzzy, something we use in an argument but
       that can’t be formalized so simply&mdash;something that we would
       expect depends on the <em>meanings</em> of the sentences and not
-      just their truth values.</p>
+      just their truth values.<sup><a href="footnote-rigid" id="footnote-rigid-ref">*</a></sup></p>
 
       <p>Another way to view the result we proved is that if we add an
       initially meaning-less symbol
@@ -383,7 +394,9 @@
       truth-functional, and its truth table is that of the material
       conditional.</p>
 
-      <h2 id="alt-proof">An alternative proof</h2>
+      <h2 id="alt-proof">An alternative proof
+        <a href="#alt-proof" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
       <p>There is an alternative, more hands-on proof. I'd like to explain it
       because I think it makes the especially counter-intuitive rows of the
@@ -400,7 +413,9 @@
       there anything deep going on here? I'm going to bet that there is, but I
       don't even understand this myself yet.</p>
 
-      <h2>Vacuous truth</h2>
+      <h2 id="vacuous-truth">Vacuous truth
+        <a href="#vacuous-truth" title="Link to this section" class="heading-marker">#</a>
+        <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
       <p>Let’s return to the example from the start of this essay, “if
       the Moon is made of cheese, then \(1+1=3\)”. Since the
@@ -495,11 +510,7 @@ Therefore, if $P$ then $Q$."
       logic more generally. What have we accomplished? Why should we
       care?</p>
 
-      <p>Something mathematicians love to do is to discover and talk
-      about recursive things like
-      the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci
-      sequence</a>. If you reflect for a moment, you will see that
-      propositional logic is a striking example of recursion.
+      <p>Propositional logic is a striking example of recursion.
       Mathematicians have been reasoning about math and writing proofs
       for thousands of years, leading to many fascinating results
       about numbers, geometry, and equations. But one way to view
@@ -516,26 +527,29 @@ Therefore, if $P$ then $Q$."
       become our “hammer” and we see “nails” everywhere. From this
       perspective, our own mathematical reasoning is itself just
       another mathematical object we could be analyzing using our
-      existing “hammer”. But there are other reasons why studying
+      existing “hammer”.  We can ask questions about mathematical
+      reasoning itself, like “Can all true mathematical statements be
+      proved?”  Taken to the extreme, we end up with the field of
+      mathematical logic.  But there is another, more mundane, reason why studying
       mathematical reasoning using mathematical reasoning is useful.
       In math, we often want to find the negation of a complicated
       statement, or find the contrapositive of a conditional statement, or
-      perform some other operation. If we have the tools of
+      perform some other operation on complicated sentences. If we have the tools of
       propositional logic at hand, we no longer need to rely on our
-      verbal ability to perform these manipulations. Instead, we can
+      verbal dexterity to perform these manipulations. Instead, we can
       be on “autopilot”, simply following the formal rules of
       propositional logic. Once we invest in mathematically analyzing
       something, in a sense we get to mindlessly use that thing
       without having to pay too much attention to it every time.</p>
 
       <p>So how does this all connect to the material conditional?
-      Well, by showing that the conditional statement is amenable to
+      By showing that the conditional statement is amenable to
       being summarized by a truth table, we have brought it from the
       realm of fuzzy human thought down to the realm of <em>mindless
       computational stuff</em>. By doing so, we can quickly negate or
       otherwise manipulate complicated expressions involving
       “if&nbsp;&hellip;, then&nbsp;&hellip;” statements. This is a
-      powerful ability to have when writing proofs!</p>
+      powerful ability to have when writing and reasoning about proofs!</p>
 
       <orbit-reviewarea debug color="cyan">
         <orbit-prompt
@@ -577,13 +591,14 @@ Therefore, if $P$ then $Q$."
       book would say on the topic, in a hopefully more convincing
       manner.  Those interested in reading more about conditionals can
       find a vast literature&mdash;on the philosophical aspects,
-      alternative conditionals.  But for those who are excited to jump
-      into proof-based mathematics (but were unconvinced by the usual
-      explanations) (and I was like this too) I hope this essay is
+      alternative conditionals, and alternative logics.
+      But for those who are excited to jump
+      into proof-based mathematics but were unconvinced by the usual
+      explanations&mdash;and I was like this too&mdash;I hope this essay is
       enough for you to be convinced that the material conditional makes
       sense.  I sure wish I had stumbled onto this explanation much
       sooner.  As Paul Halmos has said about set theory, now that you
-      have read this, you can safely forget about it, in some sense
+      have read this, you can safely forget about it,<sup><a href="footnote-halmos" id="footnote-halmos-ref">*</a></sup> in some sense
       (though I do hope you will continue to review the flashcards).</p>
 
       <p>Here are some final review questions, covering material throughout the
@@ -682,6 +697,10 @@ Therefore, if $P$ then $Q$."
       these have unambiguous meanings.
       For more information, see <a href="https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/">this post</a> by Tim Gowers and section 18.8(b) in Peter Smith’s book <a href="https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=167">here</a>.&nbsp;<a href="#footnote-implication-ref">&#8617;</a>
         </li>
+        <li id="footnote-rigid">
+          This whole result comes about because classical logic is “rigid” in
+          some sense.&nbsp;<a href="#footnote-rigid-ref">&#8617;</a>
+        </li>
         <li id="footnote-dependence">Somewhat
       technically: if \(f\) is a function taking two inputs such that
       there exists another two-input function \(g\) as well as a
@@ -700,6 +719,17 @@ Therefore, if $P$ then $Q$."
       third. So we have a contradiction. And
       <a href="https://en.wikipedia.org/wiki/Principle_of_explosion">from a contradiction we can derive anything</a>,
       including that \(1+1=3\).&nbsp;<a href="#footnote-alt-proof-ref">&#8617;</a></li>
+
+        <li>
+          From the Preface of Paul Halmos’s book <em>Naive Set Theory</em>:
+          “The student’s task in learning set theory is to steep
+          himself in unfamiliar but essentially shallow generalities
+          till they become so familiar that they can be used
+          with almost no conscious effort. In other words, general
+          set theory is pretty trivial stuff really, but, if
+          you want to be a mathematician, you need some, and
+          here it is; read it, absorb it, and forget it.”&nbsp;<a href="#footnote-halmos-ref">&#8617;</a></li>
+        </li>
       </ol>
     </article>
   </body>
