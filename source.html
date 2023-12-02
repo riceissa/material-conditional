@@ -366,7 +366,9 @@
         <a href="#proving" title="Link to this section" class="heading-marker">#</a>
         <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
-      <p>To prevent us from conflating the two meanings of the
+      <p>Now we are finally ready to prove that the two meanings of
+      “if \(P\), then \(Q\)” coincide. To prevent us from conflating
+      the two meanings of the
       conditional, let’s use \(\lnot P \lor Q\) instead of \(P
       \rightarrow Q\). By inspecting the truth table, we see that the two
       are the same:</p>
@@ -456,13 +458,53 @@
       truth table make more sense.</p>
 
       <p>We want to show that “if \(P\), then \(Q\)” is true if and only if
-      \(\lnot P \lor Q\) is true.</p>
+      \(\lnot P \lor Q\) is true.  We have four cases,
+      corresponding to the four rows of the truth table:</p>
 
-      <p>We have four cases, corresponding to the four rows of the truth
-      table.</p>
+      <ol>
+        <li>Suppose first that both \(P\) and \(Q\) are true.  In this case,
+        \(\lnot P \lor Q\) is true, so we want to show that
+        “if \(P\), then \(Q\)” is also true.  We do this via conditional
+        proof.  Suppose that \(P\) is true; our goal is to show that
+        \(Q\) is also true.  But by assumption, \(Q\) is true!  So this
+        concludes the conditional proof and shows that
+        “if \(P\), then \(Q\)” is true.</li>
+
+        <li>Now suppose that \(P\) is true and \(Q\) is false. In this case,
+        \(\lnot P \lor Q\) is false, so we must show that
+        “if \(P\), then \(Q\)” is also false.  To do this, we will do a
+        proof by contradiction.  Suppose for the sake of contradiction
+        that “if \(P\), then \(Q\)” is true.  Then since \(P\) is true,
+        by <em>modus ponens</em> we would have \(Q\).  But this is
+        absurd, since \(Q\) is by assumption false.  This contradiction
+        shows that in fact “if \(P\), then \(Q\)” must be false.</li>
+
+        <li>Now suppose that \(P\) is false and \(Q\) is true. In this case,
+        \(\lnot P \lor Q\) is true, so we will show that
+        “if \(P\), then \(Q\)” is also true.  We use conditional proof.
+        Suppose that \(P\) is true.  By assumption, \(Q\) is true.
+        So this shows that “if \(P\), then \(Q\)”.</li>
+
+        <li>Finally, suppose that both \(P\) and \(Q\) are false. Here,
+        \(\lnot P \lor Q\) is true, so we must show that
+        “if \(P\), then \(Q\)” is also true.  We again use conditional
+        proof. Suppose that \(P\) is true.  But we assumed at the start
+        that \(P\) is false. So \(P\) is both true and false,
+        and by the principle of explosion, we have \(Q\). (It does
+        not matter that we know \(Q\) to be false from the beginning.)
+        This completes the conditional proof, and we conclude that
+        “if \(P\), then \(Q\)” is true.</li>
+      </ol>
+
+      <p>In all cases, we have shown that \(\lnot P \lor Q\) and
+      “if \(P\), then \(Q\)” have the same truth values, so this
+      shows that they are identical.  This proof may seem
+      tedious to read, but it is more concrete: each case
+      corresponds to a specific row of the truth table.</p>
+
 
       <p>Notice the symmetry: to show that \(P \rightarrow Q\) is true, we used
-      modus ponens. To show that it is false, we used conditional proof. Is
+      conditional proof. To show that it is false, we used <em>modus ponens</em>. Is
       there anything deep going on here? I'm going to bet that there is, but I
       don't even understand this myself yet.</p>
 
