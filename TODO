@@ -54,7 +54,6 @@
 - idea for appendix 2: a comprehensive list of all the *other* explanations of the material conditional and why i don't like them.
 - i kinda like https://math.stackexchange.com/a/1623400/35525 even though it also assumes you can write it in a truth table.
 - explain more the analogies with valid arguments. "if p then q" is analogous to "p; therefore q".
-- also fix up this answer: https://matheducators.stackexchange.com/a/24369/9917 which was written before i had some of my recent realizations
 - talk about how, since the premise of a vacuous implication will never show up, it's not like we can conclude anything absurd anyway.
 - make a point that usually when ppl think of "mindless computational stuff", they think purely of syntax. but here, we actually got more computational results using semantics (truth tables). in particular, exhaustive listing of truth table rows can sometimes be the easiest/most mindless way to show that something is a tautology.
 - maybe say more about how the modus ponens/conditional proof version of conditional is "active/dynamic" whereas truth table is "passive/static".
