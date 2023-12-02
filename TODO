@@ -48,14 +48,12 @@
   so actually, while peter smith's IFL and velleman's book take the semantics-first approach, GEB takes the syntax-first approach!
 - so the goal of the main essay should still be to connect the "intuitive" notion of conditional with the truth table definition. but, what i'm realizing now is that there is more than one "intuitive" notion.
 - make sure to say that in this essay we are only considering "if...then..." as it is used in mathematics. so we don't consider things like counterfactual "if"s, possible-worlds, subjunctive, whatever.
-- if it's not already there, explain the connection to False |- anything.
+- *** if it's not already there, explain the connection to False |- anything. -- i.e., False -> anything is the sentence version of principle of explosion.
 - many explanations, (e.g. pointing to how (P ^ Q) -> P should be a tautology; three of the lines in the truth table for this show that T->T, F->T and F->F; see https://math.stackexchange.com/a/3467187/35525 for details) just start by assuming that -> can be captured by a truth table! maybe mention this at the start of my essay.
   also a similar reasoning should show that P -> ~P is false no matter what!
 - idea for appendix 2: a comprehensive list of all the *other* explanations of the material conditional and why i don't like them.
 - i kinda like https://math.stackexchange.com/a/1623400/35525 even though it also assumes you can write it in a truth table.
-- i feel like the moon is cheese stuff is still kinda maybe not convincing. i think i need to flesh out the connection with "ex falso quodlibet"/principle of explosion more as well.
 - explain more the analogies with valid arguments. "if p then q" is analogous to "p; therefore q".
-- go back and reread my question here to incorporate any insights: https://math.stackexchange.com/questions/4281589/does-the-following-proof-work-for-a-special-case-of-the-deduction-theorem
 - also fix up this answer: https://matheducators.stackexchange.com/a/24369/9917 which was written before i had some of my recent realizations
 - talk about how, since the premise of a vacuous implication will never show up, it's not like we can conclude anything absurd anyway.
 - make a point that usually when ppl think of "mindless computational stuff", they think purely of syntax. but here, we actually got more computational results using semantics (truth tables). in particular, exhaustive listing of truth table rows can sometimes be the easiest/most mindless way to show that something is a tautology.
