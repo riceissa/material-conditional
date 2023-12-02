@@ -56,3 +56,15 @@ table td {
 table tbody tr { border-bottom: 1px dotted #ccc; }
 table thead th { border-bottom: 1px solid #777777; }
 table tfoot th { border-top: 1px solid #777777; }
+
+sup {
+  vertical-align: top;
+}
+
+sup a {
+  text-decoration: none;
+}
+
+a.footnote-arrow {
+  text-decoration: none;
+}
