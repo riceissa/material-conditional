@@ -232,15 +232,19 @@
       comes from the fact that the connective is a function of the truth
       values, i.e., depends only on the truth values.)
       On the other hand, the value of \(g\) depends
-      on the actual values of the inputs, not just the sign. This is
+      on the actual values of the inputs, not just the sign.
+      To see this, consider how \(g(-2,3) = 1\) but \(g(-3,2) = -1\);
+      if \(g\) depended only on the sign of the inputs,
+      both of these would be the same value.
+      This behavior of \(g\) is
       despite the fact that \(g\) only takes on values in “sign space”, i.e.,
       the set \(\{-1,0,1\}\). In an
-      analogous way, a statement involving two other statements may
+      analogous way, a compound statement involving two other statements may
       depend on just the truth values of the input statements, or it
       may depend more specifically on the contents of the input
       statements&mdash;what those statements are
-      actually <em>saying</em>&mdash;despite the fact that it has a definite
-      truth value.</p>
+      actually <em>saying</em>&mdash;despite the fact that the
+      compound statement itself has a definite truth value.</p>
 
       <p>A logical connective can only be represented in a truth table
       if it depends solely on the truth values of the inputs. This is
@@ -343,7 +347,7 @@
       (i.e., a sentence obeying both <em>modus ponens</em> and
       conditional proof) is true if and only
       if the material conditional \(P \rightarrow Q\) (which is
-      equivalent to \(\lnot P \lor Q\)) is true. If you feel excited
+      equivalent to \(\lnot P \lor Q\)) is true.<sup href="#footnote-intuitive" id="footnote-intuitive-ref">*</sup> If you feel excited
       at this point, I think it’s a good idea to try to prove this
       result yourself.  Pause reading here if you want to attempt
       a proof.</p>
@@ -736,6 +740,11 @@ Therefore, if $P$ then $Q$."
           set theory is pretty trivial stuff really, but, if
           you want to be a mathematician, you need some, and
           here it is; read it, absorb it, and forget it.”&nbsp;<a href="#footnote-halmos-ref" class="footnote-arrow">&#8617;</a>
+        </li>
+
+        <li id="footnote-intuitive">
+          <!-- FIXME: this needs to be stated better. -->
+          Some books use \(P \rightarrow Q\) to initially mean the intuitive notion of “if \(P\), then \(Q\)”.&nbsp;<a href="#footnote-intuitive-ref" class="footnote-arrow">&#8617;</a>
         </li>
 
       </ol>
