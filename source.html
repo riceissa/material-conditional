@@ -550,7 +550,41 @@
 
       <p>In all cases, we have shown that \(\lnot P \lor Q\) and
       “if \(P\), then \(Q\)” have the same truth value, so this
-      shows that they are identical.  This proof may seem
+      shows that they are identical.</p>
+
+      <p>You may find the proof unconvincing. For instance, in cases (1)
+      and (3), while we did suppose that \(P\) is true and then go on to
+      demonstrate that \(Q\) is true, it's not as if \(Q\) was true
+      <em>because of</em> \(P\). Instead, \(Q\) was already true by
+      assumption from the start!  So perhaps you are doubting whether
+      conditional proofs are valid.</p>
+      <!-- FIXME: explain this. i think it's best to say some
+        combination of the following:
+      - as discussed in 'principle of explosion' section, the main thing
+      logic needs to do is to not *introduce* any errors. Conditional
+      proofs don't need to track "relations/relevance" between sentences
+      in order to do this.  If you start out with some sentence, and
+      then just conclude a thing you already knew, well, that doesn't
+      introduce any errors. It possibly shows you are doing something
+      silly or inefficient, but does not mean your argument is
+      *invalid*.
+
+      - there's a trade-off between simplicity and convincingness.
+      If we were to try to formalize 'conditional proof, but you can't
+      conclude something you already know', then we run into problems
+      like alternative proofs for results. if we've already proved
+      something using one method, then in the second proof, we would not
+      be able to conclude the result because we already know that the
+      result is true. so we further need to complicate the rule by
+      saying that it's ok to conclude something you already know, as
+      long as that thing follows from the previous steps inside the
+      conditional proof, or something. but there's probably ways in
+      which that rule doesn't make sense either. the whole thing becomes
+      as mess as you try to complicate it.
+      -->
+
+
+      <p>This proof may seem
       tedious to read, but it has the virtue of being more concrete: each case
       corresponds to a specific row of the truth table.  This means that
       if we are confused about a particular row of the truth table, then
