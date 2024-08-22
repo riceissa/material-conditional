@@ -123,3 +123,13 @@ here's maybe another way to think about what to put in the essay: ask what the m
 - mention that this essay is a mix of math and philosophy, but it leans more towards philosophy. the reason for this is that we need to connect our pre-theoretic intuitions to the actual math, which means we need to think about our intuitions a lot, and that isn't exactly rigorous math.
 
 - convert essay to pandoc markdown. for the orbit fields, use this pandoc extension: https://pandoc.org/MANUAL.html#extension-raw_attribute so that they are not interpreted by the pandoc parser in any way.
+
+- Spivak did a thing in his Calculus book in like the first chapter where he
+  says you should accept these commonsense axioms, and then he derives some
+  property of the real numbers and is like "look, if you accept the axioms,
+  then you are just forced to also have this property" and it's supposed to be
+  this like big lesson about how the field axioms behave or something. I am
+  basically doing the same thing here, except with classical logic. I'm saying
+  "look, you should accept these properties of classical logic since they make
+  sense. but if you do that, then you're forced into having the 'unintuitive'
+  truth table for the conditional!"
