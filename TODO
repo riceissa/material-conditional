@@ -137,3 +137,5 @@ here's maybe another way to think about what to put in the essay: ask what the m
 - maybe say something about the history of all of this. i think propositional
   logic actually came about _before_ the foundational crisis. how did people
   like Boole and whoever conceptualize the conditional statement?
+
+- "p, q, therefore r" is the argumentative form of "(p AND q) -> r". So in general, if we want to understand "->", we can try to understand "therefore", i.e., arguments, instead.
