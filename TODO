@@ -139,3 +139,11 @@ here's maybe another way to think about what to put in the essay: ask what the m
   like Boole and whoever conceptualize the conditional statement?
 
 - "p, q, therefore r" is the argumentative form of "(p AND q) -> r". So in general, if we want to understand "->", we can try to understand "therefore", i.e., arguments, instead.
+
+- I keep getting this card wrong in Orbit, so need to fix it (I keep saying
+  something like "whether the material conditional can be captured as a truth
+  function", but then not being able to produce a second answer as required by
+  the prompt):
+
+  > What are the two ways of looking at what makes the material conditional
+  > more confusing than other logical connectives like NOT, AND, and OR?
