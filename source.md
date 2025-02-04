@@ -1,3 +1,7 @@
+% Understanding the material conditional
+% Issa Rice
+% April 18, 2023
+
 ## Introduction and audience for this piece
 
 In this essay I will explain the truth table of the [material
@@ -115,3 +119,68 @@ The same cannot be said for the conditional statement! It is true that
 presume has some definite truth value. But is this statement really a
 function of the _truth values_ of $P$ and $Q$? Or could it depend on the
 _contents_ of $P$ and $Q$?
+
+Let me stress this point by bringing in an unrelated, somewhat
+artificial example: Consider two functions, $f$ and $g$, both defined on
+pairs of real numbers. We define $f(x,y) = \operatorname{sgn}(xy)$,
+where $\operatorname{sgn}$ is the [sign
+function](https://en.wikipedia.org/wiki/Sign_function) that returns $1$
+when a number is positive, $0$ when it is the number $0$, and $-1$ when
+a number is negative. In other words, $f(x,y)$ is the sign of the
+product of the two numbers. Similarly, we define $g(x,y) =
+\operatorname{sgn}(x+y)$ to be the sign of the sum of the two numbers.
+Thus for example $f(-2,3) = -1$ and $g(-2,3) = 1$. It can be shown that
+$\operatorname{sgn}(xy) = \operatorname{sgn}(x)\operatorname{sgn}(y)$,
+so the value of $f$ depends only on the sign of the inputs. This is
+analogous to how the "or" connective depends only on the truth values of
+the input statements. (This is sometimes expressed by saying that the
+"or" connective is _truth-functional_. The term "truth-functional" comes
+from the fact that the connective is a function of the truth values,
+i.e., depends only on the truth values.) On the other hand, the value of
+$g$ depends on the actual values of the inputs, not just the sign. To
+see this, consider how $g(-2,3) = 1$ but $g(-3,2) = -1$; if $g$ depended
+only on the sign of the inputs, both of these would be the same value.
+This behavior of $g$ is despite the fact that $g$ only takes on values
+in "sign space", i.e., the set $\{-1,0,1\}$. In an analogous way, a
+compound statement involving two other statements may depend on just the
+truth values of the input statements, or it may depend more specifically
+on the contents of the input statements---what those statements are
+actually _saying_---despite the fact that the compound statement itself
+has a definite truth value.
+
+A logical connective can only be represented in a truth table if it
+depends solely on the truth values of the inputs. This is because the
+rows of the truth table alternate between all the permutations of _truth
+values_ that the input sentences can have, without reference to what
+those sentences are saying. So at the moment it is not clear whether the
+conditional statement can actually be represented in a truth table.
+
+We can make the above point in a slightly different way: As humans, we
+tend to _conflate_ similar-seeming things in order to simplify our
+thinking. But in math, it is important to pay attention to one's mental
+representations of things and to not conflate things that are actually
+meaningfully distinct. This sort of thing happens in mathematics all the
+time. We might, for example, introduce a relation called $\leq$ on some
+class of objects. But just because it looks like an inequality, we
+cannot assume that it is reflexive or transitive or has any of the
+properties we normally associate with an inequality relation! A
+mathematician has to think very carefully to avoid this kind of
+conflation.
+
+Looking at the statement "if $P$, then $Q$", we currently have two
+different mental models of it:
+
+1.  The mysterious new meaning textbooks are forcing on us: the logical
+    connective $\rightarrow$, which takes two sentences and turns them
+    into a third sentence with a specific truth value, as governed by
+    the truth table.
+2.  A much more familiar meaning: a statement governed by certain rules
+    of inference. In particular, the way we use "if $P$, then $Q$" is
+    that if we know that "if $P$, then $Q$" is true and $P$ is true,
+    then we are allowed to also say that $Q$ is true (this is called
+    [_modus ponens_](https://en.wikipedia.org/wiki/Modus_ponens)).
+    Furthermore, the way we show that "if $P$, then $Q$" is true is by
+    supposing that $P$ is true, then doing some deductions to show that
+    $Q$ is true (this is called a [conditional
+    proof](https://en.wikipedia.org/wiki/Conditional_proof)).
+
