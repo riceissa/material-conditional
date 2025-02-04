@@ -9,7 +9,8 @@ conditional](https://en.wikipedia.org/wiki/Material_conditional) (i.e.,
 the "if ..., then ..." statement used in math). Students first learning
 formal logic or getting started with writing mathematical proofs are
 introduced to the idea of truth tables along with the usual logical
-connectives like $\lnot$ ("not"), $\land$ ("and"), and $\lor$ ("or").
+connectives like $\lnot$ ("not"), $\land$ ("and"), and $\lor$
+("or").[^connectives_notation]
 Everything goes well until the logical connective $\rightarrow$
 ("if ..., then ...") for the material conditional is introduced. Why
 does a false statement imply anything? Almost everywhere this is
@@ -72,7 +73,7 @@ switch around if one term sounds more natural than the other. Some
 authors also distinguish between a conditional and an implication. We
 won't be needing the concept of (what some authors call) implication in
 this essay, so to avoid confusion, we will refer to conditionals only,
-not implications. Also, throughout the essay we use "statement",
+not implications.[^implication] Also, throughout the essay we use "statement",
 "sentence", and "proposition" interchangeably.
 
 Finally, I know how difficult it is to learn _and retain_ math, so I
@@ -147,7 +148,7 @@ product of the two numbers. Similarly, we define $g(x,y) =
 \operatorname{sgn}(x+y)$ to be the sign of the sum of the two numbers.
 Thus for example $f(-2,3) = -1$ and $g(-2,3) = 1$. It can be shown that
 $\operatorname{sgn}(xy) = \operatorname{sgn}(x)\operatorname{sgn}(y)$,
-so the value of $f$ depends only on the sign of the inputs. This is
+so the value of $f$ depends only on the sign of the inputs.[^dependence] This is
 analogous to how the "or" connective depends only on the truth values of
 the input statements. (This is sometimes expressed by saying that the
 "or" connective is _truth-functional_. The term "truth-functional" comes
@@ -319,7 +320,7 @@ To summarize, the result we are trying to show is the following: Our
 intuitive meaning of "if $P$, then $Q$" (i.e., a sentence obeying both
 _modus ponens_ and conditional proof) is true if and only if the
 material conditional $P \rightarrow Q$ (which is equivalent to $\lnot P
-\lor Q$) is true. If you feel excited at this point, I think it's a good
+\lor Q$) is true.[^intuitive] If you feel excited at this point, I think it's a good
 idea to try to prove this result yourself. Pause reading here if you
 want to attempt a proof.
 
@@ -683,3 +684,58 @@ J. J. Smith's _Logic: The Laws of Truth_, which has a similar (but less
 rigorous) explanation in section 6.3.2 (and that same line of argument
 is in the first edition of Peter Smith's book, at the beginning of
 section 15.2, and also appears in section 19.2 of the second edition).
+
+[^connectives_notation]: There's a variety of notations here, e.g.,
+$\sim$ for "not" and $\&$ for "and". Some other variants for
+$\rightarrow$ include $\!\implies\!$ and $\supset$.
+
+[^implication]: This footnote is for readers who are curious about this
+distinction. If you don't care about the distinction, you are free to
+skip this footnote; it won't affect your comprehension of the rest of
+the essay. The basic idea of the distinction is that an implication is
+supposedly a meta-linguistic statement involving quoted versions of
+propositions. For example, we might say that "The Moon is made of
+cheese" implies "$1 + 1 = 3$". It would feel ungrammatical to use
+unquoted versions of the two involved propositions, i.e., to say that
+the Moon is made of cheese implies $1 + 1 = 3$. On the other hand, a
+conditional statement is made inside the object-language and uses
+unquoted versions of the two involved propositions; it's simply a what
+is called a _connective_, like "and" and "or". So we would say that if
+the Moon is made of cheese, then $1 + 1 = 3$, rather than saying that
+if "the Moon is made of cheese" then "$1 + 1 = 3$". However, other
+authors elide this distinction and use "material conditional" and
+"material implication" interchangeably. In mathematical logic, _is_ an
+actually important distinction between the material conditional and
+semantic consequence, where the latter is meta-linguistic and is
+denoted by the symbol $\models$. For these reasons, to avoid confusion
+it is best to use only the terms "material conditional" and "semantic
+consequence", as these have unambiguous meanings. For more
+information, see [this
+post](https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/)
+by Tim Gowers and section 18.8(b) in Peter Smith's book
+[here](https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=167).
+
+[^dependence]: Somewhat technically: if $f$ is a function taking two
+inputs such that there exists another two-input function $g$ as well
+as a one-input function $h$ such that $f(x,y) = g(h(x), h(y))$ for all
+inputs $x$ and $y$, then we can say that $f$ depends only on the
+$h$-values of the inputs---there's some other function $g$ that does
+exactly that $f$ accomplishes, but only using the $h$-values!
+
+[^intuitive]: Some books use $P \rightarrow Q$ to initially mean the
+intuitive notion of "if $P$, then $Q$". So there's two ways to
+approach what '$\rightarrow$' means. One way is to define it according
+to the truth table, then show that "$P \rightarrow Q$" matches that
+"intuitive" meaning of "if P, then Q" (i.e. a statement following MP
+and CP). That's what I was trying to get at there, by defining "$P
+\rightarrow Q$" as the same as "$\lnot P\lor Q$" (but then not using
+the former notation because it seemed confusing). The other way is to
+let "$P \rightarrow Q$" be a connective that obeys MP and CP (i.e. we
+define '$\rightarrow$' to mean the intuitive "if ... then ..."), then
+show that this has a truth table equivalent to "$\lnot P\lor Q$". -
+there's a bit of a tricky thing going on here where some books use
+$\rightarrow$ to mean the intuitive conditional, and then show that
+$\rightarrow$ works the same as not-p-or-q. whereas other books just
+define $\rightarrow$ to be the material conditional, and then they try
+to show that $\rightarrow$ is the same as the intuitive
+"if...then...". maybe mention this in like a footnote.
