@@ -769,21 +769,25 @@ skip this footnote; it won't affect your comprehension of the rest of
 the essay. The basic idea of the distinction is that an implication is
 supposedly a meta-linguistic statement involving quoted versions of
 propositions. For example, we might say that "The Moon is made of
-cheese" implies "$1 + 1 = 3$". It would feel ungrammatical to use
+cheese" implies "$1 + 1 = 3$" (notice the quote marks). It would feel ungrammatical to use
 unquoted versions of the two involved propositions, i.e., to say that
-the Moon is made of cheese implies $1 + 1 = 3$. On the other hand, a
+the Moon is made of cheese implies $1 + 1 = 3$.
+
+    On the other hand, a
 conditional statement is made inside the object-language and uses
 unquoted versions of the two involved propositions; it's simply a what
 is called a _connective_, like "and" and "or". So we would say that if
 the Moon is made of cheese, then $1 + 1 = 3$, rather than saying that
-if "the Moon is made of cheese" then "$1 + 1 = 3$". However, other
+if "the Moon is made of cheese" then "$1 + 1 = 3$" (the latter statement feels ungrammatical).
+
+    However, other
 authors elide this distinction and use "material conditional" and
-"material implication" interchangeably. In mathematical logic, _is_ an
+"material implication" interchangeably. In mathematical logic, there _is_ an
 actually important distinction between the material conditional and
 semantic consequence, where the latter is meta-linguistic and is
 denoted by the symbol $\models$. For these reasons, to avoid confusion
 it is best to use only the terms "material conditional" and "semantic
-consequence", as these have unambiguous meanings. For more
+consequence", as these have unambiguous meanings (whereas "material implication" could possibly mean the material conditional in some contexts and semantic consequence in other contexts). For more
 information, see [this
 post](https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/)
 by Tim Gowers and section 18.8(b) in Peter Smith's book
