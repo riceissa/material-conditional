@@ -295,3 +295,254 @@ true. This case is even simpler: since $\lnot P$ is already true, we
 know that at least one of $\lnot P$ or $Q$ is true, so $\lnot P \lor Q$
 is true. In either case, we have shown that $\lnot P \lor Q$ is true.
 This completes the first direction of the proof.
+
+Next we show that if $\lnot P \lor Q$ is true, then our intuitive
+meaning of "if $P$, then $Q$" is true. So suppose that $\lnot P \lor Q$
+is true. To show that "if $P$, then $Q$" is true, we will assume that
+$P$ is true and then (through a chain of deductions) show that $Q$ is
+true. In other words, we will do a conditional proof. So let's suppose
+that $P$ is true. Our goal now is to show that $Q$ is true. Can $Q$ be
+false? Suppose for the sake of contradiction that $Q$ is false. Then we
+have both $P$ and $\lnot Q$. This contradicts $\lnot P \lor Q$, which
+states that at least one of $\lnot P$ or $Q$ is true. This contradiction
+shows that our assumption that $Q$ is false was in error, so $Q$ must be
+true. By conditional proof, this shows that "if $P$, then $Q$" is true.
+This completes the other direction of the proof, and hence we have the
+result.
+
+The above result justifies calling $\rightarrow$ the "if ..., then ..."
+or conditional connective, and treating the sentence $P \rightarrow Q$
+the same as we would the claim that "if $P$, then $Q$". In a way, it is
+amazing that "if $P$, then $Q$" can be captured by a logical connective!
+The statement "if $P$, then $Q$" at first seems much more fuzzy,
+something we use in an argument but that can't be formalized so
+simply---something that we would expect depends on the _meanings_ of the
+sentences and not just their truth values.
+
+Another way to view the result we proved is that if we add an initially
+meaning-less symbol "$\rightarrow$" to our notation and all we know is
+that it obeys _modus ponens_ and conditional proof, then our new symbol
+_must_ be truth-functional, and its truth table is that of the material
+conditional.
+
+## An alternative proof
+
+There is an alternative, more hands-on proof. I'd like to explain it
+because I think it makes the especially counter-intuitive rows of the
+truth table make more sense.
+
+We want to show that "if $P$, then $Q$" is true if and only if $\lnot P
+\lor Q$ is true. We have four cases, corresponding to the four rows of
+the truth table:
+
+1.  Suppose first that both $P$ and $Q$ are true. In this case, $\lnot P
+    \lor Q$ is true, so we want to show that "if $P$, then $Q$" is also
+    true. We do this via conditional proof. Suppose that $P$ is true;
+    our goal is to show that $Q$ is also true. But by assumption, $Q$ is
+    true! So this concludes the conditional proof and shows that "if
+    $P$, then $Q$" is true.
+2.  Now suppose that $P$ is true and $Q$ is false. In this case, $\lnot
+    P \lor Q$ is false, so we must show that "if $P$, then $Q$" is also
+    false. To do this, we will do a proof by contradiction. Suppose for
+    the sake of contradiction that "if $P$, then $Q$" is true. Then
+    since $P$ is true, by _modus ponens_ we would have $Q$. But this is
+    absurd, since $Q$ is by assumption false. This contradiction shows
+    that in fact "if $P$, then $Q$" must be false.
+3.  Now suppose that $P$ is false and $Q$ is true. In this case, $\lnot
+    P \lor Q$ is true, so we will show that "if $P$, then $Q$" is also
+    true. We use conditional proof. Suppose that $P$ is true. By
+    assumption, $Q$ is true. So this shows that "if $P$, then $Q$".
+4.  Finally, suppose that both $P$ and $Q$ are false. Here, $\lnot P
+    \lor Q$ is true, so we must show that "if $P$, then $Q$" is also
+    true. We again use conditional proof. Suppose that $P$ is true. But
+    we assumed at the start that $P$ is false. So $P$ is both true and
+    false, and by the principle of explosion, we have $Q$. (It does not
+    matter that we know $Q$ to be false from the beginning.) This
+    completes the conditional proof, and we conclude that "if $P$, then
+    $Q$" is true.
+
+In all cases, we have shown that $\lnot P \lor Q$ and "if $P$, then $Q$"
+have the same truth value, so this shows that they are identical.
+
+You may find the proof unconvincing. For instance, in cases (1) and (3),
+while we did suppose that $P$ is true and then go on to demonstrate that
+$Q$ is true, it's not as if $Q$ was true _because of_ $P$. Instead, $Q$
+was already true by assumption from the start! So perhaps you are
+doubting whether conditional proofs are valid.
+
+This proof may seem tedious to read, but it has the virtue of being more
+concrete: each case corresponds to a specific row of the truth table.
+This means that if we are confused about a particular row of the truth
+table, then we only need to examine that specific case. For example,
+take the example sentence "if the Moon is made of cheese, then $1+1=3$"
+that we have been using throughout this essay. Why is it true? It
+corresponds to the fourth case of the proof. The reasoning here, from
+"within the logic", goes like this: if the Moon is made of cheese, then,
+well, it's _not_ made of cheese, so supposing that it _is_ made of
+cheese is absurd. This means we've gotten ourselves into trouble and all
+logic breaks down, so in particular $1+1=3$.
+
+## Vacuous truth
+
+A conditional where the antecedent is false is called a [vacuous
+truth](https://en.wikipedia.org/wiki/Vacuous_truth). So the sentence "if
+the Moon is made of cheese, then $1+1=3$" is vacuously true. Let's
+return to the example from the start of this essay, "if the Moon is made
+of cheese, then $1+1=3$". Can we now make sense of this statement given
+the result we showed above? One approach is to run through part of the
+proof again, but using the concrete statements that we have instead of
+(or in addition to) the letters $P$ and $Q$. We know that the Moon is
+not made of cheese ($\lnot P$), so "the Moon is not made of cheese or
+$1+1=3$" ($\lnot P \lor Q$) is true. But now suppose in addition that
+the Moon _were_ made of cheese ($P$). Could we now say that $1+1\ne 3$
+($\lnot Q$)? If we did, this would contradict what we said above, that
+either the Moon is not made of cheese or $1+1=3$ ($\lnot P \lor Q$). So
+we have no choice but to conclude that $1+1=3$ ($Q$). But now notice
+that we started with the assumption that the Moon is made of cheese
+($P$), and derived $1+1=3$ ($Q$), so we have shown "if the Moon is made
+of cheese, then $1+1=3$" (if $P$, then $Q$)!
+
+talk about how, since the premise of a vacuous implication will never
+show up, it's not like we can conclude anything absurd anyway.
+
+false implies anything is basically the statement-level version of the
+principle of explosion.
+
+That was a lot of material we just covered, so it is a good time to
+answer some review questions to solidify your understanding:
+
+## Why propositional logic?
+
+Now that we've hopefully demystified the material conditional, let's
+zoom out a bit and look at propositional logic more generally. What have
+we accomplished? Why should we care?
+
+Propositional logic is a striking example of recursion. Mathematicians
+have been reasoning about math and writing proofs for thousands of
+years, leading to many fascinating results about numbers, geometry, and
+equations. But one way to view propositional logic is that it is
+pointing this machinery at itself: we are analyzing mathematical
+reasoning _using mathematical reasoning_. This is like using a
+microscope not to study cells, but to study microscopes themselves!
+
+Why might we want to do this? Well, mathematicians are a weird and
+curious people, and delight in getting all self-referential and "meta"
+to see what happens. It's also a fairly natural thought: as
+mathematicians, we have been reasoning in a particular way and have
+gotten used to it. It has become our "hammer" and we see "nails"
+everywhere. From this perspective, our own mathematical reasoning is
+itself just another mathematical object we could be analyzing using our
+existing "hammer". We can ask questions about mathematical reasoning
+itself, like "Can all true mathematical statements be proved?" Taken to
+the extreme, we end up with the field of mathematical logic. But there
+is another, more mundane, reason why studying mathematical reasoning
+using mathematical reasoning is useful. In math, we often want to find
+the negation of a complicated statement, or find the contrapositive of a
+conditional statement, or perform some other operation on complicated
+sentences. If we have the tools of propositional logic at hand, we no
+longer need to rely on our verbal dexterity to perform these
+manipulations. Instead, we can be on "autopilot", simply following the
+formal rules of propositional logic. Once we invest in mathematically
+analyzing something, in a sense we get to mindlessly use that thing
+without having to pay too much attention to it every time.
+
+So how does this all connect to the material conditional? By showing
+that the conditional statement is amenable to being summarized by a
+truth table, we have brought it from the realm of fuzzy human thought
+down to the realm of _mindless computational stuff_. By doing so, we can
+quickly negate or otherwise manipulate complicated expressions involving
+"if ..., then ..." statements. This is a powerful ability to have when
+writing and reasoning about proofs!
+
+Continuing with the microscope analogy, it is as if by studying
+microscopes using a microscope, we can improve our own microscopes to be
+more efficient.
+
+\[That's a quite interesting point... I do admit that
+some people will be similar to you. And I do agree that learning about
+propositional logic will help people write more correct mathematical
+proofs (this is kind of what I was getting at in the "Why propositional
+logic?" section).\]
+
+## Conclusion
+
+In this essay we showed that if one accepts some background rules for
+logic (as discussed in the [Three rules of logic](#three-rules) section)
+and also accepts that the "if ..., then ..." statement in math obeys
+_modus ponens_ and conditional proof, then one is forced to having a
+truth-functional conditional with the ordinary truth table. This does
+not say anything about how conditional statements are used in ordinary
+English, but one can at least be confident that when doing mathematics,
+the "if ..., then ..." one has been using in proofs is the same as the
+truth table version.
+
+Earlier we brought up the point that the conditional seems to be both
+intuitive and unintuitive, and that this seems contradictory. But a
+little reflection shows that this sort of thing happens all the time in
+math. In fact, one way of thinking of math is to take things that seem
+awfully unintuitive or confusing, and then stare at them in just the
+right way so as to make them totally obvious.
+
+It's a fascinating fact that the conditional statement (and mathematical
+reasoning more generally) has such a concise formal description. We can
+easily imagine alternative worlds in which this was not the case, where
+mathematical reasoning itself is very complicated and messy even though
+the objects we study are simple formal systems.
+
+I don't want to give the impression that I've covered everything there
+is to know about conditionals---far from it. I do think that I said
+about as much as what an "intro to proofs" book would say on the topic,
+in a hopefully more convincing manner. Those interested in reading more
+about conditionals can find a vast literature---on the philosophical
+aspects, alternative conditionals, and alternative logics. And if you
+are interested in learning more about how to treat math as a mechanical
+thing, as an object of study in itself (rather than studying other
+mathematical objects like spheres or numbers), then this line of thought
+is taken much farther in mathematical logic. But for those who are
+excited to jump into proof-based mathematics but were unconvinced by the
+usual explanations---and I was like this too---I hope this essay is
+enough for you to be convinced that the material conditional makes
+sense. I sure wish I had stumbled onto this explanation much sooner. As
+Paul Halmos has said about set theory, now that you have read this, you
+can safely forget about it, in some sense (though I do hope you will
+continue to review the flashcards).
+
+Here are some final review questions, covering material throughout the
+whole essay:
+
+Do you have feedback for this essay? Feel free to [suggest an
+edit](TODO)
+or [post in the
+discussion](https://github.com/riceissa/material-conditional/discussions)!
+You can also [email me](mailto:riceissa@gmail.com) to give private
+feedback.
+
+**Acknowledgments:** Thanks to Satira and Vipul Naik for comments on a
+draft version of this essay, and to Stephen for comments on an earlier
+published version. I originally wrote this essay in 2021 without really
+consulting any resources. In 2023, I was reading Peter Smith's _An
+Introduction to Formal Logic_ (second edition) and saw that he had a
+similar explanation in one part of the book ([section
+22.3](https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=216)).
+I actually liked his framing better for what I was trying to do, so I
+reworked the essay to incorporate this new framing. I still think this
+essay serves as a better standalone introduction to the material
+conditional, since Smith's explanation takes over 200 pages (it's true
+that not all the pages are about the material conditional, but since the
+explanation is scattered throughout the book, one would have to read or
+skim most of it to get enough context and to make sure one isn't missing
+anything). After some more looking around, I did however later find
+Smith's [" 'If' and
+'$\supset$' "](https://www.logicmatters.net/resources/pdfs/Conditionals.pdf#page=3)
+which has a fairly self-contained explanation inside the box on page 3.
+(Apparently this PDF handout was [already
+around](https://web.archive.org/web/20100713043253/http://www.logicmatters.net/ifl/other-materials/)
+by 2010, back when only the first edition of the book was written. For
+some reason, this explanation of the material conditional which I
+consider the most intuitive was relegated to a handout and not even
+included as part of the book!) I still hope my own essay is a more
+accessible and relaxed exposition. Smith's book also references Nicholas
+J. J. Smith's _Logic: The Laws of Truth_, which has a similar (but less
+rigorous) explanation in section 6.3.2 (and that same line of argument
+is in the first edition of Peter Smith's book, at the beginning of
+section 15.2, and also appears in section 19.2 of the second edition).
