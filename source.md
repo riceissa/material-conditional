@@ -356,7 +356,7 @@ amazing that "if $P$, then $Q$" can be captured by a logical connective!
 The statement "if $P$, then $Q$" at first seems much more fuzzy,
 something we use in an argument but that can't be formalized so
 simply---something that we would expect depends on the _meanings_ of the
-sentences and not just their truth values.
+sentences and not just their truth values.[^rigid]
 
 Another way to view the result we proved is that if we add an initially
 meaning-less symbol "$\rightarrow$" to our notation and all we know is
@@ -439,7 +439,7 @@ either the Moon is not made of cheese or $1+1=3$ ($\lnot P \lor Q$). So
 we have no choice but to conclude that $1+1=3$ ($Q$). But now notice
 that we started with the assumption that the Moon is made of cheese
 ($P$), and derived $1+1=3$ ($Q$), so we have shown "if the Moon is made
-of cheese, then $1+1=3$" (if $P$, then $Q$)!
+of cheese, then $1+1=3$" (if $P$, then $Q$)![^alt_proof]
 
 talk about how, since the premise of a vacuous implication will never
 show up, it's not like we can conclude anything absurd anyway.
@@ -619,8 +619,9 @@ usual explanations---and I was like this too---I hope this essay is
 enough for you to be convinced that the material conditional makes
 sense. I sure wish I had stumbled onto this explanation much sooner. As
 Paul Halmos has said about set theory, now that you have read this, you
-can safely forget about it, in some sense (though I do hope you will
-continue to review the flashcards).
+can safely forget about it,[^halmos] in some sense, so go back to manipulating
+conditionals purely syntactically (though I do hope you will
+continue to review the flashcards).[^gowers_syntax]
 
 Here are some final review questions, covering material throughout the
 whole essay:
@@ -739,3 +740,31 @@ $\rightarrow$ works the same as not-p-or-q. whereas other books just
 define $\rightarrow$ to be the material conditional, and then they try
 to show that $\rightarrow$ is the same as the intuitive
 "if...then...". maybe mention this in like a footnote.
+
+[^rigid]: This whole result comes about because classical logic is
+"rigid" in some sense.
+
+[^alt_proof]: You might say that in the above proof, at the step where
+we ask whether we could say that $1+1\ne 3$ ($\lnot Q$), that of
+course we could. That is also a valid approach. If you want to
+continue the proof that way, we have that the Moon is made of cheese
+($P$); $1+1\ne 3$ ($\lnot Q$); and "the Moon is not made of cheese or
+$1+1=3$" ($\lnot P \lor Q$). But the first two of these directly
+contradict the third. So we have a contradiction. And [from a
+contradiction we can derive
+anything](https://en.wikipedia.org/wiki/Principle_of_explosion),
+including that $1+1=3$.
+
+[^halmos]: From the Preface of Paul Halmos's book _Naive Set Theory_:
+"The student's task in learning set theory is to steep himself in
+unfamiliar but essentially shallow generalities till they become so
+familiar that they can be used with almost no conscious effort. In
+other words, general set theory is pretty trivial stuff really, but,
+if you want to be a mathematician, you need some, and here it is; read
+it, absorb it, and forget it."
+
+[^gowers_syntax]: In one of the most striking posts on mathematical
+pedagogy that I have ever read, Tim Gowers argues that mathematicians
+think syntactically a lot of the time, rather than by thinking about
+the "meanings" of the various manipulations they do, and that this is
+also a good way to _teach_, for example, logarithms.
