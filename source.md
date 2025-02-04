@@ -103,8 +103,10 @@ future. Since the reminder emails will get more infrequent over time as
 your understanding becomes more durable (this is known as [spaced
 repetition](https://en.wikipedia.org/wiki/Spaced_repetition)), this
 allows you to efficiently retain your understanding of the ideas in this
-essay. I highly recommend signing up with your email so that you
-remember these important ideas forever. The short review questions
+essay. I highly recommend signing up with your email---don't let all
+the hard work you put into understanding this essay go to waste by
+forgetting what you learned soon after!
+The short review questions
 appear in boxes like the following:
 
 ```{=html}
