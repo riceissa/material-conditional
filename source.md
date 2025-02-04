@@ -22,7 +22,7 @@ we say that the promise was kept. In this way, a false antecedent (the
 part of the conditional appearing after "if ...") means the condition of
 the promise never arises, so one automatically keeps the promise.
 
-As a beginner to math, I spent many _years_ being confused about this.
+As a beginner to proof-based math, I spent many _years_ being confused about this.
 Just to give one aspect of my confusion, the explanation in terms of
 promises didn't make sense because while it is true that one didn't
 break the promise when the antecedent is false, it's also not clear that
@@ -124,12 +124,12 @@ of sentences. Sure, we might debate whether our "or" should be inclusive
 or exclusive, but in either case, it is clear that this concept can be
 represented as one of two columns in a truth table:
 
-  $P$   $Q$   $P$ inclusive-or $Q$   $P$ exclusive-or $Q$
+   $P$   $Q$   $P$ inclusive-or $Q$   $P$ exclusive-or $Q$
   ----- ----- ---------------------- ----------------------
-  T     T     T                      F
-  T     F     T                      T
-  F     T     T                      T
-  F     F     F                      F
+   T     T     T                      F
+   T     F     T                      T
+   F     T     T                      T
+   F     F     F                      F
 
 The same cannot be said for the conditional statement! It is true that
 "if $P$, then $Q$" is a statement involving $P$ and $Q$, which we
@@ -139,21 +139,25 @@ _contents_ of $P$ and $Q$?
 
 Let me stress this point by bringing in an unrelated, somewhat
 artificial example: Consider two functions, $f$ and $g$, both defined on
-pairs of real numbers. We define $f(x,y) = \operatorname{sgn}(xy)$,
-where $\operatorname{sgn}$ is the [sign
+pairs of real numbers. We define $f(x,y) = \mathrm{sgn}(xy)$,
+where $\mathrm{sgn}$ is the [sign
 function](https://en.wikipedia.org/wiki/Sign_function) that returns $1$
 when a number is positive, $0$ when it is the number $0$, and $-1$ when
 a number is negative. In other words, $f(x,y)$ is the sign of the
 product of the two numbers. Similarly, we define $g(x,y) =
-\operatorname{sgn}(x+y)$ to be the sign of the sum of the two numbers.
-Thus for example $f(-2,3) = -1$ and $g(-2,3) = 1$. It can be shown that
-$\operatorname{sgn}(xy) = \operatorname{sgn}(x)\operatorname{sgn}(y)$,
+\mathrm{sgn}(x+y)$ to be the sign of the sum of the two numbers.
+Thus for example $f(-2,3) = -1$ and $g(-2,3) = 1$.
+
+It can be shown that
+$\mathrm{sgn}(xy) = \mathrm{sgn}(x)\mathrm{sgn}(y)$,
 so the value of $f$ depends only on the sign of the inputs.[^dependence] This is
 analogous to how the "or" connective depends only on the truth values of
-the input statements. (This is sometimes expressed by saying that the
+the input statements. This is sometimes expressed by saying that the
 "or" connective is _truth-functional_. The term "truth-functional" comes
 from the fact that the connective is a function of the truth values,
-i.e., depends only on the truth values.) On the other hand, the value of
+i.e., depends only on the truth values.
+
+On the other hand, the value of
 $g$ depends on the actual values of the inputs, not just the sign. To
 see this, consider how $g(-2,3) = 1$ but $g(-3,2) = -1$; if $g$ depended
 only on the sign of the inputs, both of these would be the same value.
@@ -309,12 +313,12 @@ $Q$" coincide. To prevent us from conflating the two meanings of the
 conditional, let's use $\lnot P \lor Q$ instead of $P \rightarrow Q$. By
 inspecting the truth table, we see that the two are the same:
 
-  $P$   $Q$   $\lnot P$   $\lnot P \lor Q$   $P \rightarrow Q$
+   $P$   $Q$   $\lnot P$   $\lnot P \lor Q$   $P \rightarrow Q$
   ----- ----- ----------- ------------------ -------------------
-  T     T     F           T                  T
-  T     F     F           F                  F
-  F     T     T           T                  T
-  F     F     T           T                  T
+   T     T     F           T                  T
+   T     F     F           F                  F
+   F     T     T           T                  T
+   F     F     T           T                  T
 
 To summarize, the result we are trying to show is the following: Our
 intuitive meaning of "if $P$, then $Q$" (i.e., a sentence obeying both
@@ -619,7 +623,7 @@ usual explanations---and I was like this too---I hope this essay is
 enough for you to be convinced that the material conditional makes
 sense. I sure wish I had stumbled onto this explanation much sooner. As
 Paul Halmos has said about set theory, now that you have read this, you
-can safely forget about it,[^halmos] in some sense, so go back to manipulating
+can safely forget about it,[^halmos] in some sense, to go back to manipulating
 conditionals purely syntactically (though I do hope you will
 continue to review the flashcards).[^gowers_syntax]
 
@@ -658,7 +662,9 @@ feedback.
 
 Thanks to Satira and Vipul Naik for comments on a
 draft version of this essay, and to Stephen for comments on an earlier
-published version. I originally wrote this essay in 2021 without really
+published version.
+
+I originally wrote this essay in 2021 without really
 consulting any resources. In 2023, I was reading Peter Smith's _An
 Introduction to Formal Logic_ (second edition) and saw that he had a
 similar explanation in one part of the book ([section
@@ -670,7 +676,9 @@ conditional, since Smith's explanation takes over 200 pages (it's true
 that not all the pages are about the material conditional, but since the
 explanation is scattered throughout the book, one would have to read or
 skim most of it to get enough context and to make sure one isn't missing
-anything). After some more looking around, I did however later find
+anything).
+
+After some more looking around, I did however later find
 Smith's [" 'If' and
 '$\supset$' "](https://www.logicmatters.net/resources/pdfs/Conditionals.pdf#page=3)
 which has a fairly self-contained explanation inside the box on page 3.
@@ -680,7 +688,9 @@ by 2010, back when only the first edition of the book was written. For
 some reason, this explanation of the material conditional which I
 consider the most intuitive was relegated to a handout and not even
 included as part of the book!) I still hope my own essay is a more
-accessible and relaxed exposition. Smith's book also references Nicholas
+accessible and relaxed exposition.
+
+Smith's book also references Nicholas
 J. J. Smith's _Logic: The Laws of Truth_, which has a similar (but less
 rigorous) explanation in section 6.3.2 (and that same line of argument
 is in the first edition of Peter Smith's book, at the beginning of
