@@ -184,3 +184,36 @@ different mental models of it:
     $Q$ is true (this is called a [conditional
     proof](https://en.wikipedia.org/wiki/Conditional_proof)).
 
+Intuitively---as well as when writing mathematical proofs---we think of
+(and interact with) "if $P$, then $Q$" in the sense (2) given above.
+That is, a conditional statement is something that we create via a
+conditional proof and make use of via _modus ponens_. _A priori_, this
+has very little to do with the statement $P \rightarrow Q$ as defined by
+the truth table! This is just another way of stating that we aren't sure
+yet whether our intuitive notion of "if $P$, then $Q$" can be
+represented in a truth table.
+
+This is the core of what makes the material conditional far more
+confusing than the other logical connectives, so let me emphasize the
+point by saying: the only reason you find the material conditional hard
+to grok is that you _already have opinions about it_. If we had defined
+an entirely new connective called $\star$ and said that $P\star Q$ is
+false if $P$ is true and $Q$ is false and is true otherwise, you wonder
+why $\star$ is an interesting connective to study, but you wouldn't be
+thinking it is _unintuitive_. To put it another way, something can only
+be _unintuitive_ when you already have pre-existing intuitions about the
+thing. The goal here is to pinpoint this intuition (as we have done
+above) and to compare it with the new definition.
+
+So, _are_ these two meanings of "if $P$, then $Q$" related? It turns
+out, there is a very satisfying but surprising connection: they are
+exactly the same. That's right, our intuitive notion of "if $P$, then
+$Q$" coincides perfectly with the truth-table definition of the
+conditional!
+
+"Huh?" you might say. "How could our intuitive notion coincide with the
+truth table one? Didn't we go on at length in the introduction about how
+unintuitive the conditional statement is? How can it be both intuitive
+and unintuitive?" This is a good point, and we will come back to it
+[soon](#conclusion)! But first, I will make a few points about logic and
+then we will try to prove this result.
