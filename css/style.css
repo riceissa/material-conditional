@@ -62,10 +62,10 @@ sup {
   line-height: 0;
 }
 
-sup a {
+a.footnote-ref {
   text-decoration: none;
 }
 
-a.footnote-arrow {
+a.footnote-back {
   text-decoration: none;
 }
