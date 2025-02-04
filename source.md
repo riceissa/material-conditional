@@ -517,7 +517,9 @@ discussion](https://github.com/riceissa/material-conditional/discussions)!
 You can also [email me](mailto:riceissa@gmail.com) to give private
 feedback.
 
-**Acknowledgments:** Thanks to Satira and Vipul Naik for comments on a
+## Acknowledgments {.unnumbered .unlisted}
+
+Thanks to Satira and Vipul Naik for comments on a
 draft version of this essay, and to Stephen for comments on an earlier
 published version. I originally wrote this essay in 2021 without really
 consulting any resources. In 2023, I was reading Peter Smith's _An
