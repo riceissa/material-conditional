@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+    <meta name="description" content="$description-meta$" />
+$endif$
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54694473-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-54694473-1');
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+
+    <link rel="canonical" href="https://riceissa.github.io/material-conditional/">
+    <meta property="og:title" content="Understanding the material conditional" />
+    <meta property="og:site_name" content="Issa Rice" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta name="author" content="Issa Rice" />
+    <meta name="dcterms.date" content="2023-04-18" />
+    <meta name="date" content="2023-04-18" />
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  </head>
+  <body>
+    <article>
+      <h1 class="title">$title$</h1>
+      <p class="author">by <a href="https://issarice.com/">$author$</a></p>
+      <p class="date">Originally published on <time datetime="2021-08-22">August 22, 2021</time>; last major edits made on
+      <time datetime="2023-04-18">April 18, 2023</time></p>
+
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="$idprefix$toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+
+$body$
+
+    </article>
+  </body>
+</html>
