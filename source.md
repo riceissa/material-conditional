@@ -87,6 +87,22 @@ essay. I highly recommend signing up with your email so that you
 remember these important ideas forever. The short review questions
 appear in boxes like the following:
 
+```{=html}
+<orbit-reviewarea debug color="cyan">
+  <orbit-prompt
+    question="Why is an explanation of the material conditional in terms of promises not convincing?"
+    answer="There are many potential answers, but here are two:
+
+1. It's not entirely clear that the promise has been (or would have been) kept if the condition never arises.
+2. It's not clear why we are allowed to take one specific ordinary usage of “if&nbsp;&hellip;, then&nbsp;&hellip;” while ignoring all the others."
+  ></orbit-prompt>
+  <orbit-prompt
+    question="Which kind of logical “or” is the default in math?"
+    answer="inclusive or"
+  ></orbit-prompt>
+</orbit-reviewarea>
+```
+
 ## What makes the conditional different from other logical connectives?
 
 So why does the conditional statement $P \rightarrow Q$ have the truth
