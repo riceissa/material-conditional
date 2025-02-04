@@ -217,3 +217,63 @@ unintuitive the conditional statement is? How can it be both intuitive
 and unintuitive?" This is a good point, and we will come back to it
 [soon](#conclusion)! But first, I will make a few points about logic and
 then we will try to prove this result.
+
+## Three rules of logic
+
+To follow along with the proof in the next section, it will be important
+to be familiar with a few rules of logic. In fact, you may already be
+familiar with these rules. These are not the only rules of logic, but
+they are the ones that are particularly important for understanding the
+rest of this essay.
+
+The first is called the _law of excluded middle_. It states that every
+sentence is true or false. In other words, given any statement $P$, we
+can claim $P \lor \lnot P$. While in natural language there are many
+sentences (such as questions or commands) that don't have a truth value,
+it is reasonable to say that at least in mathematics, all sentences are
+either true or false. That being said, this law is somewhat
+controversial even within mathematics; the thought goes that perhaps a
+statement may be neither true nor false, and its truth or falsity may be
+forever unknown. Despite this, most mathematicians accept this law, and
+I hope you find it at least more acceptable than the truth table of the
+material conditional.
+
+The second is called _proof by contradiction_. This rule says that when
+trying to prove a statement $P$, it is valid to suppose that $P$ is
+false, and see what happens. If you happen to reach a contradiction
+(that is, you show that $Q \land \lnot Q$ for some statement $Q$), then
+you get to say that the assumption that $P$ is false was in error, and
+conclude that $P$ must be true after all. This rule makes sense given
+the law of excluded middle: either $P$ is true or $P$ is false, and we
+just showed that $P$ cannot be false, so it must be true.
+
+The third is called the _principle of explosion_. This rule states that
+if we ever show that some statement $P$ is both true and false, i.e., if
+we ever show $P \land \lnot P$, then we can conclude anything at all. To
+see why this is a reasonable rule, suppose that both $P$ and $\lnot P$
+are true. We will show that an arbitrary statement $Q$ must be true.
+Since $P$ is true, it must be the case that at least one of $P$ or $Q$
+is true, i.e., $P \lor Q$ is true. But since $\lnot P$ is also true,
+that is, $P$ is false, the first alternative in $P \lor Q$ cannot hold,
+so we conclude that $Q$ is true. This argument may seem ridiculous, but
+it is ridiculous only because our starting assumption, that $P$ is both
+true and false, was itself ridiculous. Logic should be thought of as a
+machine that never _introduces_ errors; but if you start out by assuming
+some erroneous notion, then logic won't help you become less wrong. The
+moral here is that if your logical system ever derives a contradiction,
+then it is worthless because it can then prove anything at all.
+
+## Proving that the conditional has the usual truth table
+
+Now we are finally ready to prove that the two meanings of "if $P$, then
+$Q$" coincide. To prevent us from conflating the two meanings of the
+conditional, let's use $\lnot P \lor Q$ instead of $P \rightarrow Q$. By
+inspecting the truth table, we see that the two are the same:
+
+  $P$   $Q$   $\lnot P$   $\lnot P \lor Q$   $P \rightarrow Q$
+  ----- ----- ----------- ------------------ -------------------
+  T     T     F           T                  T
+  T     F     F           F                  F
+  F     T     T           T                  T
+  F     F     T           T                  T
+
