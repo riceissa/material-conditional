@@ -198,7 +198,7 @@ confusing than the other logical connectives, so let me emphasize the
 point by saying: the only reason you find the material conditional hard
 to grok is that you _already have opinions about it_. If we had defined
 an entirely new connective called $\star$ and said that $P\star Q$ is
-false if $P$ is true and $Q$ is false and is true otherwise, you wonder
+false if $P$ is true and $Q$ is false and is true otherwise, you might wonder
 why $\star$ is an interesting connective to study, but you wouldn't be
 thinking it is _unintuitive_. To put it another way, something can only
 be _unintuitive_ when you already have pre-existing intuitions about the
