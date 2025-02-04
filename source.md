@@ -277,3 +277,21 @@ inspecting the truth table, we see that the two are the same:
   F     T     T           T                  T
   F     F     T           T                  T
 
+To summarize, the result we are trying to show is the following: Our
+intuitive meaning of "if $P$, then $Q$" (i.e., a sentence obeying both
+_modus ponens_ and conditional proof) is true if and only if the
+material conditional $P \rightarrow Q$ (which is equivalent to $\lnot P
+\lor Q$) is true. If you feel excited at this point, I think it's a good
+idea to try to prove this result yourself. Pause reading here if you
+want to attempt a proof.
+
+Let's first suppose that our intuitive meaning of "if $P$, then $Q$" is
+true. We want to show that $\lnot P \lor Q$ is true. By the law of
+excluded middle, we have two cases, $P$ or $\lnot P$. Suppose first that
+$P$ is true. Then by _modus ponens_, we are allowed to derive $Q$. Since
+we know that $Q$ is true, we know that at least one of $Q$ or $\lnot P$
+is true, so $\lnot P \lor Q$ is true. Next suppose that $\lnot P$ is
+true. This case is even simpler: since $\lnot P$ is already true, we
+know that at least one of $\lnot P$ or $Q$ is true, so $\lnot P \lor Q$
+is true. In either case, we have shown that $\lnot P \lor Q$ is true.
+This completes the first direction of the proof.
