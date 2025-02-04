@@ -586,7 +586,7 @@ logic?" section).\]
 ## Conclusion
 
 In this essay we showed that if one accepts some background rules for
-logic (as discussed in the [Three rules of logic](#three-rules) section)
+logic (as discussed in the [Three rules of logic](#three-rules-of-logic) section)
 and also accepts that the "if ..., then ..." statement in math obeys
 _modus ponens_ and conditional proof, then one is forced to having a
 truth-functional conditional with the ordinary truth table. This does
