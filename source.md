@@ -279,6 +279,28 @@ some erroneous notion, then logic won't help you become less wrong. The
 moral here is that if your logical system ever derives a contradiction,
 then it is worthless because it can then prove anything at all.
 
+
+```{=html}
+<orbit-reviewarea debug color="cyan">
+  <orbit-prompt
+    question="Which rule of logic says that for any sentence $P$, we have $P \lor \lnot P$?"
+    answer="law of excluded middle"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="Which rule of logic says that it is valid to suppose some proposition, reach a contradiction, then conclude the opposite of the original proposition?"
+    answer="proof by contradiction
+
+(*reductio ad absurdum* is also a correct answer)"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="Which rule of logic says that if we ever find a sentence $P$ such that $P \land \lnot P$, then we can conclude any sentence at all?"
+    answer="principle of explosion
+
+(*ex falso quodlibet* is also a correct answer)"
+  ></orbit-prompt>
+</orbit-reviewarea>
+```
+
 ## Proving that the conditional has the usual truth table
 
 Now we are finally ready to prove that the two meanings of "if $P$, then
@@ -427,6 +449,65 @@ principle of explosion.
 That was a lot of material we just covered, so it is a good time to
 answer some review questions to solidify your understanding:
 
+```{=html}
+<orbit-reviewarea debug color="cyan">
+  <orbit-prompt
+    question="What makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”? (phrase answer in terms of truth tables)"
+    answer="It's not clear that the meaning of the conditional can be captured by a truth table."
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”? (phrase answer in terms of intuitive rule of inference)"
+    answer="It's not clear that the material conditional corresponds to what we intuitively mean by “If $P$, then $Q$”, which is a sentence governed by certain rules of inference."
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What are the two ways of looking at what makes the material conditional more confusing than other logical connectives like “not”, “and”, and “or”?"
+    answer="1. truth table representability
+2. equivalence of the rule-of-inference and truth table interpretations of the conditional"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What does the fact that a logical connective only depends on the truth values of its inputs mean in terms of a truth table?"
+    answer="the connective can be represented as a truth table"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What does the fact that a logical connective can be represented as a truth table mean in terms of how it uses its inputs?"
+    answer="it only depends on the _truth values_ of the inputs rather than the _contents_ of those inputs"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="To prevent us from conflating $P \rightarrow Q$ with our intuitive notion of “if $P$, then $Q$”, what did we do?"
+    answer="We replaced $P\rightarrow Q$ with $\lnot P \lor Q$, which has the same truth table entries as $P \rightarrow Q$"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's the following rule of inference called?
+
+If $P$, then $Q$. \
+$P$. \
+Therefore, $Q$."
+    answer="*modus ponens*"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's the following rule of inference called?
+
+Suppose $P$ is true. \
+[…insert more work here…] \
+$Q$. \
+Therefore, if $P$ then $Q$."
+    answer="conditional proof"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's it called when a conditional has a false antecedent?"
+    answer="vacuous truth"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="“If the moon is made of cheese, then $1+1=3$” is an example of what?"
+    answer="vacuous truth"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's the term for when something only depends on the truth values of its inputs?"
+    answer="truth-functional"
+  ></orbit-prompt>
+</orbit-reviewarea>
+```
+
 ## Why propositional logic?
 
 Now that we've hopefully demystified the material conditional, let's
@@ -480,6 +561,23 @@ propositional logic will help people write more correct mathematical
 proofs (this is kind of what I was getting at in the "Why propositional
 logic?" section).\]
 
+```{=html}
+<orbit-reviewarea debug color="cyan">
+  <orbit-prompt
+    question="Why can propositional logic be seen as an example of recursion/self-reference/meta?"
+    answer="because we are using mathematical reasoning to analyze mathematical reasoning"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="Microscope analogy for propositional logic"
+    answer="using a microscope to study microscopes"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="Why is propositional logic useful? (phrase answer in terms of computation)"
+    answer="We can mindlessly perform manipulations like negation and contraposition on complicated expressions"
+  ></orbit-prompt>
+</orbit-reviewarea>
+```
+
 ## Conclusion
 
 In this essay we showed that if one accepts some background rules for
@@ -525,6 +623,27 @@ continue to review the flashcards).
 
 Here are some final review questions, covering material throughout the
 whole essay:
+
+```{=html}
+<orbit-reviewarea debug color="cyan">
+  <orbit-prompt
+    question="What does it mean for something to be truth-functional?"
+    answer="it only depends on the truth values of inputs"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's a vacuous truth?"
+    answer="a conditional where the antecedent is false"
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What is *modus ponens*?"
+    answer="A rule of inference that allows us to conclude $Q$ given “If $P$ then $Q$” and $P$."
+  ></orbit-prompt>
+  <orbit-prompt
+    question="What's a conditional proof?"
+    answer="A proof where you start out by assuming $P$, and then (through a chain of deductions) show $Q$, which allows you to conclude “if $P$ then $Q$”."
+  ></orbit-prompt>
+</orbit-reviewarea>
+```
 
 Do you have feedback for this essay? Feel free to [suggest an
 edit](TODO)
