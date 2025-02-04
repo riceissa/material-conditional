@@ -51,7 +51,8 @@ confused---I had trouble articulating my own confusion.
 Like many students of mathematics, I eventually decided to accept the
 usual truth table without understanding it because it just seemed to
 work: it seemed to produce correct proofs, and in any case vacuous
-conditionals don't show up all that much. Many years later, I eventually
+conditionals don't show up all that much when doing regular mathematics.
+Many years later, I eventually
 hit upon the core of my confusion, and also a way to resolve this
 confusion. This is what I'd like to explain in this essay.
 
@@ -73,7 +74,7 @@ material conditional is the way it is. In other words, it's someone who
 is itching to get started with proof-based math, but just finds the
 truth table for the conditional plain confusing. This means that I won't
 be explaining all of formal logic from scratch. I'll only be explaining
-the conceptually tricky parts that are not covered in most books.
+the conceptually and philosophically tricky parts that are not covered in most books.
 
 Also, because this essay is intended for people pursuing mathematics, I
 will only be discussing how the "if ..., then ..." statement is used in
