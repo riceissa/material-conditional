@@ -17,20 +17,24 @@ connectives like $\lnot$ ("not"), $\land$ ("and"), and $\lor$
 Everything goes well until the logical connective $\rightarrow$
 ("if ..., then ...") for the material conditional is introduced. Why
 does a false statement imply anything? Almost everywhere this is
-explained poorly. For instance, in terms of promises: the sentence "if
+explained poorly. For instance, it is often explained
+in terms of promises: the sentence "if
 the Moon is made of cheese, then $1+1=3$" is interpreted as the promise
 that $1+1=3$ as long as the Moon is made of cheese; but since the Moon
 is not made of cheese, we can't say that the promise was broken, and so
 we say that the promise was kept. In this way, a false antecedent (the
+_antecedent_ is the
 part of the conditional appearing after "if ...") means the condition of
 the promise never arises, so one automatically keeps the promise.
 
-As a beginner to proof-based math, I spent many _years_ being confused about this.
+As a beginner to proof-based math, I spent
+many _years_ being confused about this.
 Just to give one aspect of my confusion, the explanation in terms of
 promises didn't make sense because while it is true that one didn't
 break the promise when the antecedent is false, it's also not clear that
 one has actually kept the promise, or that one _would have_ kept the
-promise. Indeed, because the consequent (the part appearing after
+promise. Indeed, because the consequent (the _consequent_ is the
+part appearing after
 "then ...") is false, it seemed clear that no such promise about $1+1=3$
 could have been kept. It also seemed suspicious that we were picking one
 specific way in which "if ..., then ..." was used in natural language
@@ -801,7 +805,7 @@ and CP). That's what I was trying to get at there, by defining "$P
 \rightarrow Q$" as the same as "$\lnot P\lor Q$" (but then not using
 the former notation because it seemed confusing). The other way is to
 let "$P \rightarrow Q$" be a connective that obeys MP and CP (i.e. we
-define '$\rightarrow$' to mean the intuitive "if ... then ..."), then
+define '$\rightarrow$' to mean the intuitive "if ... then ..."), then
 show that this has a truth table equivalent to "$\lnot P\lor Q$". -
 there's a bit of a tricky thing going on here where some books use
 $\rightarrow$ to mean the intuitive conditional, and then show that
