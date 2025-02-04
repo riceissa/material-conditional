@@ -4,6 +4,9 @@
 
 ## Introduction and audience for this piece
 
+<!-- FIXME: re-read some hofstadter to imbibe his style. he has a nice
+  serious-yet-humorous and clear writing style. -->
+
 In this essay I will explain the truth table of the [material
 conditional](https://en.wikipedia.org/wiki/Material_conditional) (i.e.,
 the "if ..., then ..." statement used in math). Students first learning
@@ -47,6 +50,17 @@ work: it seemed to produce correct proofs, and in any case vacuous
 conditionals don't show up all that much. Many years later, I eventually
 hit upon the core of my confusion, and also a way to resolve this
 confusion. This is what I'd like to explain in this essay.
+
+<!-- FIXME: somewhere around here, explain how if one were to learn this
+  stuff in school, there is an expectation for the course to just move
+  along to the next topic, so you are not given time to think about these
+things in depth. If you don't get it, you are left behind. and you may
+also think everyone else understands it because they are going along with
+the course. on the other hand, it can be fine to provisionally accept
+something even if you don't understand it, as long as it is a flagged
+spot in your mind. but eventually, you DO want to deeply understand it,
+and it is important to always be honest to yourself about how much you
+REALLY understand something. -->
 
 In keeping with the above, the audience for this essay is someone who
 has written some proofs before and has seen propositional logic and
@@ -176,6 +190,13 @@ values_ that the input sentences can have, without reference to what
 those sentences are saying. So at the moment it is not clear whether the
 conditional statement can actually be represented in a truth table.
 
+<!-- FIXME: I'm not sure how I feel about this conflation paragraph.
+  feels gimmicky.
+
+  The part about "simplify our thinking" feels handwavy. I think it's
+  more like, it reduces working memory load and helps to come up with a
+better (i.e. occam'd) model of reality most of the time.
+-->
 We can make the above point in a slightly different way: As humans, we
 tend to _conflate_ similar-seeming things in order to simplify our
 thinking. But in math, it is important to pay attention to one's mental
@@ -320,6 +341,9 @@ inspecting the truth table, we see that the two are the same:
    F     T     T           T                  T
    F     F     T           T                  T
 
+<!-- FIXME: I don't like the phrasing "intuitive meaning of 'if P then
+  Q'". It should be "'if P, then Q' is true according to our intuitive
+  interpretation" or something. -->
 To summarize, the result we are trying to show is the following: Our
 intuitive meaning of "if $P$, then $Q$" (i.e., a sentence obeying both
 _modus ponens_ and conditional proof) is true if and only if the
@@ -412,6 +436,30 @@ while we did suppose that $P$ is true and then go on to demonstrate that
 $Q$ is true, it's not as if $Q$ was true _because of_ $P$. Instead, $Q$
 was already true by assumption from the start! So perhaps you are
 doubting whether conditional proofs are valid.
+<!-- FIXME: explain this. i think it's best to say some
+  combination of the following:
+- as discussed in 'principle of explosion' section, the main thing
+logic needs to do is to not *introduce* any errors. Conditional
+proofs don't need to track "relations/relevance" between sentences
+in order to do this.  If you start out with some sentence, and
+then just conclude a thing you already knew, well, that doesn't
+introduce any errors. It possibly shows you are doing something
+silly or inefficient, but does not mean your argument is
+*invalid*.
+
+- there's a trade-off between simplicity and convincingness.
+If we were to try to formalize 'conditional proof, but you can't
+conclude something you already know', then we run into problems
+like alternative proofs for results. if we've already proved
+something using one method, then in the second proof, we would not
+be able to conclude the result because we already know that the
+result is true. so we further need to complicate the rule by
+saying that it's ok to conclude something you already know, as
+long as that thing follows from the previous steps inside the
+conditional proof, or something. but there's probably ways in
+which that rule doesn't make sense either. the whole thing becomes
+as mess as you try to complicate it.
+-->
 
 This proof may seem tedious to read, but it has the virtue of being more
 concrete: each case corresponds to a specific row of the truth table.
@@ -424,6 +472,13 @@ corresponds to the fourth case of the proof. The reasoning here, from
 well, it's _not_ made of cheese, so supposing that it _is_ made of
 cheese is absurd. This means we've gotten ourselves into trouble and all
 logic breaks down, so in particular $1+1=3$.
+
+<!--
+<p>Notice the symmetry: to show that \(P \rightarrow Q\) is true, we used
+conditional proof. To show that it is false, we used <em>modus ponens</em>. Is
+there anything deep going on here? I'm going to bet that there is, but I
+don't even understand this myself yet.</p>
+-->
 
 ## Vacuous truth
 
@@ -445,9 +500,11 @@ that we started with the assumption that the Moon is made of cheese
 ($P$), and derived $1+1=3$ ($Q$), so we have shown "if the Moon is made
 of cheese, then $1+1=3$" (if $P$, then $Q$)![^alt_proof]
 
+<!-- FIXME: flesh this out -->
 talk about how, since the premise of a vacuous implication will never
 show up, it's not like we can conclude anything absurd anyway.
 
+<!-- FIXME -->
 false implies anything is basically the statement-level version of the
 principle of explosion.
 
@@ -556,6 +613,7 @@ quickly negate or otherwise manipulate complicated expressions involving
 "if ..., then ..." statements. This is a powerful ability to have when
 writing and reasoning about proofs!
 
+<!-- FIXME: make this flow better -->
 Continuing with the microscope analogy, it is as if by studying
 microscopes using a microscope, we can improve our own microscopes to be
 more efficient.
@@ -732,8 +790,9 @@ as a one-input function $h$ such that $f(x,y) = g(h(x), h(y))$ for all
 inputs $x$ and $y$, then we can say that $f$ depends only on the
 $h$-values of the inputs---there's some other function $g$ that does
 exactly that $f$ accomplishes, but only using the $h$-values!
+<!-- TODO: give the example of a function that only depends on the last digit of the inputs -->
 
-[^intuitive]: Some books use $P \rightarrow Q$ to initially mean the
+[^intuitive]: <!-- FIXME: this needs to be stated better. --> Some books use $P \rightarrow Q$ to initially mean the
 intuitive notion of "if $P$, then $Q$". So there's two ways to
 approach what '$\rightarrow$' means. One way is to define it according
 to the truth table, then show that "$P \rightarrow Q$" matches that

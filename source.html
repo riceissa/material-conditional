@@ -56,9 +56,6 @@
         <a href="#intro" title="Link to this section" class="heading-marker">#</a>
         <a href="#toc" title="Go back to the table of contents" class="heading-marker">&#8617;</a></h2>
 
-      <!-- FIXME: re-read some hofstadter to imbibe his style. he has a nice
-        serious-yet-humorous and clear writing style. -->
-
       <p>In this essay I will explain the truth table of
       the <a href="https://en.wikipedia.org/wiki/Material_conditional">material
       conditional</a> (i.e., the “if&nbsp;&hellip;,
@@ -111,17 +108,6 @@
       Many years later, I eventually hit upon the
       core of my confusion, and also a way to resolve this confusion.
       This is what I’d like to explain in this essay.</p>
-
-      <!-- FIXME: somewhere around here, explain how if one were to learn this
-        stuff in school, there is an expectation for the course to just move
-        along to the next topic, so you are not given time to think about these
-      things in depth. If you don't get it, you are left behind. and you may
-      also think everyone else understands it because they are going along with
-      the course. on the other hand, it can be fine to provisionally accept
-      something even if you don't understand it, as long as it is a flagged
-      spot in your mind. but eventually, you DO want to deeply understand it,
-      and it is important to always be honest to yourself about how much you
-      REALLY understand something. -->
 
       <p>In keeping with the above, the audience for this essay is
       someone who has written some proofs before and has seen
@@ -281,13 +267,6 @@
       So at the moment it is not clear whether the conditional
       statement can actually be represented in a truth table.</p>
 
-      <!-- FIXME: I'm not sure how I feel about this conflation paragraph.
-        feels gimmicky.
-
-        The part about "simplify our thinking" feels handwavy. I think it's
-        more like, it reduces working memory load and helps to come up with a
-      better (i.e. occam'd) model of reality most of the time.
-      -->
       <p>We can make the above point in a slightly different way: As
       humans, we tend to <em>conflate</em> similar-seeming things in
       order to simplify our thinking. But in math, it is important to
@@ -465,9 +444,6 @@
         </tbody>
       </table>
 
-      <!-- FIXME: I don't like the phrasing "intuitive meaning of 'if P then
-        Q'". It should be "'if P, then Q' is true according to our intuitive
-        interpretation" or something. -->
       <p>To summarize, the result we are trying to show is the
       following: Our intuitive meaning of “if \(P\), then \(Q\)”
       (i.e., a sentence obeying both <em>modus ponens</em> and
@@ -582,30 +558,6 @@
       <em>because of</em> \(P\). Instead, \(Q\) was already true by
       assumption from the start!  So perhaps you are doubting whether
       conditional proofs are valid.</p>
-      <!-- FIXME: explain this. i think it's best to say some
-        combination of the following:
-      - as discussed in 'principle of explosion' section, the main thing
-      logic needs to do is to not *introduce* any errors. Conditional
-      proofs don't need to track "relations/relevance" between sentences
-      in order to do this.  If you start out with some sentence, and
-      then just conclude a thing you already knew, well, that doesn't
-      introduce any errors. It possibly shows you are doing something
-      silly or inefficient, but does not mean your argument is
-      *invalid*.
-
-      - there's a trade-off between simplicity and convincingness.
-      If we were to try to formalize 'conditional proof, but you can't
-      conclude something you already know', then we run into problems
-      like alternative proofs for results. if we've already proved
-      something using one method, then in the second proof, we would not
-      be able to conclude the result because we already know that the
-      result is true. so we further need to complicate the rule by
-      saying that it's ok to conclude something you already know, as
-      long as that thing follows from the previous steps inside the
-      conditional proof, or something. but there's probably ways in
-      which that rule doesn't make sense either. the whole thing becomes
-      as mess as you try to complicate it.
-      -->
 
 
       <p>This proof may seem
@@ -623,12 +575,6 @@
       \(1+1=3\).</p>
 
 
-      <!--
-      <p>Notice the symmetry: to show that \(P \rightarrow Q\) is true, we used
-      conditional proof. To show that it is false, we used <em>modus ponens</em>. Is
-      there anything deep going on here? I'm going to bet that there is, but I
-      don't even understand this myself yet.</p>
-      -->
 
       <h2 id="vacuous-truth">Vacuous truth
         <a href="#vacuous-truth" title="Link to this section" class="heading-marker">#</a>
@@ -660,10 +606,8 @@
       so we have shown “if the Moon
       is made of cheese, then \(1+1=3\)” (if \(P\), then \(Q\))!<sup><a href="#footnote-alt-proof" id="footnote-alt-proof-ref">6</a></sup></p>
 
-      <!-- FIXME: flesh this out -->
       <p>talk about how, since the premise of a vacuous implication will never show up, it’s not like we can conclude anything absurd anyway.</p>
 
-      <!-- FIXME -->
       <p>false implies anything is basically the statement-level version
       of the principle of explosion.</p>
 
@@ -778,7 +722,6 @@ Therefore, if $P$ then $Q$."
       “if&nbsp;&hellip;, then&nbsp;&hellip;” statements. This is a
       powerful ability to have when writing and reasoning about proofs!</p>
 
-      <!-- FIXME: make this flow better -->
       <p>Continuing with the microscope analogy, it is as if by studying
       microscopes using a microscope, we can improve our own microscopes
       to be more efficient.
@@ -966,11 +909,9 @@ Therefore, if $P$ then $Q$."
       only on the <span style="white-space: nowrap;">\(h\)-values</span> of the inputs&mdash;there’s some other function
       \(g\) that does exactly that \(f\) accomplishes, but only using the
       <span style="white-space: nowrap;">\(h\)-values</span>!&nbsp;<a href="#footnote-dependence-ref" class="footnote-arrow">&#8617;</a>
-      <!-- TODO: give the example of a function that only depends on the last digit of the inputs -->
         </li>
 
         <li id="footnote-intuitive">
-          <!-- FIXME: this needs to be stated better. -->
           Some books use \(P \rightarrow Q\) to initially mean the intuitive notion of “if \(P\), then \(Q\)”.
 
           So there's two ways to approach what '\(\rightarrow\)' means. One way
