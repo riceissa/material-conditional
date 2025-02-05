@@ -491,8 +491,9 @@ don't even understand this myself yet.</p>
 
 A conditional where the antecedent is false is called a [vacuous
 truth](https://en.wikipedia.org/wiki/Vacuous_truth). So the sentence "if
-the Moon is made of cheese, then $1+1=3$" is vacuously true. Let's
-return to the example from the start of this essay, "if the Moon is made
+the Moon is made of cheese, then $1+1=3$" is vacuously true.
+
+Let's return to the example from the start of this essay, "if the Moon is made
 of cheese, then $1+1=3$". Can we now make sense of this statement given
 the result we showed above? One approach is to run through part of the
 proof again, but using the concrete statements that we have instead of
@@ -716,9 +717,7 @@ whole essay:
 </orbit-reviewarea>
 ```
 
-Do you have feedback for this essay? Feel free to [suggest an
-edit](TODO)
-or [post in the
+Do you have feedback for this essay? Feel free to [post in the
 discussion](https://github.com/riceissa/material-conditional/discussions)!
 You can also [email me](mailto:riceissa@gmail.com) to give private
 feedback.
