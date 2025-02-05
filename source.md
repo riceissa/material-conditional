@@ -807,24 +807,26 @@ section 15.2, and also appears in section 19.2 of the second edition).
     <!-- TODO: give the example of a function that only depends on the last digit of the inputs -->
 
 [^intuitive]: <!-- FIXME: this needs to be stated better. --> Some
-    books use $P \rightarrow Q$ to initially mean the intuitive notion
-    of "if $P$, then $Q$". So there's two ways to approach what
-    '$\rightarrow$' means. One way is to define it according to the
-    truth table, then show that "$P \rightarrow Q$" matches that
-    "intuitive" meaning of "if P, then Q" (i.e. a statement following MP
-    and CP). That's what I was trying to get at there, by defining "$P
-    \rightarrow Q$" as the same as "$\lnot P\lor Q$" (but then not using
-    the former notation because it seemed confusing). The other way is
-    to let "$P \rightarrow Q$" be a connective that obeys MP and CP
-    (i.e. we define '$\rightarrow$' to mean the intuitive "if ...
-    then ..."), then show that this has a truth table equivalent to
-    "$\lnot P\lor Q$". - there's a bit of a tricky thing going on here
-    where some books use $\rightarrow$ to mean the intuitive
-    conditional, and then show that $\rightarrow$ works the same as
-    not-p-or-q. whereas other books just define $\rightarrow$ to be the
-    material conditional, and then they try to show that $\rightarrow$
-    is the same as the intuitive "if...then...". maybe mention this in
-    like a footnote.
+    books use $P \rightarrow Q$ to initially mean the intuitive
+    notion of “if $P$, then $Q$”.
+
+    So there's two ways to approach what '$\rightarrow$' means. One way
+    is to define it according to the truth table, then show that "$P
+    \rightarrow Q$" matches that "intuitive" meaning of "if P, then Q"
+    (i.e. a statement following MP and CP). That's what I was trying to
+    get at there, by defining "$P \rightarrow Q$" as the same as
+    "$\lnot P\lor Q$" (but then not using the former notation because
+    it seemed confusing). The other way is to let "$P \rightarrow Q$"
+    be a connective that obeys MP and CP (i.e. we define
+    '$\rightarrow$' to mean the intuitive "if ... then ..."), then show
+    that this has a truth table equivalent to "$\lnot P\lor Q$".
+
+    - there's a bit of a tricky thing going on here where some books use
+    $\rightarrow$ to mean the intuitive conditional, and then show that
+    $\rightarrow$ works the same as not-p-or-q. whereas other books
+    just define $\rightarrow$ to be the material conditional, and then
+    they try to show that $\rightarrow$ is the same as the intuitive
+    "if...then...". maybe mention this in like a footnote.
 
 [^rigid]: This whole result comes about because classical logic is
     "rigid" in some sense.
