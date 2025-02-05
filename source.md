@@ -760,6 +760,7 @@ rigorous) explanation in section 6.3.2 (and that same line of argument
 is in the first edition of Peter Smith's book, at the beginning of
 section 15.2, and also appears in section 19.2 of the second edition).
 
+
 [^connectives_notation]: There's a variety of notations here, e.g.,
     $\sim$ for "not" and $\&$ for "and". Some other variants for
     $\rightarrow$ include $\!\implies\!$ and $\supset$.
