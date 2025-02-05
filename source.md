@@ -762,89 +762,95 @@ is in the first edition of Peter Smith's book, at the beginning of
 section 15.2, and also appears in section 19.2 of the second edition).
 
 [^connectives_notation]: There's a variety of notations here, e.g.,
-$\sim$ for "not" and $\&$ for "and". Some other variants for
-$\rightarrow$ include $\!\implies\!$ and $\supset$.
+    $\sim$ for "not" and $\&$ for "and". Some other variants for
+    $\rightarrow$ include $\!\implies\!$ and $\supset$.
 
 [^implication]: This footnote is for readers who are curious about this
-distinction. If you don't care about the distinction, you are free to
-skip this footnote; it won't affect your comprehension of the rest of
-the essay. The basic idea of the distinction is that an implication is
-supposedly a meta-linguistic statement involving quoted versions of
-propositions. For example, we might say that "The Moon is made of
-cheese" implies "$1 + 1 = 3$" (notice the quote marks). It would feel ungrammatical to use
-unquoted versions of the two involved propositions, i.e., to say that
-the Moon is made of cheese implies $1 + 1 = 3$.
+    distinction. If you don't care about the distinction, you are free
+    to skip this footnote; it won't affect your comprehension of the
+    rest of the essay. The basic idea of the distinction is that an
+    implication is supposedly a meta-linguistic statement involving
+    quoted versions of propositions. For example, we might say that "The
+    Moon is made of cheese" implies "$1 + 1 = 3$" (notice the quote
+    marks). It would feel ungrammatical to use unquoted versions of the
+    two involved propositions, i.e., to say that the Moon is made of
+    cheese implies $1 + 1 = 3$.
 
-    On the other hand, a
-conditional statement is made inside the object-language and uses
-unquoted versions of the two involved propositions; it's simply a what
-is called a _connective_, like "and" and "or". So we would say that if
-the Moon is made of cheese, then $1 + 1 = 3$, rather than saying that
-if "the Moon is made of cheese" then "$1 + 1 = 3$" (the latter statement feels ungrammatical).
+    On the other hand, a conditional statement is made inside the
+    object-language and uses unquoted versions of the two involved
+    propositions; it's simply a what is called a _connective_, like
+    "and" and "or". So we would say that if the Moon is made of cheese,
+    then $1 + 1 = 3$, rather than saying that if "the Moon is made of
+    cheese" then "$1 + 1 = 3$" (the latter statement feels
+    ungrammatical).
 
-    However, other
-authors elide this distinction and use "material conditional" and
-"material implication" interchangeably. In mathematical logic, there _is_ an
-actually important distinction between the material conditional and
-semantic consequence, where the latter is meta-linguistic and is
-denoted by the symbol $\models$. For these reasons, to avoid confusion
-it is best to use only the terms "material conditional" and "semantic
-consequence", as these have unambiguous meanings (whereas "material implication" could possibly mean the material conditional in some contexts and semantic consequence in other contexts). For more
-information, see [this
-post](https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/)
-by Tim Gowers and section 18.8(b) in Peter Smith's book
-[here](https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=167).
+    However, other authors elide this distinction and use "material
+    conditional" and "material implication" interchangeably. In
+    mathematical logic, there _is_ an actually important distinction
+    between the material conditional and semantic consequence, where the
+    latter is meta-linguistic and is denoted by the symbol $\models$.
+    For these reasons, to avoid confusion it is best to use only the
+    terms "material conditional" and "semantic consequence", as these
+    have unambiguous meanings (whereas "material implication" could
+    possibly mean the material conditional in some contexts and semantic
+    consequence in other contexts). For more information, see [this
+    post](https://gowers.wordpress.com/2011/09/28/basic-logic-connectives-implies/)
+    by Tim Gowers and section 18.8(b) in Peter Smith's book
+    [here](https://www.logicmatters.net/resources/pdfs/IFL2_LM.pdf#page=167).
 
 [^dependence]: Somewhat technically: if $f$ is a function taking two
-inputs such that there exists another two-input function $g$ as well
-as a one-input function $h$ such that $f(x,y) = g(h(x), h(y))$ for all
-inputs $x$ and $y$, then we can say that $f$ depends only on the
-$h$-values of the inputs---there's some other function $g$ that does
-exactly that $f$ accomplishes, but only using the $h$-values!
-<!-- TODO: give the example of a function that only depends on the last digit of the inputs -->
+    inputs such that there exists another two-input function $g$ as well
+    as a one-input function $h$ such that $f(x,y) = g(h(x), h(y))$ for
+    all inputs $x$ and $y$, then we can say that $f$ depends only on the
+    $h$-values of the inputs---there's some other function $g$ that does
+    exactly that $f$ accomplishes, but only using the $h$-values!
+    <!-- TODO: give the example of a function that only depends on the last digit of the inputs -->
 
-[^intuitive]: <!-- FIXME: this needs to be stated better. --> Some books use $P \rightarrow Q$ to initially mean the
-intuitive notion of "if $P$, then $Q$". So there's two ways to
-approach what '$\rightarrow$' means. One way is to define it according
-to the truth table, then show that "$P \rightarrow Q$" matches that
-"intuitive" meaning of "if P, then Q" (i.e. a statement following MP
-and CP). That's what I was trying to get at there, by defining "$P
-\rightarrow Q$" as the same as "$\lnot P\lor Q$" (but then not using
-the former notation because it seemed confusing). The other way is to
-let "$P \rightarrow Q$" be a connective that obeys MP and CP (i.e. we
-define '$\rightarrow$' to mean the intuitive "if ... then ..."), then
-show that this has a truth table equivalent to "$\lnot P\lor Q$". -
-there's a bit of a tricky thing going on here where some books use
-$\rightarrow$ to mean the intuitive conditional, and then show that
-$\rightarrow$ works the same as not-p-or-q. whereas other books just
-define $\rightarrow$ to be the material conditional, and then they try
-to show that $\rightarrow$ is the same as the intuitive
-"if...then...". maybe mention this in like a footnote.
+[^intuitive]: <!-- FIXME: this needs to be stated better. --> Some
+    books use $P \rightarrow Q$ to initially mean the intuitive notion
+    of "if $P$, then $Q$". So there's two ways to approach what
+    '$\rightarrow$' means. One way is to define it according to the
+    truth table, then show that "$P \rightarrow Q$" matches that
+    "intuitive" meaning of "if P, then Q" (i.e. a statement following MP
+    and CP). That's what I was trying to get at there, by defining "$P
+    \rightarrow Q$" as the same as "$\lnot P\lor Q$" (but then not using
+    the former notation because it seemed confusing). The other way is
+    to let "$P \rightarrow Q$" be a connective that obeys MP and CP
+    (i.e. we define '$\rightarrow$' to mean the intuitive "if ...
+    then ..."), then show that this has a truth table equivalent to
+    "$\lnot P\lor Q$". - there's a bit of a tricky thing going on here
+    where some books use $\rightarrow$ to mean the intuitive
+    conditional, and then show that $\rightarrow$ works the same as
+    not-p-or-q. whereas other books just define $\rightarrow$ to be the
+    material conditional, and then they try to show that $\rightarrow$
+    is the same as the intuitive "if...then...". maybe mention this in
+    like a footnote.
 
 [^rigid]: This whole result comes about because classical logic is
-"rigid" in some sense.
+    "rigid" in some sense.
 
 [^alt_proof]: You might say that in the above proof, at the step where
-we ask whether we could say that $1+1\ne 3$ ($\lnot Q$), that of
-course we could. That is also a valid approach. If you want to
-continue the proof that way, we have that the Moon is made of cheese
-($P$); $1+1\ne 3$ ($\lnot Q$); and "the Moon is not made of cheese or
-$1+1=3$" ($\lnot P \lor Q$). But the first two of these directly
-contradict the third. So we have a contradiction. And [from a
-contradiction we can derive
-anything](https://en.wikipedia.org/wiki/Principle_of_explosion),
-including that $1+1=3$.
+    we ask whether we could say that $1+1\ne 3$ ($\lnot Q$), that of
+    course we could. That is also a valid approach. If you want to
+    continue the proof that way, we have that the Moon is made of cheese
+    ($P$); $1+1\ne 3$ ($\lnot Q$); and "the Moon is not made of cheese
+    or $1+1=3$" ($\lnot P \lor Q$). But the first two of these directly
+    contradict the third. So we have a contradiction. And [from a
+    contradiction we can derive
+    anything](https://en.wikipedia.org/wiki/Principle_of_explosion),
+    including that $1+1=3$.
 
 [^halmos]: From the Preface of Paul Halmos's book _Naive Set Theory_:
-"The student's task in learning set theory is to steep himself in
-unfamiliar but essentially shallow generalities till they become so
-familiar that they can be used with almost no conscious effort. In
-other words, general set theory is pretty trivial stuff really, but,
-if you want to be a mathematician, you need some, and here it is; read
-it, absorb it, and forget it."
+    "The student's task in learning set theory is to steep himself in
+    unfamiliar but essentially shallow generalities till they become so
+    familiar that they can be used with almost no conscious effort. In
+    other words, general set theory is pretty trivial stuff really, but,
+    if you want to be a mathematician, you need some, and here it is;
+    read it, absorb it, and forget it."
 
 [^gowers_syntax]: In one of the most striking posts on mathematical
-pedagogy that I have ever read, Tim Gowers argues that mathematicians
-think syntactically a lot of the time, rather than by thinking about
-the "meanings" of the various manipulations they do, and that this is
-also a good way to _teach_, for example, logarithms.
+    pedagogy that I have ever read, Tim Gowers argues that
+    mathematicians think syntactically a lot of the time, rather than by
+    thinking about the "meanings" of the various manipulations they do,
+    and that this is also a good way to _teach_, for example,
+    logarithms.
