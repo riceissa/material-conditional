@@ -821,7 +821,7 @@ section 15.2, and also appears in section 19.2 of the second edition).
     '$\rightarrow$' to mean the intuitive "if ... then ..."), then show
     that this has a truth table equivalent to "$\lnot P\lor Q$".
 
-    - there's a bit of a tricky thing going on here where some books use
+    \- there's a bit of a tricky thing going on here where some books use
     $\rightarrow$ to mean the intuitive conditional, and then show that
     $\rightarrow$ works the same as not-p-or-q. whereas other books
     just define $\rightarrow$ to be the material conditional, and then
