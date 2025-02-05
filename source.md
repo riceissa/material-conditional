@@ -276,12 +276,12 @@ they are the ones that are particularly important for understanding the
 rest of this essay.
 
 The first is called the _law of excluded middle_. It states that every
-sentence is true or false. In other words, given any statement $P$, we
+sentence is either true or false (there's not third truth value or "middle" option). In other words, given any statement $P$, we
 can claim $P \lor \lnot P$. While in natural language there are many
 sentences (such as questions or commands) that don't have a truth value,
 it is reasonable to say that at least in mathematics, all sentences are
 either true or false. That being said, this law is somewhat
-controversial even within mathematics; the thought goes that perhaps a
+controversial even within the mathematical community; the thought goes that perhaps a
 statement may be neither true nor false, and its truth or falsity may be
 forever unknown. Despite this, most mathematicians accept this law, and
 I hope you find it at least more acceptable than the truth table of the
