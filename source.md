@@ -298,13 +298,16 @@ just showed that $P$ cannot be false, so it must be true.
 
 The third is called the _principle of explosion_. This rule states that
 if we ever show that some statement $P$ is both true and false, i.e., if
-we ever show $P \land \lnot P$, then we can conclude anything at all. To
+we ever show $P \land \lnot P$, then we can conclude anything at all,
+for instance, some arbitrary statement $Q$. To
 see why this is a reasonable rule, suppose that both $P$ and $\lnot P$
 are true. We will show that an arbitrary statement $Q$ must be true.
 Since $P$ is true, it must be the case that at least one of $P$ or $Q$
 is true, i.e., $P \lor Q$ is true. But since $\lnot P$ is also true,
 that is, $P$ is false, the first alternative in $P \lor Q$ cannot hold,
-so we conclude that $Q$ is true. This argument may seem ridiculous, but
+so we conclude that $Q$ is true. This argument may seem ridiculous
+(What do you mean "the first alternative cannot hold"? We just said
+that $P$ is true!), but
 it is ridiculous only because our starting assumption, that $P$ is both
 true and false, was itself ridiculous. Logic should be thought of as a
 machine that never _introduces_ errors; but if you start out by assuming
