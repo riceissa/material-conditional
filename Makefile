@@ -1,2 +1,2 @@
-index.html: source.html
-	mjpage --output CommonHTML < "$<" > "$@"
+index.html: source.md
+	pandoc -f markdown -t html --toc --template template.html -o "$@" "$<"
